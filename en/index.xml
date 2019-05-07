@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 26 Apr 2019 22:27:24 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 23:54:17 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning Resources</title>
+      <link>https://myentangled.com/en/2019/04/learning-resources/</link>
+      <pubDate>Fri, 26 Apr 2019 23:54:17 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/04/learning-resources/</guid>
+      <description>Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the development level. Most widely used quantum programming languages and libraries are created for people to learn and experiment with their ideas rather than for publishing any kind of commercial product. Roughly speaking, the field lacks the application side; its focus strongly lies in interpreting quantum theories and&amp;hellip; build some funny stuffs for the sake of learning.</description>
+    </item>
     
     <item>
       <title>Who am I and what the fish is this blog?</title>
