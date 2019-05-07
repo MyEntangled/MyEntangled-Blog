@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="vn-vn" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <title>Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử &middot; </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
+    <link rel="canonical" href="https://myentangled.com/vn/2019/03/fundamentals-of-qubits/" />
+
+     <meta name="description" content="Như mình đã nhắc đến trong bài đăng trước, qubit (Bit Lượng tử) không bị giới hạn giá trị bởi duy nhất $0$ và $1$. Trong bài viết này, mình sẽ nói về những kiến" /> 
+
+     
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Fundamentals%20of%20Qubits/HelplessHighlevelEelelephant-size_restricted.gif"/>
+    
+ 
+    <meta name="twitter:title" content="Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử"/>
+    <meta name="twitter:description" content="Như mình đã nhắc đến trong bài đăng trước, qubit (Bit Lượng tử) không bị giới hạn giá trị bởi duy nhất $0$ và $1$. Trong bài viết này, mình sẽ nói về những kiến"/>
+    <meta name="twitter:url" content="https://myentangled.com/vn/2019/03/fundamentals-of-qubits/" />
+    <meta name="twitter:site" content="@"/>
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử &middot; My Entangled" />
+    <meta property="og:url" content="https://myentangled.com/vn/2019/03/fundamentals-of-qubits/" />
+    <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Như mình đã nhắc đến trong bài đăng trước, qubit (Bit Lượng tử) không bị giới hạn giá trị bởi duy nhất $0$ và $1$. Trong bài viết này, mình sẽ nói về những kiến" />
+
+    <meta property="article:published_time" content="2019-03-12T19:47:20&#43;07:00" />
+    <meta property="article:tag" content="archive" />
+
+    <meta property="og:image" content="https://myentangled.com/uploads/Fundamentals%20of%20Qubits/HelplessHighlevelEelelephant-size_restricted.gif"/>
+
+
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
+
+     
+
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script> 
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto" rel="stylesheet"&gt>
+
+    <style>
+    p{
+    font-family: 'Arial', sans-serif;
+    }
+    body {
+    }
+    code {}
+    }
+    </style>
+
+</head>
+
+
+<body class="post-template">
+  <div class="site-wrapper"> 
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">
+
+        <ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="/vn/">Trang chủ</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/tags/archive/">Bài viết</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/tags/project/">Dự án</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/categories/quantum-computing/">Điện toán lượng tử</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/">English</a>
+            </li>
+        
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
+
+                    
+
+                    <a class="social-link" href="https://github.com/myentangled" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+                    
+
+                    
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    
+      <article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="2019-03-12">12 March 2019</time>
+                <span class="date-divider">/</span> <a href="https://myentangled.com/tags/archive/">#archive</a>&nbsp;
+        </section>
+        <h1 class="post-full-title">Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử</h1>
+    </header>
+    
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Fundamentals%20of%20Qubits/HelplessHighlevelEelelephant-size_restricted.gif)">
+    </figure>
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        
+
+<p>Như mình đã nhắc đến trong bài đăng trước, qubit (Bit Lượng tử) không bị giới hạn giá trị bởi duy nhất $0$ và $1$. Trong bài viết này, mình sẽ nói về những kiến thức nền cần thiết cho những ai mới bắt đầu tìm hiểu như mình.</p>
+
+<p>As I&rsquo;ve mentioned in my previous post, qubits doesn&rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field.</p>
+
+<h4 id="đơn-qubit">Đơn Qubit</h4>
+
+<p><em>Kí hiệu Dirac</em> $\left | \cdot \right\rangle$ (đọc là <em>ket</em>) được dùng để biểu thị trạng thái của qubit. Trạng thái $\left|\psi\right\rangle$ của một qubit có thể là một vector đơn vị bất kì trong không gian vector hai chiều trên miền số phức. Hai trạng thái cơ sở $\left|0\right\rangle$ and $\left|1\right\rangle$ là hai thành phần (hoặc hai <em>vector cơ sở</em>) tạo thành <em>cơ sở tính toán</em>, trong đó bất kì trạng thái nào của một qubit đều có thể biểu diễn thành một tổ hợp tuyến tính của các thành phần.</p>
+
+<p>Trạng thái tổng quát của một qubit được viết như sau
+$$\left|\psi\right\rangle = \alpha_0\left|0\right\rangle + \alpha_1\left|1\right\rangle$$
+hoặc biểu diễn bằng vector $$\left|\psi\right\rangle = \begin{bmatrix}
+\alpha_0 \\ \alpha_1<br />
+\end{bmatrix}$$
+với $\alpha_0$ và $\alpha_1$ là các hệ số phức. Tất cả trạng thái qubit đều bắt buộc là một vector đơn vị trong không gian vector phức nên bị ràng buộc bởi điều kiện chuẩn hóa $$\left|\alpha_0\right|^2 + \left|\alpha_1\right|^2 = 1$$</p>
+
+<p>Ngược lại với bit thông tin cổ điển, các qubit không có &ldquo;giá trị thực sự&rdquo;. Nói một cách chính xác, chúng phải được biểu diễn bằng các trạng thái. Trạng thái tổng quát $\left|\psi\right\rangle$ là một <em>trạng thái chồng chập</em> (sẽ viết tắt thành <em>chồng chập</em>) của các trạng thái cơ sở $\left|0\right\rangle$ and $\left|1\right\rangle$ với <em>biên độ xác suất</em> tương ứng là $\alpha_0$ và $\alpha_1$. Điều này có nghĩa rằng nếu bạn tiến hành đo giá trị của một qubit đơn lẻ ở trạng thái $\left|\psi\right\rangle$, bạn sẽ thu được $0$ với xác suất $\left|\alpha_0\right|^2$ và $1$ với xác suất $\left|\alpha_1\right|^2$. Các bit cổ điển chỉ là một trường hợp đặc biệt của qubit. Giá trị của chúng giống với một trong hai trạng thái cơ sở $\left|0\right\rangle$ hoặc $\left|1\right\rangle$ với xác suất $1$.
+$$\left|0\right\rangle = \begin{bmatrix}
+1 \\ 0
+\end{bmatrix}; \left|1\right\rangle = \begin{bmatrix}
+0 \\ 1
+\end{bmatrix}$$</p>
+
+<h4 id="đa-qubit">Đa qubit</h4>
+
+<p>Trong máy tính cổ điển, bởi vì mỗi bit mang một trong hai giá trị, có tổng cộng $2^2 = 4$ tổ hợp giá trị cho mỗi hai bit bao gồm $\left|00\right\rangle, \left|01\right\rangle, \left|10\right\rangle$ và $\left|11\right\rangle$. Bốn vector cơ sở này trực giao và hợp thành không gian vector bốn chiều của hai qubit.
+Một cách kiế hiệu khác cho các vector trạng thái trên: $$\left|0\right\rangle\left|0\right\rangle, \left|0\right\rangle\left|1\right\rangle, \left|1\right\rangle\left|0\right\rangle, \left|1\right\rangle\left|1\right\rangle$$
+Trên thưc tế kí hiệu này nhằm gợi ý một phép nhân, hay nói một cách chính xác hơn là một <em>tích tensor</em> của hai vector qubit. Trong ngôn ngữ Toán học hình thức, nó được viết dưới dạng $$\left|0\right\rangle \otimes \left|0\right\rangle, \left|0\right\rangle \otimes \left|1\right\rangle, \left|1\right\rangle \otimes \left|0\right\rangle, \left|1\right\rangle \otimes \left|1\right\rangle$$
+Tích tensor của một vector có $M$ thành phần $\mathbf{a}$ và một vector có $N$ thành phần $\mathbf{b}$ la một vector có $MN$ thành phần
+$$\mathbf{a} \otimes \mathbf{b} = \begin{bmatrix}
+a_1 \\ a_2 \\ \vdots \\ a_{n}
+\end{bmatrix} \otimes \begin{bmatrix}
+b_1 \\ b_2 \\ \vdots \\ b_{m}
+\end{bmatrix} = \begin{bmatrix}
+a_1b_1 \\ a_1b_2 \\ \vdots \\ a_1b_{m} \\ a_2b_1 \\ \vdots \\ a_nb_{m-1} \\ a_nb_m
+\end{bmatrix} $$
+Do đó việc áp dụng tích tensor lên hai trạng thái của hai qubit tạo thành một vector mà nó biểu diễn trạng thái hợp thành của cả hai qubit đấy. Quy tắc này còn được mở rộng lên cho phép biểu diễn trạng thái của hệ gồm $n$ qubit dưới dạng tích tensor gộp của $n$ vector. Hãy thử áp dụng quy tắc này cho ba qubit đều ở các trạng thái cơ sở $\left|6\right\rangle_3$
+$$\left|6\right\rangle_3 = \left|110\right\rangle = \left|1\right\rangle \otimes \left|1\right\rangle \otimes \left|0\right\rangle
+= \begin{bmatrix}
+0 \\ 1
+\end{bmatrix} \otimes \begin{bmatrix}
+0 \\ 1
+\end{bmatrix} \otimes \begin{bmatrix}
+1 \\ 0
+\end{bmatrix} = \begin{bmatrix}
+0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \\ 1 \\ 0
+\end{bmatrix} $$
+Trạng thái $\left|m\right\rangle_n$ được biểu diễn bởi vector $2^n$ chiều, trong đó tất cả phần tử đều bằng không ngoại trử phần tử thứ $m$ mang giá trị $1$, với một lưu ý rằng các phần tử của vector được đánh số từ $0$ trở đi. Từ bài viết này, chỉ số dưới ngay sau một kí hiệu ket sẽ được dùng để chỉ một số lượng hữu hạn qubit ta đang quan tâm đến.</p>
+
+<p>Trạng thái tổng quát của hệ $n$ qubit bị ràng buộc bởi duy nhất điều kiện chuẩn hóa tương tự như trạng thái của một qubit đơn lẻ. Xét một hệ gồm $2$ qubit ở trạng thái tổng quát
+$$\left|\Psi\right\rangle = \alpha_{00}\left|00\right\rangle + \alpha_{01}\left|01\right\rangle + \alpha_{10}\left|10\right\rangle + \alpha_{11}\left|11\right\rangle = \begin{bmatrix}
+\alpha_{00} \\ \alpha_{01} \\ \alpha_{10} \\ \alpha_{11}
+\end{bmatrix},$$
+$$\left|\alpha_{00}\right|^2 + \left|\alpha_{01}\right|^2 + \left|\alpha_{10}\right|^2 + \left|\alpha_{11}\right|^2 = 1$$
+Tổng quát thì trạng thái hợp của $n$ qubit có thể là bất kì chồng chập nào của $2^n$ trạng thái cổ điển khác nhau với biên độ xác suất thỏa mãn điều kiện chuẩn hóa. Vậy nên trạng thái lượng tử mới này có một cơ sở tính toán với $2^n$ vector cơ sở là $\left|x\right\rangle_n$ với $0\leq x \leq 2^n-1$.
+$$\left|\Psi\right\rangle = \sum_{x=0}^{2^n-1}\alpha_x\left|x\right\rangle_n,$$
+$$\sum_{x=0}^{2^n-1}\left|\alpha_x\right|^2 = 1.$$
+Ta có thể dễ dàng thu được trạng thái hợp của $n$-qubit bằng cách áp dụng tích tensor lên trạng thái của mọi qubit thành phần. Tuy nhiên điều ngược lại thì không đúng. Trạng thái tổng quát của $n$-qubit, vốn là một chồng chập của $2^n$ vector cơ sở, không thể được biểu diễn một cách tổng quát dưới dạng tích của trạng thái của $n$ qubit thành phần. Nói cách khác thì một qubit thành phần trong hệ đa qubit có thể không có trạng thái thành phần (<em>trạng thái thuần</em>) của riêng nó. Nếu một qubit không ở trạng thái thuần thì nó đang ở một trạng thái hỗn độn được mô tả bởi một ma trận mật độ. Trong khuôn khổ trang blog này, mình mặc định dùng thuật ngữ &ldquo;trạng thái&rdquo; của một qubit đơn lẻ để chỉ &ldquo;trạng thái thuần&rdquo; của nó trừ trường hợp có ghi chú rõ ràng.
+$$\left|0\right\rangle \otimes \left|1\right\rangle = \begin{bmatrix}
+1 \\ 0
+\end{bmatrix} \otimes \begin{bmatrix}
+0 \\ 1
+\end{bmatrix} = \begin{bmatrix}
+0 \\ 1 \\ 0 \\0
+\end{bmatrix} = \left|01\right\rangle, $$
+$$ \begin{bmatrix}
+\frac{1}{\sqrt{2}} \\ 0 \\ 0 \\ \frac{1}{\sqrt{2}}
+\end{bmatrix} \not\equiv
+\begin{bmatrix}
+a \\ b
+\end{bmatrix} \otimes \begin{bmatrix}
+c \\ d
+\end{bmatrix} $$</p>
+
+<p>Những trạng thái hợp của hệ nhiều qubit mà không thể biểu diễn thành các tích được gọi là các trạng thái <em>vướng víu</em>, một thuật ngữ được sử dụng trong ngữ cảnh này lần đầu tiên bởi Schrödinger. Vướng víu cùng với chồng chập lượng tử là những nguyên lý quan trọng nhất đối với sự hình thành của ngành điện toán lượng tử bởi vì cách hành xử dị thường nhưng thú vị của hệ gồm các qubit rối rắm (để tránh lặp từ &ldquo;vướng víu&rdquo; thôi) có thể dẫn chúng ta đến những kết quả đột phá không thể được tạo ra bởi ngay cả siêu máy tính cổ điển mạnh nhất trên thế giới.</p>
+    
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="https://myentangled.com/">Entangled Cat</a></h4>
+                <p>A superimposed, textroverted cate-worshippurr</p>
+        </section>
+      </section>
+    </footer>
+</article>
+    
+    
+    
+
+  </div>
+</main>
+
+
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">      
+      
+<article class="read-next-card" 
+            style="background-image: url(https://myentangled.com/uploads/cover-picture.jpg);" >
+    <header class="read-next-card-header">
+        <small class="read-next-card-header-sitetitle">&mdash; My Entangled &mdash;</small>
+        
+        <h3 class="read-next-card-header-title"><a href="https://myentangled.com/tags/archive/">#archive</a></h3>
+    </header>
+    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+    </div>
+
+    <div class="read-next-card-content">
+      
+        <ul>
+          <li><a href="https://myentangled.com/vn/2019/03/v%C6%B0%E1%BB%9Bng-v%C3%ADu-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD-m%E1%BB%99t-c%E1%BB%A9-l%E1%BB%ABa-%C4%91%E1%BB%91i-v%E1%BB%9Bi-th%E1%BB%B1c-t%E1%BA%A1i/">Vướng víu Lượng tử - một cứ lừa đối với thực tại?</a></li>            
+        
+                      
+        
+          <li><a href="https://myentangled.com/vn/2019/03/%C4%91o-l%C6%B0%E1%BB%9Dng-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD-kh%C3%B4ng-ch%E1%BB%89-l%C3%A0-0-v%C3%A0-1/">Đo lường Lượng tử: Không chỉ là 0 và 1</a></li>            
+        
+          <li><a href="https://myentangled.com/vn/2019/03/introduction-to-quantum-computing/">Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử</a></li>            
+        </ul>
+    </div>
+    <footer class="read-next-card-footer">
+      
+        <a href="https://myentangled.com/tags/archive/">See all related posts →</a>
+    </footer>
+</article>
+
+
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/vn/2019/03/introduction-to-quantum-computing/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Introduction%20to%20Quantum%20Computing/Post1_Schrodinger%27s%20cat.jpg)"></div>
+    </a>
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/vn/2019/03/introduction-to-quantum-computing/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #project 
+              #archive  </span>
+              
+              <h2 class="post-card-title">Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều năm trước, tôi cũng bị ấn tượng bởi những tuyên ngôn này được lặp đi lặp lại trong những bài báo khoa học đại chúng. Nhưng liệu rằng khẳng định trên đúng đến đâu? Trước khi đi đến một kết luận cuối cùng, hãy cùng tôi điểm qua một vài cột mốc trong tiến trình lịch sử của ngành khoa học này. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+      
+      
+    </div>
+  </div>
+</aside>
+
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="https://myentangled.com/">
+      
+      <span></span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử</div>
+  <div class="floating-header-share">
+    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+    </div>
+    
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Qubit%3a%20S%e1%bb%b1%20thay%20th%e1%ba%bf%20cho%20Bit%20t%e1%bb%ab%20g%c3%b3c%20nh%c3%acn%20l%c6%b0%e1%bb%a3ng%20t%e1%bb%ad&amp;url=https%3a%2f%2fmyentangled.com%2fvn%2f2019%2f03%2ffundamentals-of-qubits%2f"
+          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+      </a>
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fvn%2f2019%2f03%2ffundamentals-of-qubits%2f"
+          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+      </a>
+  </div>
+
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="/"></a>  <br>
+      
+    </section>
+    <nav class="site-footer-nav">
+        <a href="/">Latest Posts</a>
+        <a href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener">Facebook</a>
+        
+        <a href="https://github.com/myentangled" target="_blank" rel="noopener">Github</a>
+        
+        
+    </nav>  
+  </div>
+
+</footer>
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://myentangled.com/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    <script>
+
+
+
+
+
+$(document).ready(function () {
+    
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+</body></html>

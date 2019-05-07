@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en-us" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <title>Quantum Operations: Unitary and Reversible Matrices &middot; </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
+    <link rel="canonical" href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/" />
+
+     <meta name="description" content="In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and D" /> 
+
+     
+    
+    <meta name="twitter:card" content="summary"/>
+    
+ 
+    <meta name="twitter:title" content="Quantum Operations: Unitary and Reversible Matrices"/>
+    <meta name="twitter:description" content="In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and D"/>
+    <meta name="twitter:url" content="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/" />
+    <meta name="twitter:site" content="@"/>
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Quantum Operations: Unitary and Reversible Matrices &middot; My Entangled" />
+    <meta property="og:url" content="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/" />
+    <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and D" />
+
+    <meta property="article:published_time" content="2019-03-26T10:58:21&#43;07:00" />
+    <meta property="article:tag" content="archive" />
+
+    <meta property="og:image" content="https://myentangled.com/uploads/cover-picture.jpg"/>
+
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
+
+     
+
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script> 
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto" rel="stylesheet"&gt>
+
+    <style>
+    p{
+    font-family: 'Arial', sans-serif;
+    }
+    body {
+    }
+    code {}
+    }
+    </style>
+
+</head>
+
+
+<body class="post-template">
+  <div class="site-wrapper"> 
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">
+
+        <ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="/en/">Home</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/tags/archive/">Archives</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/tags/project/">Projects</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">About me</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/categories/quantum-computing/">Quantum Computing</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/">Tiếng Việt</a>
+            </li>
+        
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
+
+                    
+
+                    <a class="social-link" href="https://github.com/myentangled" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+                    
+
+                    
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    
+      <article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="2019-03-26">26 March 2019</time>
+                <span class="date-divider">/</span> <a href="https://myentangled.com/tags/archive/">#archive</a>&nbsp;
+        </section>
+        <h1 class="post-full-title">Quantum Operations: Unitary and Reversible Matrices</h1>
+    </header>
+    
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/5.jpg)">
+    </figure>
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        
+
+<p>In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion. Since every operation can be implemented as a logic gate in the circuit, all calculations come down to a specific sequence of logic gates. Is there any anology to classical gates but for qubits given the difference between classical and quantum configuration.</p>
+
+<h4 id="a-principle-of-quantum-operations">A principle of quantum operations</h4>
+
+<p>A fundamental property of qubits is that they are constrained by the normalization condition, i.e. sum of amplitudes&rsquo; square equal 1. Because operations act on a set of qubits and transform them to another quantum state, the operations must preserve the normalization throughout the whole process. Mathematically, the possible operations are matrices that preserve the Euclidean norm of a vector state they apply on. This kind of matrices are called <em>unitary matrices</em> denoted as $U$. A simple way to verify a matrix&rsquo;s unitarity is to check the equation:
+$$U^{\dagger}U=UU^{\dagger}=I \text{ (Eq.1)}$$
+where $U^{\dagger}$ ($U$ dagger) is the conjugate transpose of $U$, which means to take the transpose of $U$ and then take the complex conjugate of each of the transpose&rsquo; entries. Applying a few unitary matrices on quantum state $\left|\psi\right\rangle = \alpha\left|0\right\rangle + \beta\left|1\right\rangle$ results in new states corresponding to the meaning of the operation.
+$$I \text{ (Identity)}= \begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 1
+\end{bmatrix}; I\left|\psi\right\rangle = \begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 1
+\end{bmatrix}\begin{bmatrix}
+\alpha\\
+\beta
+\end{bmatrix} = \begin{bmatrix}
+\alpha\\
+\beta
+\end{bmatrix} = \alpha\left|0\right\rangle + \beta\left|1\right\rangle$$</p>
+
+<p>$$X \text{ (NOT)}= \begin{bmatrix}
+0 &amp; 1\\
+1 &amp; 0
+\end{bmatrix}; X\left|\psi\right\rangle = \begin{bmatrix}
+0 &amp; 1\\
+1 &amp; 0
+\end{bmatrix}\begin{bmatrix}
+\alpha\\
+\beta
+\end{bmatrix} = \begin{bmatrix}
+\beta\\
+\alpha
+\end{bmatrix} = \beta\left|0\right\rangle + \alpha\left|1\right\rangle$$</p>
+
+<p>$$H \text{ (Hadamard)}= \begin{bmatrix}
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}
+\end{bmatrix}; H\left|\psi\right\rangle = \begin{bmatrix}
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}
+\end{bmatrix} \begin{bmatrix}
+\alpha\\
+\beta
+\end{bmatrix} = \begin{bmatrix}
+\frac{1}{\sqrt{2}}\alpha + \frac{1}{\sqrt{2}}\beta\\
+\frac{1}{\sqrt{2}}\alpha - \frac{1}{\sqrt{2}}\beta
+\end{bmatrix} = \frac{\alpha +\beta}{\sqrt{2}}\left|0\right\rangle + \frac{\alpha -\beta}{\sqrt{2}}\left|1\right\rangle$$</p>
+
+<p>$$R_y(\theta) \text{ (Rotation about y-axis)}= \begin{bmatrix}
+\cos\theta &amp; -\sin\theta\\
+\sin\theta &amp; \cos\theta
+\end{bmatrix}; R_y(\theta)\left|\psi\right\rangle = \begin{bmatrix}
+\cos\theta &amp; -\sin\theta\\
+\sin\theta &amp; \cos\theta
+\end{bmatrix}\begin{bmatrix}
+\alpha\\
+\beta
+\end{bmatrix} = \begin{bmatrix}
+\alpha\cos\theta-\beta\sin\theta\\
+\alpha\sin\theta+\beta\cos\theta
+\end{bmatrix}$$</p>
+
+<p>As you can see in the (Eq.1), because the product of $U$ and $U^{\dagger}$ is equal to the identity operation, any quantum operation can be reverted by applying its complex conjugate on the new state, allowing every quantum operation to be reversible. Please keep in mind that reversibility is a special property of quantum operations. It isn&rsquo;t always inherent in classical operations. For example, an $\text{AND}$ operation results in outcome $0$ when two inputs is any pair of ${(0,0),(0,1),(1,0)}$; there is no obvious way to retrieve the actual pair of input numbers from the output $0$. On the other hand, it&rsquo;s easy to verify $XX^\dagger\left|\psi\right\rangle =XX\left|\psi\right\rangle = I\left|\psi\right\rangle = \left|\psi\right\rangle$ by matrix multiplication or just common sense: negate $\left|\psi\right\rangle$ twice keeps the state unchanged.</p>
+
+<h4 id="acting-on-multiple-qubits">Acting on multiple qubits</h4>
+
+<p>In the section above, we have just discussed about single-qubit operators. These nevertheless aren&rsquo;t enough to transform a quantum system into whatever the state of our interest. There are classes of transformation operating on many qubits simultaneously. A good paradigm in case of two qubits is
+$$CNOT = \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 1\\0 &amp; 0 &amp; 1 &amp; 0
+\end{bmatrix}$$
+CNOT is simply Controlled NOT, which takes a qubit as control qubit and another as target qubit. Intuitively, the operator will only flip the state of the target qubit if the control qubit is one, and do nothing if the control is zero. In the next example, we use the left qubit as the control and the right one target.
+$$\begin{matrix} CNOT&amp; (\alpha_{00}\left|00\right\rangle+\alpha_{01}\left|01\right\rangle+\alpha_{10}\left|10\right\rangle+\alpha_{11}\left|11\right\rangle) \\   &amp;=\alpha_{00}\left|00\right\rangle+\alpha_{01}\left|01\right\rangle+\alpha_{10}\left|11\right\rangle+\alpha_{11}\left|10\right\rangle \end{matrix}$$
+Theoretically, it&rsquo;s possible to construct more &lsquo;controlled&rsquo; gates or operators. They will be based on the same principle in the two-qubit situation. Although using such operators gives us a degree of convenience, there are no realible gates that acts on three or more qubits have been engineered in reality. Fortunately, this problem might not be a serious barrier because any gate of higher level can be built using only one- or two-qubit quantum gate.</p>
+
+<p>A combination of low-level gates together can perform any qubit transformation. In theory, their functions add up into an operator determined by their tensor product. Assume that Trong has two qubits; he wants to transform the first one into the Hadamard state while flipping the other qubit. The collective effect follows from the two operators&rsquo; tensor product:</p>
+
+<p>$$H\otimes X = \begin{bmatrix}
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}
+\end{bmatrix} \otimes \begin{bmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{bmatrix} = \begin{bmatrix}
+\frac{1}{\sqrt{2}}\begin{bmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{bmatrix} &amp; \frac{1}{\sqrt{2}}\begin{bmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{bmatrix} \\ \frac{1}{\sqrt{2}}\begin{bmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{bmatrix} &amp; -\frac{1}{\sqrt{2}}\begin{bmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\ 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0\end{bmatrix}$$
+Applying this combined operator to a Bell state $\left|\Psi\right\rangle = \frac{1}{\sqrt{2}}\left(\left|00\right\rangle + \left|11\right\rangle\right)$ results in
+$$(H\otimes X)\left|\Psi\right\rangle = \begin{bmatrix}
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\ 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0\end{bmatrix} \begin{bmatrix}\frac{1}{\sqrt{2}} \\ 0 \\ 0 \\ \frac{1}{\sqrt{2}}  \end{bmatrix}= \begin{bmatrix} \frac{1}{2} \\ \frac{1}{2} \\ -\frac{1}{2} \\ \frac{1}{2}\end{bmatrix} = \frac{1}{\sqrt{2}}\left( \left|00\right\rangle + \left|01\right\rangle - \left|10\right\rangle + \left|11\right\rangle \right)$$
+Trong verifies his multiplication by comparing with the result produced directly by hand
+$$\frac{1}{\sqrt{2}}\left(\left|00\right\rangle + \left|11\right\rangle\right) \overset{H\otimes I}{\rightarrow}
+\frac{1}{2}\left( \left|00\right\rangle + \left|10\right\rangle + \left|01\right\rangle - \left|11\right\rangle \right) \overset{I\otimes X}{\rightarrow} \frac{1}{2}\left( \left|01\right\rangle + \left|11\right\rangle + \left|00\right\rangle - \left|10\right\rangle \right) $$
+It was proven that any quantum manipulation can be performed by a set of basic quantum gates. These gates are call universal gates and just include one and two-qubit gates. This universality will be discussed in one other post.</p>
+
+<p>Before coming to the end, we&rsquo;ll go through some nice properties of tensor product. First, the product is an associative operation: $(A \otimes B) \otimes C = A \otimes (B \otimes C)$ so that it makes sense to write a sequence of tensor products straight out without parentheses. Second, operations acting on a same subset of qubit blends their effect altogether, assuming the product $AC$ and $BD$ make sense.
+$$(A \otimes B)(C \otimes D) = (AC \otimes BD)$$
+Third, the distributive laws hold for tensor product:
+$$A \otimes (B+C) = A \otimes B + A \otimes C $$
+Finally, a scalar can go anywhere between components of a product:
+$$(\alpha A) \otimes B = A \otimes (\alpha B) $$</p>
+
+<p>Next time we will expand the concept of quantum operations to explain things like measurement and observable.</p>
+    
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="https://myentangled.com/">Entangled Cat</a></h4>
+                <p>A superimposed, textroverted cate-worshippurr</p>
+        </section>
+      </section>
+    </footer>
+</article>
+    
+    
+    
+
+  </div>
+</main>
+
+
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">      
+      
+<article class="read-next-card" 
+            style="background-image: url(https://myentangled.com/uploads/cover-picture.jpg);" >
+    <header class="read-next-card-header">
+        <small class="read-next-card-header-sitetitle">&mdash; My Entangled &mdash;</small>
+        
+        <h3 class="read-next-card-header-title"><a href="https://myentangled.com/tags/archive/">#archive</a></h3>
+    </header>
+    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+    </div>
+
+    <div class="read-next-card-content">
+      
+        <ul>
+          <li><a href="https://myentangled.com/en/2019/04/quantum-search-algorithm/">Quantum Search Algorithm</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">Quantum Measurement: Not just 0 and 1</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">Quantum Entanglement to cheat the Reality</a></li>            
+        </ul>
+    </div>
+    <footer class="read-next-card-footer">
+      
+        <a href="https://myentangled.com/tags/archive/">See all related posts →</a>
+    </footer>
+</article>
+
+
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Measurement/Fig1.png)"></div>
+    </a>
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #archive  </span>
+              
+              <h2 class="post-card-title">Quantum Measurement: Not just 0 and 1</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>Quantum entanglement is, by definition, a phenomenon that the combined state of a set of qubits cannot be described as a product of the states of each qubit of that set, which also means the entangled state contains hidden information that one cannot reveal through examining separate qubits. In this text, I&rsquo;m going to introduce and discuss several aspects of this spectacular phenomenon.
+Measurement in different bases In previous posts, I&rsquo;ve mentioned that a qubit can be in a superposition of its basis states $\left|0\right\rangle$ and $\left|1\right\rangle$ with corresponding complex amplitudes $a_0$ and $a_1$. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+      
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Fundamentals%20of%20Qubits/HelplessHighlevelEelelephant-size_restricted.gif)"></div>
+    </a>
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #archive  </span>
+              
+              <h2 class="post-card-title">Qubits: The substitution of bits in quantum scenario</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>As I&rsquo;ve mentioned in my previous post, qubits doesn&rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field like me.
+Single Qubit Dirac notation $\left | \cdot \right\rangle$ (pronounced as ket) is adopted to indicate qubit states. The state $\left|\psi\right\rangle$ associated with a qubit can be an arbitrary unit vector in the two-dimensional vector space over the complex numbers. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+      
+    </div>
+  </div>
+</aside>
+
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="https://myentangled.com/">
+      
+      <span></span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">Quantum Operations: Unitary and Reversible Matrices</div>
+  <div class="floating-header-share">
+    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+    </div>
+    
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Quantum%20Operations%3a%20Unitary%20and%20Reversible%20Matrices&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f03%2fquantum-operations-unitary-and-reversible-matrices%2f"
+          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+      </a>
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f03%2fquantum-operations-unitary-and-reversible-matrices%2f"
+          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+      </a>
+  </div>
+
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="/"></a>  <br>
+      
+    </section>
+    <nav class="site-footer-nav">
+        <a href="/">Latest Posts</a>
+        <a href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener">Facebook</a>
+        
+        <a href="https://github.com/myentangled" target="_blank" rel="noopener">Github</a>
+        
+        
+    </nav>  
+  </div>
+
+</footer>
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://myentangled.com/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    <script>
+
+
+
+
+
+$(document).ready(function () {
+    
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+</body></html>

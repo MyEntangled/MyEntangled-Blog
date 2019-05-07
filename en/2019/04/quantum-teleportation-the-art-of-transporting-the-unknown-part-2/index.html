@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en-us" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <title>Quantum Teleportation: The Art of transporting the Unknown (Part 2) &middot; </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
+    <link rel="canonical" href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-2/" />
+
+     <meta name="description" content="Problem Statement Suppose Trong has just created a wonderful qubit in his lab. He knows his qubit look like $|\psi\rangle = \alpha |0\rangle &#43; \beta |1\rangle$ " /> 
+
+     
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Teleportation/fig1.jpg"/>
+    
+ 
+    <meta name="twitter:title" content="Quantum Teleportation: The Art of transporting the Unknown (Part 2)"/>
+    <meta name="twitter:description" content="Problem Statement Suppose Trong has just created a wonderful qubit in his lab. He knows his qubit look like $|\psi\rangle = \alpha |0\rangle &#43; \beta |1\rangle$ "/>
+    <meta name="twitter:url" content="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-2/" />
+    <meta name="twitter:site" content="@"/>
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Quantum Teleportation: The Art of transporting the Unknown (Part 2) &middot; My Entangled" />
+    <meta property="og:url" content="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-2/" />
+    <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Problem Statement Suppose Trong has just created a wonderful qubit in his lab. He knows his qubit look like $|\psi\rangle = \alpha |0\rangle &#43; \beta |1\rangle$ " />
+
+    <meta property="article:published_time" content="2019-04-26T15:26:47&#43;07:00" />
+    
+
+    <meta property="og:image" content="https://myentangled.com/uploads/Teleportation/fig1.jpg"/>
+
+
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
+
+     
+
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script> 
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto" rel="stylesheet"&gt>
+
+    <style>
+    p{
+    font-family: 'Arial', sans-serif;
+    }
+    body {
+    }
+    code {}
+    }
+    </style>
+
+</head>
+
+
+<body class="post-template">
+  <div class="site-wrapper"> 
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">
+
+        <ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="/en/">Home</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/tags/archive/">Archives</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/tags/project/">Projects</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">About me</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/categories/quantum-computing/">Quantum Computing</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/">Tiếng Việt</a>
+            </li>
+        
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
+
+                    
+
+                    <a class="social-link" href="https://github.com/myentangled" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+                    
+
+                    
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    
+      <article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="2019-04-26">26 April 2019</time>
+        </section>
+        <h1 class="post-full-title">Quantum Teleportation: The Art of transporting the Unknown (Part 2)</h1>
+    </header>
+    
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)">
+    </figure>
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        
+
+<h4 id="problem-statement">Problem Statement</h4>
+
+<p>Suppose Trong has just created a wonderful qubit in his lab. He knows his qubit look like $|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$ but doesn&rsquo;t know $\alpha$ and $\beta$. Now he wants to transport this qubit to his crush, but they don&rsquo;t have a quantum channel that can help transport quantum information. Of course it&rsquo;s a very bad idea for Trong to try to figure out $\alpha$ and $\beta$ through measurement because if he does so, he&rsquo;ll destroy his qubit but only learn extremely little information about it. So how can Trong possibly transport his qubit to his crush. The key here is Quantum Teleportation.</p>
+
+<p>No, teleportation doesn&rsquo;t violate the No-cloning Theorem discussed in Part 1. Teleportation doesn&rsquo;t mean duplicating a qubit or knowning its state, but just bringing it to another location.</p>
+
+<p>For ease of writing, I&rsquo;ll use letter A to indicate Trong and B for his crush in the next sections.</p>
+
+<h4 id="a-simplifed-solution">A Simplifed Solution</h4>
+
+<blockquote>
+<p>This is a completely unrealistic solution where we&rsquo;re going to assume that there is a CNOT gate extending from A to B despite the large distance. We just examine this as a stepping stone for a realistic process later.</p>
+</blockquote>
+
+<p><img src="/uploads/Teleportation/circuit_3.png" alt="Example image" /></p>
+
+<p>As shown in the figure above, A holds the top qubit in the state $|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$, and B keeps the bottom qubit $|\psi\rangle = \alpha |0\rangle + \beta |1\rangle$. The CNOT gate takes A&rsquo;s qubit as the control and B&rsquo;s as the target and entangles them into $|\psi\rangle = \alpha |00\rangle + \beta |11\rangle$.</p>
+
+<p>Now one thing you may think of is to let A measure his qubit. If A gets a $|0\rangle$ then B also gets $|0\rangle$, and if A sees a $|1\rangle$ then B ends up with a $|1\rangle$. This is no good at all.</p>
+
+<p>But what if A measures his qubit in the $|+\rangle,|-\rangle$ basis:
+$$\begin{matrix} \alpha |00\rangle + \beta |11\rangle &amp;=&amp; \displaystyle{\alpha \left(\frac{1}{\sqrt{2}}|+\rangle +\frac{1}{\sqrt{2}}|-\rangle \right) |0\rangle + \beta\left(\frac{1}{\sqrt{2}}|+\rangle -\frac{1}{\sqrt{2}}|-\rangle \right) |1\rangle } \\
+&amp;=&amp; \displaystyle{\frac{1}{\sqrt{2}} |+\rangle \left(\alpha |0\rangle + \beta|1\rangle \right) + \frac{1}{\sqrt{2}}|-\rangle \left(\alpha |0\rangle - \beta|1\rangle \right)} \end{matrix}$$</p>
+
+<p>If A gets $|+\rangle$, the composite state becomes $|+\rangle \left(\alpha |0\rangle + \beta|1\rangle \right)$.</p>
+
+<p>On the contrary, if A gets $|-\rangle$, the composite state will be $|-\rangle \left(\alpha |0\rangle - \beta|1\rangle \right)$.</p>
+
+<p>After his measurement, A just simply call and tell B the outcome, and B will need to use operator $Z =\begin{bmatrix}
+1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}$ in case of receiving the outcome $|-\rangle$ from A. $Z$ operator do nothing to $|0\rangle$ state but flip the sign of $|1\rangle$ state.</p>
+
+<p>In conclusion, if B receives the outcome $|+\rangle$, B already got the state $\alpha |0\rangle + \beta |1\rangle$ at hand. Otherwise, B applies a $Z$ and comes up with $Z \left( \alpha |0\rangle - \beta |1\rangle \right)  = \alpha |0\rangle + \beta |1\rangle$ as we need. That&rsquo;s how an over-stretching CNOT gate helps transmit a qubit from A to B, but I know that kind of gate still doesn&rsquo;t exist in the world. In fact, this simplified solution points out we just need to create the entangled state $\psi\rangle = \alpha |00\rangle + \beta |11\rangle$ to do teleportation. We&rsquo;ll make it without a quantum communication, i.e. the lengthy CNOT gate, in the next section.</p>
+
+<h4 id="teleporting-procedure">Teleporting Procedure</h4>
+
+<p>Let&rsquo;s assume A and B share a pair of qubits entangled in the state $|\psi\rangle = \frac{1}{\sqrt{2}}|00\rangle + \frac{1}{\sqrt{2}}|11\rangle$. Generally speaking, teleportation is a protocol in which A measures two qubits, the entangled qubit and the unknown qubit that A wants to transport to B. Then, A makes a phone call and tells B two classical bits resulting from the measurements. Finally, B needs to apply some simple operators depending on the classical bits to restore the state of the unknown qubit. The following digram summarizes the crucial steps for a teleportation.</p>
+
+<p><img src="/uploads/Teleportation/fig1.jpg" alt="Example image" /></p>
+
+<p>From then on, you shall know that all steps needed to perform a quantum algorithm can be shown in quantum circuit diagram as every classical algorithm has its own block diagram. Below is the complete quantum circuit for teleportation. Some new notations include big black dots as target nodes, dash-line rectangles as groupings that serve for clear visual as well as logical thinking flow, and double lines as classical wires (in contrast to single lines demonstrating quantum connections).</p>
+
+<p><img src="/uploads/Teleportation/circuit_4.png" alt="Example image" /></p>
+
+<p>As you can see, there are three qubits in total, the top two of which will be measured on the A side later, and the bottom one on the B side will end up being in the $|\psi\rangle$ that A wants to transport. The second and third qubits need to be entangled before separated and each brought to one of the two people. The first grouping is responsible for that entanglement, which I call the preparation stage.</p>
+
+<h6 id="preparation-stage">Preparation stage</h6>
+
+<p>$$|\Psi_0\rangle = (\alpha|0\rangle + \beta|1\rangle) |00\rangle$$
+The first grouping alone is a Bell State circuit shown in Part 1 of this topic that if $|00\rangle$ is feeded as the input, the output state will be $|\Phi^+\rangle$. So that the beginning state $|\Psi_0\rangle$ evolves to
+$$\begin{matrix} |\Psi_1\rangle &amp;=&amp; \displaystyle{(\alpha|0\rangle + \beta|1\rangle) \left( \frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |11\rangle \right)} \\
+&amp;=&amp; \displaystyle{\frac{\alpha}{\sqrt{2}} |000\rangle + \frac{\alpha}{\sqrt{2}} |011\rangle + \frac{\beta}{\sqrt{2}} |100\rangle + \frac{\beta}{\sqrt{2}} |111\rangle}\end{matrix}$$
+Then the middle qubit will be delivered to A and the bottom one to B. They now share a pair of entangled qubits that will soon be helpful in forming a connection the unknown qubit with the B side.</p>
+
+<h6 id="pre-measurement-stage">Pre-measurement stage</h6>
+
+<p>This stage is wrapped into two operators inside the second grouping, a CNOT gate that takes the top qubit as the control and the middle as the target followed by a Hadamard gate acting on the first line.</p>
+
+<p>You may be tempting to ask what are the purposes of these two gates. Do you remember the simplified solution we discussed above: A and B take advantage of entangling the unknown qubit at the source with the qubit at the destination. The CNOT gate here do the same thing in a slightly different manner. It entangles the top qubit to the second and therefore creates a cluster of three entangled qubits.
+$$|\Psi_{1.5}\rangle = \frac{\alpha}{\sqrt{2}} |000\rangle + \frac{\alpha}{\sqrt{2}} |011\rangle + \frac{\beta}{\sqrt{2}} |110\rangle + \frac{\beta}{\sqrt{2}} |101\rangle$$</p>
+
+<p>Let me remind you that a qubit measurement in the $|+\rangle, |-\rangle$ basis, the most essential step in the simplified solution, is completely equivalent to rotating that qubit to the Hadamard basis (another name for $|+\rangle, |-\rangle$ basis) and then measuring it in the computational basis. This technique of rotating and measuring is frequently used as a subroutine in many quantum algorithms. Knowing the technique, A knows he needs to rotate the unknown qubit to the Hadamard basis using the Hadamard gate.</p>
+
+<p>$$\begin{matrix} |\Psi_{2}\rangle &amp;=&amp; \displaystyle{\frac{\alpha}{\sqrt{2}} \left( \frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle \right) (|00\rangle + |11\rangle) + \frac{\beta}{\sqrt{2}} \left( \frac{1}{\sqrt{2}} |0\rangle - \frac{1}{\sqrt{2}} |1\rangle \right) (|10\rangle + |01\rangle)} \\
+&amp;=&amp; \displaystyle{\frac{\alpha}{2} (|000\rangle +|011\rangle + |100\rangle + |111\rangle) + \frac{\beta}{2} (|010\rangle +|001\rangle - |110\rangle - |101\rangle)} \\
+&amp;=&amp; \displaystyle{\frac{1}{2} |00\rangle (\alpha |0\rangle + \beta|1\rangle) + \frac{1}{2} |01\rangle (\alpha |1\rangle + \beta|0\rangle) + \frac{1}{2} |10\rangle (\alpha |0\rangle - \beta|1\rangle) + \frac{1}{2} |11\rangle (\alpha |1\rangle - \beta|0\rangle)} \end{matrix}$$</p>
+
+<h6 id="measurement-stage">Measurement stage</h6>
+
+<p>This last stage include two measurements and two controlled gates acting on the bottom qubit: Z controlled by the first qubit measurement and X by the second qubit measurement. The last equality shown in the pre-measurement stage has already revealed four possible situations of the two measurements A would perform. Let $b_0$ and $b_1$ be the upcoming results of the measurements for the top qubit and the middle qubit respectively. Which stages the bottom qubit is left in each case is shown in the table below.</p>
+
+<table>
+<thead>
+<tr>
+<th>$b_0b_1$</th>
+<th>Bottom qubit</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$00$</td>
+<td>$\alpha |0\rangle + \beta|1\rangle$</td>
+</tr>
+
+<tr>
+<td>$01$</td>
+<td>$\alpha |1\rangle + \beta|0\rangle$</td>
+</tr>
+
+<tr>
+<td>$10$</td>
+<td>$\alpha |0\rangle - \beta|1\rangle$</td>
+</tr>
+
+<tr>
+<td>$11$</td>
+<td>$\alpha |1\rangle - \beta|0\rangle$</td>
+</tr>
+</tbody>
+</table>
+
+<p>After the measurements, A picks up his phone and tells B the two outcomes to help B apply suitable operators to the third qubit. B will need to use $Z$ gate if $b_0 = 1$ and use $X$ gate if $b_1 = 1$. The order in which B applies operators doesn&rsquo;t matter; you can verify that $XZ|\psi\rangle = ZX|\psi\rangle$ by doing some matrix calculations on your own. However, I want to let you know that when scientists write $U_1 U_0|\psi\rangle$, they mean to apply $U_0$ before $U_1$, i.e. operators will act on the qubit in the right-left order. Get back to the current problem, all the former states, after corresponding operations, have to transform into the unknown state.</p>
+
+<table>
+<thead>
+<tr>
+<th>$b_0b_1$</th>
+<th>Bottom qubit</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$00$</td>
+<td>$\alpha |0\rangle + \beta|1\rangle \overset{I}{\rightarrow}\alpha|0\rangle + \beta|1\rangle$</td>
+</tr>
+
+<tr>
+<td>$01$</td>
+<td>$\alpha |1\rangle + \beta|0\rangle \overset{X}{\rightarrow}\alpha|0\rangle + \beta|1\rangle$</td>
+</tr>
+
+<tr>
+<td>$10$</td>
+<td>$\alpha |0\rangle - \beta|1\rangle \overset{Z}{\rightarrow}\alpha|0\rangle + \beta|1\rangle$</td>
+</tr>
+
+<tr>
+<td>$11$</td>
+<td>$\alpha |1\rangle - \beta|0\rangle \overset{ZX}{\rightarrow}-\alpha|0\rangle - \beta|1\rangle$</td>
+</tr>
+</tbody>
+</table>
+
+<p>Now the qubit on B side is guaranteed to be in the state $\alpha |0\rangle + \beta|1\rangle$ except for the $b_0 b_1 = 11$ case. But don&rsquo;t worry, two minus signs in $-\alpha|0\rangle - \beta|1\rangle$ are rather a global phase and experimentally undetectable. So that in all cases, Trong has successfully transported his qubit to his crush by communicating only two classical bits $b_0$ and $b_1$.</p>
+
+<h4 id="recap">Recap</h4>
+
+<p>The whole algorithm for teleportation protocol can be described in a single line of states and operators that
+$$ (\mathbf{C^Z_{20} C^X_{21}})(\mathbf{M_1M_0})(\mathbf{H_0 CNOT_{10}})(\mathbf{CNOT_{12} H_2})(\alpha |0\rangle + \beta|1\rangle) |0\rangle |0\rangle$$
+where $\mathbf{C^U_{ij}}$ is a Controlled $U$ gate that takes as input the $j$-th qubit and acts on $i$-th qubit in $0$-th index system. As I have just mentioned, the operators should be read from right to left.</p>
+
+<p>If this is your first time to deal with a quantum algorithms, my advice is that you should practice calculating in both matrix and quantum fashions. That may help you really understand the process and be ready for more complicated algorithms to come.</p>
+
+<p>In the next part, I&rsquo;ll mainly focus on implementing the protocol using Microsoft Q# programming language.</p>
+    
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="https://myentangled.com/">Entangled Cat</a></h4>
+                <p>A superimposed, textroverted cate-worshippurr</p>
+        </section>
+      </section>
+    </footer>
+</article>
+    
+    
+    
+
+  </div>
+</main>
+
+
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">      
+      
+<article class="read-next-card" 
+            style="background-image: url(https://myentangled.com/uploads/cover-picture.jpg);" >
+    <header class="read-next-card-header">
+        <small class="read-next-card-header-sitetitle">&mdash; My Entangled &mdash;</small>
+        
+    </header>
+    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+    </div>
+
+    <div class="read-next-card-content">
+      
+        <ul>
+          <li><a href="https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/">A half-alive-half-dead cat and the beginning of Quantum Information</a></li>            
+        
+                      
+        
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-3/">Quantum Teleportation: The Art of transporting the Unknown (Part 3)</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/quantum-search-algorithm/">Quantum Search Algorithm</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">Quantum Entanglement to cheat the Reality</a></li>            
+        </ul>
+    </div>
+    <footer class="read-next-card-footer">
+      
+    </footer>
+</article>
+
+
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/1.jpg)"></div>
+    </a>    
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">Who am I and what the fish is this blog?</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>About me Hi, my name is Entangled, a cat who adopted a boy named Trong Duong. My servant&hellip; I liken&rsquo;t when he laughed watching videos of other cats showing off their cuteness. He love eating like me&hellip; but just a mediocre, troublemaking cook. He&rsquo;s also a textrovert, a word coined to indicate a person who is apparently energetic in a texting conversation but may dumb as a fish in a face-to-face. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+      
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-3/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/1.jpg)"></div>
+    </a>    
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-3/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #archive 
+              #project  </span>
+              
+              <h2 class="post-card-title">Quantum Teleportation: The Art of transporting the Unknown (Part 3)</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>Let&rsquo;s implement and verify the teleporation protocol following the procedure we discussed throughout previous parts.
+First we need to create an arbitrary quantum state. Trong has been curious about the combined effect of rotation gates about the x, y, and z axes. So, he decides to apply three distinct rotation gates, each as a rotation of 60 degrees around one coordinate axis acting on a qubit currently in the Hadamard state $|-\rangle$. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+      
+    </div>
+  </div>
+</aside>
+
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="https://myentangled.com/">
+      
+      <span></span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">Quantum Teleportation: The Art of transporting the Unknown (Part 2)</div>
+  <div class="floating-header-share">
+    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+    </div>
+    
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Quantum%20Teleportation%3a%20The%20Art%20of%20transporting%20the%20Unknown%20%28Part%202%29&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2fquantum-teleportation-the-art-of-transporting-the-unknown-part-2%2f"
+          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+      </a>
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2fquantum-teleportation-the-art-of-transporting-the-unknown-part-2%2f"
+          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+      </a>
+  </div>
+
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="/"></a>  <br>
+      
+    </section>
+    <nav class="site-footer-nav">
+        <a href="/">Latest Posts</a>
+        <a href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener">Facebook</a>
+        
+        <a href="https://github.com/myentangled" target="_blank" rel="noopener">Github</a>
+        
+        
+    </nav>  
+  </div>
+
+</footer>
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://myentangled.com/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    <script>
+
+
+
+
+
+$(document).ready(function () {
+    
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+</body></html>
