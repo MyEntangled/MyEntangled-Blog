@@ -169,14 +169,14 @@
         <h1 class="post-full-title">Quantum Operations: Unitary and Reversible Matrices</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/6.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/5.jpg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
-<p>In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion. Since every operation can be implemented as a logic gate in the circuit, all calculations come down to a specific sequence of logic gates. Is there any anology to classical gates but for qubits given the difference between classical and quantum configuration.</p>
+<p>In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion. Since every operation can be implemented as a logic gate in the circuit, all calculations come down to a specific sequence of logic gates. In the quantum realm, quantum operations, or quantum logic gates, are an anology to classical gates but for qubits given the difference between classical and quantum configuration.</p>
 
 <h4 id="a-principle-of-quantum-operations">A principle of quantum operations</h4>
 
@@ -268,16 +268,21 @@ Theoretically, it&rsquo;s possible to construct more &lsquo;controlled&rsquo; ga
 0 &amp; 1 \\ 1 &amp; 0
 \end{bmatrix}
 \end{bmatrix} = \begin{bmatrix}
-0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\ 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0\end{bmatrix}$$
-Applying this combined operator to a Bell state $\left|\Psi\right\rangle = \frac{1}{\sqrt{2}}\left(\left|00\right\rangle + \left|11\right\rangle\right)$ results in
-$$(H\otimes X)\left|\Psi\right\rangle = \begin{bmatrix}
-0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\ 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0\end{bmatrix} \begin{bmatrix}\frac{1}{\sqrt{2}} \\ 0 \\ 0 \\ \frac{1}{\sqrt{2}}  \end{bmatrix}= \begin{bmatrix} \frac{1}{2} \\ \frac{1}{2} \\ -\frac{1}{2} \\ \frac{1}{2}\end{bmatrix} = \frac{1}{\sqrt{2}}\left( \left|00\right\rangle + \left|01\right\rangle - \left|10\right\rangle + \left|11\right\rangle \right)$$
-Trong verifies his multiplication by comparing with the result produced directly by hand
-$$\frac{1}{\sqrt{2}}\left(\left|00\right\rangle + \left|11\right\rangle\right) \overset{H\otimes I}{\rightarrow}
-\frac{1}{2}\left( \left|00\right\rangle + \left|10\right\rangle + \left|01\right\rangle - \left|11\right\rangle \right) \overset{I\otimes X}{\rightarrow} \frac{1}{2}\left( \left|01\right\rangle + \left|11\right\rangle + \left|00\right\rangle - \left|10\right\rangle \right) $$
-It was proven that any quantum manipulation can be performed by a set of basic quantum gates. These gates are call universal gates and just include one and two-qubit gates. This universality will be discussed in one other post.</p>
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\ 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0\end{bmatrix}$$</p>
 
-<p>Before coming to the end, we&rsquo;ll go through some nice properties of tensor product. First, the product is an associative operation: $(A \otimes B) \otimes C = A \otimes (B \otimes C)$ so that it makes sense to write a sequence of tensor products straight out without parentheses. Second, operations acting on a same subset of qubit blends their effect altogether, assuming the product $AC$ and $BD$ make sense.
+<p>Applying this combined operator to a Bell state $\left|\Psi\right\rangle = \frac{1}{\sqrt{2}}\left(\left|00\right\rangle + \left|11\right\rangle\right)$ results in</p>
+
+<p>$$(H\otimes X)\left|\Psi\right\rangle = \begin{bmatrix}
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\ 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0\end{bmatrix} \begin{bmatrix}\frac{1}{\sqrt{2}} \\ 0 \\ 0 \\ \frac{1}{\sqrt{2}}  \end{bmatrix}= \begin{bmatrix} \frac{1}{2} \\ \frac{1}{2} \\ -\frac{1}{2} \\ \frac{1}{2}\end{bmatrix} = \frac{1}{\sqrt{2}}\left( \left|00\right\rangle + \left|01\right\rangle - \left|10\right\rangle + \left|11\right\rangle \right)$$</p>
+
+<p>Trong verifies his multiplication by comparing with the result produced directly using Dirac notations.</p>
+
+<p>$$\frac{1}{\sqrt{2}}\left(\left|00\right\rangle + \left|11\right\rangle\right) \overset{H\otimes I}{\rightarrow}
+\frac{1}{2}\left( \left|00\right\rangle + \left|10\right\rangle + \left|01\right\rangle - \left|11\right\rangle \right) \overset{I\otimes X}{\rightarrow} \frac{1}{2}\left( \left|01\right\rangle + \left|11\right\rangle + \left|00\right\rangle - \left|10\right\rangle \right) $$</p>
+
+<p>It was proven that any quantum manipulation can be performed by a set of basic quantum gates. These gates are call universal gates and just include one and two-qubit gates. This universality will be discussed in one other post.</p>
+
+<p>Before coming to the end, we&rsquo;ll go through some nice properties of tensor product. First, the product is an associative operation: $(A \otimes B) \otimes C = A \otimes (B \otimes C)$ so that it makes sense to write a sequence of tensor products straight out without parentheses. Second, operations acting on a same subset of qubit blends their effect altogether with the assumption that the products $AC$ and $BD$ make sense:
 $$(A \otimes B)(C \otimes D) = (AC \otimes BD)$$
 Third, the distributive laws hold for tensor product:
 $$A \otimes (B+C) = A \otimes B + A \otimes C $$
@@ -324,13 +329,15 @@ $$(\alpha A) \otimes B = A \otimes (\alpha B) $$</p>
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">Quantum Entanglement to cheat the Reality</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-3/">Quantum Teleportation: The Art of transporting the Unknown (Part 3)</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">Quantum Measurement: Not just 0 and 1</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-2/">Quantum Teleportation: The Art of transporting the Unknown (Part 2)</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/">A half-alive-half-dead cat and the beginning of Quantum Information</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
+                      
+        
+          <li><a href="https://myentangled.com/en/2019/04/learning-resources/">Learning Resources</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -464,6 +471,14 @@ Single Qubit Dirac notation $\left | \cdot \right\rangle$ (pronounced as ket) is
 
 <script>hljs.initHighlightingOnLoad();</script>
 
+
+  <!-- Google Analytics -->
+  <script>
+    var _gaq=[['_setAccount','google-site-verification=qA4s0-D9Q9IQAlFEUrJNkGs1JXtbFcRna2k2ZR1ErEA'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 
 
     <script>
