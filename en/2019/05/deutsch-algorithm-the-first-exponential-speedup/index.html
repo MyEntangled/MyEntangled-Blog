@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en-us" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <title>Deutsch Algorithm: The first exponential speedup &middot; </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
+    <link rel="canonical" href="https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/" />
+
+     <meta name="description" content="I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem wi" /> 
+
+     
+    
+    <meta name="twitter:card" content="summary"/>
+    
+ 
+    <meta name="twitter:title" content="Deutsch Algorithm: The first exponential speedup"/>
+    <meta name="twitter:description" content="I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem wi"/>
+    <meta name="twitter:url" content="https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/" />
+    <meta name="twitter:site" content="@"/>
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Deutsch Algorithm: The first exponential speedup &middot; My Entangled" />
+    <meta property="og:url" content="https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/" />
+    <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem wi" />
+
+    <meta property="article:published_time" content="2019-05-11T00:57:50&#43;07:00" />
+    <meta property="article:tag" content="project" />
+
+    <meta property="og:image" content="https://myentangled.com/uploads/cover-picture.jpg"/>
+
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
+
+     
+
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script> 
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto" rel="stylesheet"&gt>
+
+    <style>
+    p{
+    font-family: 'Arial', sans-serif;
+    }
+    body {
+    }
+    code {}
+    }
+    </style>
+
+</head>
+
+
+<body class="post-template">
+  <div class="site-wrapper"> 
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">
+
+        <ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="/en/">Home</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/categories/quantum-information">Quantum Information</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/categories/quantum-algorithms/">Quantum Algorithms</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/tags/project/">Projects</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">About me</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/2019/04/learning-resources/">Resources</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/">Tiếng Việt</a>
+            </li>
+        
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
+
+                    
+
+                    <a class="social-link" href="https://github.com/myentangled" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+                    
+
+                    
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    
+      <article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="2019-05-11">11 May 2019</time>
+                <span class="date-divider">/</span> <a href="https://myentangled.com/tags/project/">#project</a>&nbsp;
+        </section>
+        <h1 class="post-full-title">Deutsch Algorithm: The first exponential speedup</h1>
+    </header>
+    
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/4.jpg)">
+    </figure>
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        
+
+<blockquote>
+<p>I have said something like quantum computing can overpower classical computing several times before. In this series, I&rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.</p>
+</blockquote>
+
+<h4 id="phase-kick-back">Phase kick-back</h4>
+
+<p>One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors. In the setting of quantum information, we say $|\psi\rangle$ is an eigenvector of operator $U$ with eigenvalue $\lambda$ if
+$$U|\psi\rangle = \lambda|\psi\rangle$$</p>
+
+<p>The concept is very convenient because it keeps $|\psi\rangle$ unchanged or, more accurately, results in a multiple of $|\psi\rangle$. Here we have a special instance, which is the state $\frac{|0\rangle-|1\rangle}{\sqrt{2}}$. It is an eigenvector of the $I$ (Identity) gate (undoubtedly true for all states) and the $X$ (NOT) gate simultaneously. Verifying these properties, you&rsquo;ll see that
+$$I\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right) = \frac{|0\rangle-|1\rangle}{\sqrt{2}}$$
+$$X\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right) = (-1)\frac{|0\rangle-|1\rangle}{\sqrt{2}}$$</p>
+
+<p>Now we try to evaluate the effects in a 2-qubit gate $U_f$ that maps $U_f: |x\rangle|y\rangle \mapsto |x\rangle|y\oplus f(x)\rangle$ with $f$ being an arbitrary function from $\{0,1\}$ to $\{0,1\}$. Although you cannot the function $f$ itself, the whole mapping $U_f$ is reversible because the control qubit $|x\rangle$ is kept intact. We can fix the <em>target register</em> (another name for <em>target qubit</em>) to the state $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$ and analyse the impact $U_f$ creates on the control register.
+$$\begin{matrix} \displaystyle{U_f: |x\rangle \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)} &amp; \displaystyle{\mapsto} &amp; \displaystyle{\frac{U_f|x\rangle|0\rangle -U_f|x\rangle|1\rangle}{\sqrt{2}}}\\
+&amp; = &amp; \displaystyle{\frac{|x\rangle|0\oplus f(x)\rangle - |x\rangle|1\oplus f(x)\rangle}{\sqrt{2}}}\\
+&amp; = &amp; \displaystyle{|x\rangle \left( \frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}} \right)}\end{matrix}$$</p>
+
+<p>We know that $\oplus f(x)$ acts as an Identity operator if $f(x) = 0$ and as a NOT operator if $f(x) = 1$. This is the case I explained just before this example. So, let&rsquo;s consider what occurs to the target qubit when $f(x) = 0$ and $f(x) = 1$:
+$$\begin{matrix} f(x) = 0 : &amp; \displaystyle{\frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}}}  &amp;= &amp; \displaystyle{\frac{|0\rangle - |1\rangle}{\sqrt{2}}}\\
+f(x) = 1 : &amp; \displaystyle{\frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}}} &amp; = &amp; \displaystyle{-\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)}\end{matrix}$$</p>
+
+<p>In these two possibilities, the posterior target states only differ by a global factor of $-1$, which depends on the value of $f(x)$. In that way, we can generalize the transformation into:
+$$\displaystyle{ U_f: |x\rangle \left( \frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}} \right) \mapsto (-1)^{f(x)} |x\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}$$
+<p> In most of the cases, the control qubit will be in a superposition of $|0\rangle$ and $|1\rangle$: </p>
+$$\displaystyle{ U_f: (\alpha|0\rangle + \beta|1\rangle) \left( \frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}} \right) \mapsto \left( (-1)^{f(0)} \alpha|0\rangle + (-1)^{f(1)} \beta|1\rangle  \right) \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}$$</p>
+
+<p>This phase kick-back technique is definitely useful for solving some quantum problems, especially the next one.</p>
+
+<h4 id="deutsch-problem">Deutsch Problem</h4>
+
+<p>Trong&rsquo;s crush has a apparatus that takes a binary input to compute a binary value. Mathematically, it&rsquo;s a black-box function $f: \{0,1\} \rightarrow \{0,1\}$ (which means you can get the value of $f$ with different inputs but have no idea about how $f$ computes inside). </br>
+<strong>Task</strong>: Trong wants to whether $f$ is constant or balanced by making least queries to $f$.</p>
+
+<p>What is a constant function? Balanced function. A function with binary outputs is constant if it always returns one value regardless of the input. A balanced function is one that outputs $0$ in a half of circumstances and outputs $1$ in the other half. $f: \{0,1\} \rightarrow 0$ and $f: \{0,1\} \rightarrow 1$ are examples of constant functions while $f(x) = \left\{\begin{matrix} 0 \text{, if } x = 0 \\ 1 \text{, if } x = 1 \end{matrix}\right. \text{ }$ and $\text{ }f(x) = \left\{\begin{matrix} 0 \text{, if } x = 1 \\ 1 \text{, if } x = 0 \end{matrix}\right.$ are balanced. Although we have no way to decode a black-box function, it&rsquo;s possible to extract some partial, relational information of the function leveraging quantum information properties. In the Deutsch problem, $f$ is constant if $f(0) \oplus f(1) = 0$ and balanced if $f(0) \oplus f(1) = 0$ that makes the problem equivalent to evaluating $f(0) \oplus f(1)$ with least queries. </br></p>
+
+<p>Let&rsquo;s start from the classical approach. How many queries are needed at least to determine $f(0) \oplus f(1)$. The answer is obviously $2$. You have to know both the values of $f(0)$ and $f(1)$. Without one of those two values, you can never conclude anything if the function is constant or balanced. On the other hand, a quantum algorithm known as Deutsch algorithm is able to achieve this within a single query.</p>
+
+<p><img src="/uploads/Deutsch Algorithm/simple-version.png" alt="Example image" /></p>
+
+<p>The figure above is the quantum circuit for the Deutsch algorithm. We begin with two registers, one in $|0\rangle$ and the other in $|-\rangle$. The $|-\rangle$ qubit is used because we want to exploit it in phase kick-back. This state can be craeted by applying a single Hadamard gate to $|1\rangle$, which I don&rsquo;t show to emphasize the algorithm&rsquo;s symmetry. If you&rsquo;re curious about using $|-\rangle|0\rangle$ as our starter pack, you can reproduce the result by following the same procedure as follows:</p>
+
+<p>First, as I&rsquo;ve mentioned, the input state is:
+$$|\psi_0\rangle = |0\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)$$</p>
+
+<p>Second, let a Hadamard gate act on the first qubit. The purpose of this action is to create a superposition that grants us the ability to quantumly compute on multiple combinations of states simultaneously after this stage.
+$$\begin{matrix} |\psi_1\rangle &amp; = &amp; \displaystyle{\left( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \right) \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}\\
+&amp; = &amp; \displaystyle{\frac{1}{\sqrt{2}}|0\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) + \frac{1}{\sqrt{2}}|1\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}\end{matrix}$$</p>
+
+<p>Recalling the last representation of $U_f$ shown in the Phase kick-back section, after applying the $U_f$ gate and doing some basic math we have:
+$$\begin{matrix} |\psi_2\rangle &amp; = &amp; \displaystyle{\frac{(-1)^{f(0)}}{\sqrt{2}}|0\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) + \frac{(-1)^{f(1)}}{\sqrt{2}}|1\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}\\
+&amp; = &amp; \displaystyle{\left( \frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}} \right) \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}\\
+&amp; = &amp; \displaystyle{(-1)^{f(0)} \left( \frac{|0\rangle+(-1)^{f(0)\oplus f(1)}|1\rangle}{\sqrt{2}} \right) \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}\end{matrix}$$</p>
+
+<p>In the last line we have conveniently factored out $(-1)^{f(0)}$ to the global phase, leaving $(-1)^{f(0)\oplus f(1)}$ as a relative phase. It&rsquo;s possible to ignore the global phase because it&rsquo;s unobservable and thus has no experimental meaning. With that in mind, we can see that if $(-1)^{f(0)\oplus f(1)} = 0$ when $f$ is constant, the first qubit is left in the stage $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$. In contrast, if $(-1)^{f(0)\oplus f(1)} = 1$ when $f$ is balanced, the first qubit becomes $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$. The two possibilities resulting from two situations of $f$ are easily distinguished with a measurement in Hadamard basis.</p>
+
+<p>If $f$ is constant, or $(-1)^{f(0)\oplus f(1)} = 0$,
+$$|\psi_3\rangle = (-1)^{f(0)}|0\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)$$
+If $f$ is balanced, or $(-1)^{f(0)\oplus f(1)} = 1$,
+$$|\psi_3\rangle = (-1)^{f(0)}|1\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)$$</p>
+
+<p>At this point you should see that the type of $f$ is associated with $f(0) \oplus f(1)$ and this sum associated with the technique of kicking back phase factors (corresponding to control register&rsquo;s state). The concept of using quantum interference to find out the relative amplitude is applied in this text and the next one. The real exponential speedup will appear soon&hellip;</p>
+    
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="https://myentangled.com/">Entangled Cat</a></h4>
+                <p>A superimposed, textroverted cate-worshippurr</p>
+        </section>
+      </section>
+    </footer>
+</article>
+    
+    
+    
+
+  </div>
+</main>
+
+
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">      
+      
+<article class="read-next-card" 
+            style="background-image: url(https://myentangled.com/uploads/cover-picture.jpg);" >
+    <header class="read-next-card-header">
+        <small class="read-next-card-header-sitetitle">&mdash; My Entangled &mdash;</small>
+        
+        <h3 class="read-next-card-header-title"><a href="https://myentangled.com/tags/project/">#project</a></h3>
+    </header>
+    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+    </div>
+
+    <div class="read-next-card-content">
+      
+        <ul>
+          <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/learning-resources/">Learning Resources</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/quantum-search-algorithm/">Quantum Search Algorithm</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/">Quantum Operations: Unitary and Reversible Matrices</a></li>            
+        </ul>
+    </div>
+    <footer class="read-next-card-footer">
+      
+        <a href="https://myentangled.com/tags/project/">See all related posts →</a>
+    </footer>
+</article>
+
+
+      
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/learning-resources/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/7.jpg)"></div>
+    </a>    
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/learning-resources/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">Learning Resources</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the development level. Most widely used quantum programming languages and libraries are created for people to learn and experiment with their ideas rather than for publishing any kind of commercial product. Generally speaking, the field has a weak application side; its focus strongly lies in interpreting quantum information theories and&hellip; build some funny stuffs for the sake of learning. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile-picture.png" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+      
+    </div>
+  </div>
+</aside>
+
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="https://myentangled.com/">
+      
+      <span></span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">Deutsch Algorithm: The first exponential speedup</div>
+  <div class="floating-header-share">
+    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+    </div>
+    
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Deutsch%20Algorithm%3a%20The%20first%20exponential%20speedup&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f05%2fdeutsch-algorithm-the-first-exponential-speedup%2f"
+          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+      </a>
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f05%2fdeutsch-algorithm-the-first-exponential-speedup%2f"
+          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+      </a>
+  </div>
+
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="/"></a>  <br>
+      
+    </section>
+    <nav class="site-footer-nav">
+        <a href="/">Latest Posts</a>
+        <a href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener">Facebook</a>
+        
+        <a href="https://github.com/myentangled" target="_blank" rel="noopener">Github</a>
+        
+        
+    </nav>  
+  </div>
+
+</footer>
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://myentangled.com/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+  <!-- Google Analytics -->
+  <script>
+    var _gaq=[['_setAccount','google-site-verification=qA4s0-D9Q9IQAlFEUrJNkGs1JXtbFcRna2k2ZR1ErEA'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+
+    <script>
+
+
+
+
+
+$(document).ready(function () {
+    
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+</body></html>

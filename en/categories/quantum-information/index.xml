@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Information on </title>
+    <link>https://myentangled.com/en/categories/quantum-information/</link>
+    <description>Recent content in Quantum Information on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Sat, 20 Apr 2019 11:09:30 +0700</lastBuildDate>
+    
+	<atom:link href="https://myentangled.com/en/categories/quantum-information/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A formal approach to Observables and Measurements</title>
+      <link>https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/</link>
+      <pubDate>Sat, 20 Apr 2019 11:09:30 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/</guid>
+      <description>Throughout previous posts, I&amp;rsquo;ve delivered a way to understand what is a quantum measurement. That way of understanding is simple and may suit our normal intuition, but measurement is a non-trivial physical process and somewhat counter-intuitive for several reasons.
+First, a measurement in general results in probabilistic outcomes. No matter how careful you prepare for the measurement procedure, it is inherent that possible outcomes of a measure is distributed according to a certain probability distribution determined by the state space of your quantum system.</description>
+    </item>
+    
+    <item>
+      <title>Quantum Operations: Unitary and Reversible Matrices</title>
+      <link>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</link>
+      <pubDate>Sat, 30 Mar 2019 10:58:21 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</guid>
+      <description>In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion. Since every operation can be implemented as a logic gate in the circuit, all calculations come down to a specific sequence of logic gates.</description>
+    </item>
+    
+    <item>
+      <title>Quantum Entanglement to cheat the Reality</title>
+      <link>https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/</link>
+      <pubDate>Fri, 29 Mar 2019 23:59:42 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/</guid>
+      <description>Quantum entanglement Have you ever thought of a situation when the happening of an event in an isolated environment dictates the result of another event also in an isolated environment with no communication allowed? That sounds infeasible in our view of reality, except that these two separated events share a somewhat telepathic power. Yes, this telepathy really happens in the realm of quantum entanglement. The phenomenon can be simplified that the result of the first measurement reveals information about the result of the second measurement despite an absolute separation and no communication setting.</description>
+    </item>
+    
+    <item>
+      <title>Quantum Measurement: Not just 0 and 1</title>
+      <link>https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/</link>
+      <pubDate>Tue, 26 Mar 2019 10:58:21 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/</guid>
+      <description>Quantum entanglement is, by definition, a phenomenon that the combined state of a set of qubits cannot be described as a product of the states of each qubit of that set, which also means the entangled state contains hidden information that one cannot reveal through examining separate qubits. In this text, I&amp;rsquo;m going to introduce and discuss several aspects of this spectacular phenomenon.
+Measurement in different bases In previous posts, I&amp;rsquo;ve mentioned that a qubit can be in a superposition of its basis states $\left|0\right\rangle$ and $\left|1\right\rangle$ with corresponding complex amplitudes $a_0$ and $a_1$.</description>
+    </item>
+    
+    <item>
+      <title>Qubits: The substitution of bits in quantum scenario</title>
+      <link>https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/</link>
+      <pubDate>Fri, 15 Mar 2019 16:39:36 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/</guid>
+      <description>As I&amp;rsquo;ve mentioned in my previous post, qubits doesn&amp;rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&amp;rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field like me.
+Single Qubit Dirac notation $\left | \cdot \right\rangle$ (pronounced as ket) is adopted to indicate qubit states. The state $\left|\psi\right\rangle$ associated with a qubit can be an arbitrary unit vector in the two-dimensional vector space over the complex numbers.</description>
+    </item>
+    
+    <item>
+      <title>A half-alive-half-dead cat and the beginning of Quantum Information</title>
+      <link>https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/</link>
+      <pubDate>Tue, 12 Mar 2019 19:47:20 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/</guid>
+      <description>You may have heard of quantum information promising many prospects in revolutionizing the future of computers? When I was a high-schooler years ago, I also got amazed by these statements repeated in pop science articles. But to what extent this statement is true? Before we come to a final conclusion, let&amp;rsquo;s take a look on historical milestones of the field.
+The duration from the 1900s to 1930s was the golden age of quantum mechanics with many groundbreaking findings that established a concrete theoretical foundation for quantum information.</description>
+    </item>
+    
+  </channel>
+</rss>
