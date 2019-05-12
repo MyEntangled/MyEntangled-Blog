@@ -12,11 +12,20 @@
     
     
     <item>
-      <title>Quantum Computing</title>
-      <link>https://myentangled.com/en/categories/quantum-computing/</link>
-      <pubDate>Fri, 26 Apr 2019 15:26:47 +0700</pubDate>
+      <title>Quantum Algorithms</title>
+      <link>https://myentangled.com/en/categories/quantum-algorithms/</link>
+      <pubDate>Sat, 11 May 2019 00:57:50 +0700</pubDate>
       
-      <guid>https://myentangled.com/en/categories/quantum-computing/</guid>
+      <guid>https://myentangled.com/en/categories/quantum-algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantum Information</title>
+      <link>https://myentangled.com/en/categories/quantum-information/</link>
+      <pubDate>Sat, 20 Apr 2019 11:09:30 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/categories/quantum-information/</guid>
       <description></description>
     </item>
     

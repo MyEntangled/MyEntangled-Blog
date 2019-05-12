@@ -17,7 +17,8 @@
 
      
     
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Quantum%20Operations/QuantumGate.gif"/>
     
  
     <meta name="twitter:title" content="Quantum Operations: Unitary and Reversible Matrices"/>
@@ -33,10 +34,11 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and D" />
 
-    <meta property="article:published_time" content="2019-03-26T10:58:21&#43;07:00" />
-    <meta property="article:tag" content="archive" />
+    <meta property="article:published_time" content="2019-03-30T10:58:21&#43;07:00" />
+    
 
-    <meta property="og:image" content="https://myentangled.com/uploads/cover-picture.jpg"/>
+    <meta property="og:image" content="https://myentangled.com/uploads/Quantum%20Operations/QuantumGate.gif"/>
+
 
     <meta name="generator" content="Hugo 0.54.0" />
 
@@ -112,7 +114,11 @@
             </li>
         
             <li class="" role="menuitem">
-              <a href="/en/tags/archive/">Archives</a>
+              <a href="/en/categories/quantum-information">Quantum Information</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/categories/quantum-algorithms/">Quantum Algorithms</a>
             </li>
         
             <li class="" role="menuitem">
@@ -121,10 +127,6 @@
         
             <li class="" role="menuitem">
               <a href="/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">About me</a>
-            </li>
-        
-            <li class="" role="menuitem">
-              <a href="/en/categories/quantum-computing/">Quantum Computing</a>
             </li>
         
             <li class="" role="menuitem">
@@ -163,13 +165,12 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2019-03-26">26 March 2019</time>
-                <span class="date-divider">/</span> <a href="https://myentangled.com/tags/archive/">#archive</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2019-03-30">30 March 2019</time>
         </section>
         <h1 class="post-full-title">Quantum Operations: Unitary and Reversible Matrices</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/5.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Operations/QuantumGate.gif)">
     </figure>
 
     <section class="post-full-content">
@@ -182,7 +183,7 @@
 
 <p>A fundamental property of qubits is that they are constrained by the normalization condition, i.e. sum of amplitudes&rsquo; square equal 1. Because operations act on a set of qubits and transform them to another quantum state, the operations must preserve the normalization throughout the whole process. Mathematically, the possible operations are matrices that preserve the Euclidean norm of a vector state they apply on. This kind of matrices are called <em>unitary matrices</em> denoted as $U$. A simple way to verify a matrix&rsquo;s unitarity is to check the equation:
 $$U^{\dagger}U=UU^{\dagger}=I \text{ (Eq.1)}$$
-where $U^{\dagger}$ ($U$ dagger) is the conjugate transpose of $U$, which means to take the transpose of $U$ and then take the complex conjugate of each of the transpose&rsquo; entries. Applying a few unitary matrices on quantum state $\left|\psi\right\rangle = \alpha\left|0\right\rangle + \beta\left|1\right\rangle$ results in new states corresponding to the meaning of the operation.
+where $U^{\dagger}$ ($U$ dagger) is the conjugate transpose of $U$, which means to take the transpose of $U$ and then take the complex conjugate of each of the transpose&rsquo; entries. Applying each of a few unitary matrices on quantum state $\left|\psi\right\rangle = \alpha\left|0\right\rangle + \beta\left|1\right\rangle$ results in a new state corresponding to the meaning of the operation.
 $$I \text{ (Identity)}= \begin{bmatrix}
 1 &amp; 0\\
 0 &amp; 1
@@ -321,7 +322,6 @@ $$(\alpha A) \otimes B = A \otimes (\alpha B) $$</p>
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash; My Entangled &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="https://myentangled.com/tags/archive/">#archive</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -329,20 +329,17 @@ $$(\alpha A) \otimes B = A \otimes (\alpha B) $$</p>
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">Qubits: The substitution of bits in quantum scenario</a></li>            
+        
           <li><a href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">Quantum Entanglement to cheat the Reality</a></li>            
         
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-2/">Quantum Teleportation: The Art of transporting the Unknown (Part 2)</a></li>            
+        
           <li><a href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">Quantum Measurement: Not just 0 and 1</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/">A half-alive-half-dead cat and the beginning of Quantum Information</a></li>            
-        
-                      
-        
-          <li><a href="https://myentangled.com/en/2019/04/learning-resources/">Learning Resources</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="https://myentangled.com/tags/archive/">See all related posts →</a>
     </footer>
 </article>
 
@@ -350,23 +347,22 @@ $$(\alpha A) \otimes B = A \otimes (\alpha B) $$</p>
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Measurement/Fig1.png)"></div>
-    </a>
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-search-algorithm/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/6.jpg)"></div>
+    </a>    
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/quantum-search-algorithm/">
           <header class="post-card-header">
               <span class="post-card-tags">
               #archive  </span>
               
-              <h2 class="post-card-title">Quantum Measurement: Not just 0 and 1</h2>
+              <h2 class="post-card-title">Quantum Search Algorithm</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>Quantum entanglement is, by definition, a phenomenon that the combined state of a set of qubits cannot be described as a product of the states of each qubit of that set, which also means the entangled state contains hidden information that one cannot reveal through examining separate qubits. In this text, I&rsquo;m going to introduce and discuss several aspects of this spectacular phenomenon.
-Measurement in different bases In previous posts, I&rsquo;ve mentioned that a qubit can be in a superposition of its basis states $\left|0\right\rangle$ and $\left|1\right\rangle$ with corresponding complex amplitudes $a_0$ and $a_1$. ...  </p>
+                <p>By examining this operator in the instance of $|\Psi\rangle = \frac{1}{2} \left(|00\rangle +|01\rangle+|10\rangle+|11\rangle \right)$, i.e. the equal superposition of two qubits, and a post-phase-flip state $|k\rangle_2 = \left(a_{00}|00\rangle +a_{01}|01\rangle+a_{10}|10\rangle+a_{11}|11\rangle \right)$, we expect to preview the behavior of this so called phase-shift operator. The general form of this transformation is $\displaystyle{(2 |\Psi\rangle \langle\Psi| - I) |k\rangle_n = 2 |\Psi\rangle \langle\Psi||k\rangle_n - |k\rangle_n}$. For a clear writing, the part before the minus sign will be evaluated first. ...  </p>
               
           </section>
       </a>
@@ -381,23 +377,22 @@ Measurement in different bases In previous posts, I&rsquo;ve mentioned that a qu
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Fundamentals%20of%20Qubits/HelplessHighlevelEelelephant-size_restricted.gif)"></div>
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Entanglement/cover.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #archive  </span>
+              #project  </span>
               
-              <h2 class="post-card-title">Qubits: The substitution of bits in quantum scenario</h2>
+              <h2 class="post-card-title">Quantum Entanglement to cheat the Reality</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>As I&rsquo;ve mentioned in my previous post, qubits doesn&rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field like me.
-Single Qubit Dirac notation $\left | \cdot \right\rangle$ (pronounced as ket) is adopted to indicate qubit states. The state $\left|\psi\right\rangle$ associated with a qubit can be an arbitrary unit vector in the two-dimensional vector space over the complex numbers. ...  </p>
+                <p>Quantum entanglement Have you ever thought of a situation when the happening of an event in an isolated environment dictates the result of another event also in an isolated environment with no communication allowed? That sounds infeasible in our view of reality, except that these two separated events share a somewhat telepathic power. Yes, this telepathy really happens in the realm of quantum entanglement. The phenomenon can be simplified that the result of the first measurement reveals information about the result of the second measurement despite an absolute separation and no communication setting. ...  </p>
               
           </section>
       </a>

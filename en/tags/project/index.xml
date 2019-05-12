@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 26 Apr 2019 15:26:47 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 00:57:50 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/tags/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deutsch Algorithm: The first exponential speedup</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/</link>
+      <pubDate>Sat, 11 May 2019 00:57:50 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/</guid>
+      <description>I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&amp;rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
+ Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors.</description>
+    </item>
     
     <item>
       <title>Quantum Teleportation: The Art of transporting the Unknown (Part 3)</title>

@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/</loc>
+    <lastmod>2019-05-11T00:57:50+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/en/2019/04/learning-resources/</loc>
     <lastmod>2019-04-26T23:54:17+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/2019/04/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/2019/04/learning-resources/"
+                />
   </url>
   
   <url>
@@ -38,6 +53,11 @@
   </url>
   
   <url>
+    <loc>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</loc>
+    <lastmod>2019-03-30T10:58:21+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/</loc>
     <lastmod>2019-03-29T23:59:42+07:00</lastmod>
     <xhtml:link
@@ -65,11 +85,6 @@
                 hreflang="en"
                 href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</loc>
-    <lastmod>2019-03-26T10:58:21+07:00</lastmod>
   </url>
   
   <url>
@@ -104,7 +119,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-04-26T23:54:17+07:00</lastmod>
+    <lastmod>2019-05-11T00:57:50+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -120,7 +135,7 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/archive/</loc>
-    <lastmod>2019-04-26T15:26:47+07:00</lastmod>
+    <lastmod>2019-04-12T00:50:00+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -151,7 +166,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-04-26T23:54:17+07:00</lastmod>
+    <lastmod>2019-05-11T00:57:50+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -167,7 +182,7 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/project/</loc>
-    <lastmod>2019-04-26T15:26:47+07:00</lastmod>
+    <lastmod>2019-05-11T00:57:50+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -182,24 +197,20 @@
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/categories/quantum-computing/</loc>
-    <lastmod>2019-04-26T15:26:47+07:00</lastmod>
+    <loc>https://myentangled.com/en/categories/quantum-algorithms/</loc>
+    <lastmod>2019-05-11T00:57:50+07:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vn"
-                href="https://myentangled.com/vn/categories/quantum-computing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://myentangled.com/en/categories/quantum-computing/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/en/categories/quantum-information/</loc>
+    <lastmod>2019-04-20T11:09:30+07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://myentangled.com/en/tags/</loc>
-    <lastmod>2019-04-26T15:26:47+07:00</lastmod>
+    <lastmod>2019-04-12T00:50:00+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

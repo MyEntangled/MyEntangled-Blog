@@ -17,7 +17,8 @@
 
      
     
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Quantum%20Measurement/cover.jpg"/>
     
  
     <meta name="twitter:title" content="A formal approach to Observables and Measurements"/>
@@ -36,7 +37,8 @@
     <meta property="article:published_time" content="2019-04-20T11:09:30&#43;07:00" />
     
 
-    <meta property="og:image" content="https://myentangled.com/uploads/cover-picture.jpg"/>
+    <meta property="og:image" content="https://myentangled.com/uploads/Quantum%20Measurement/cover.jpg"/>
+
 
     <meta name="generator" content="Hugo 0.54.0" />
 
@@ -112,7 +114,11 @@
             </li>
         
             <li class="" role="menuitem">
-              <a href="/en/tags/archive/">Archives</a>
+              <a href="/en/categories/quantum-information">Quantum Information</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/categories/quantum-algorithms/">Quantum Algorithms</a>
             </li>
         
             <li class="" role="menuitem">
@@ -121,10 +127,6 @@
         
             <li class="" role="menuitem">
               <a href="/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">About me</a>
-            </li>
-        
-            <li class="" role="menuitem">
-              <a href="/en/categories/quantum-computing/">Quantum Computing</a>
             </li>
         
             <li class="" role="menuitem">
@@ -168,7 +170,7 @@
         <h1 class="post-full-title">A formal approach to Observables and Measurements</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/3.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Measurement/cover.jpg)">
     </figure>
 
     <section class="post-full-content">
@@ -183,9 +185,13 @@
 
 <p>Third, it is necessary to define a set of theoretical rules that allows us to evaluate the probability distribution determining the result if we perform a measurement. Today we&rsquo;re going to get a deeper look at what a measurement really is in a formally mathematical fashion.</p>
 
-<p>Recall that quantum computing is the science of computation leveraging quantum properties. Qubits, the protagonists in the field, are merely a computer science-favored name for atomic and sub-atomic particles like photons, electrons, etc.. For that reason, measuring a qubit is just measuring specific characteristics of a particle (including but not limited to position, energy, charge, momentum, angular momentum, and spin) that are collectively known as <em>observables</em>. In that way, the outcome of a measurement corresponds to the values of the qubit&rsquo;s observables. Mathematically, observables are Hermitian operators, a special kind of operator: if $\hat{A}$ is a linear operator: $\hat{A}: \mathscr{H} \rightarrow \mathscr{H}$ with $\mathscr{H}$ is a finite-dimensional Hilbert space, and if $\hat{A} = \hat{A^{\dagger}}$, then $\hat{A}$ is a Hermitian operator.</p>
+<p>Recall that quantum computing is the science of computation leveraging quantum properties. Qubits, the protagonists in the field, are merely a computer science-favored name for atomic and sub-atomic particles like photons, electrons, etc.. For that reason, measuring a qubit is just measuring specific characteristics of a particle (including but not limited to position, energy, charge, momentum, angular momentum, and spin) that are collectively known as <em>observables</em>. In that way, the outcome of a measurement corresponds to values of the measured qubit&rsquo;s observables. Mathematically, observables are Hermitian operators, a special kind of operator: if $\hat{A}$ is a linear operator: $\hat{A}: \mathscr{H} \rightarrow \mathscr{H}$ with $\mathscr{H}$ is a finite-dimensional Hilbert space, and if $\hat{A} = \hat{A^{\dagger}}$, then $\hat{A}$ is a Hermitian operator.</p>
 
-<p>It needs some techniques in functional analysis to provide a complete explanation why Hermitian operators associate with observable. This makes the concept convoluted and unappealing (actually because I don&rsquo;t fully understand it). For simplicity, this correspondence happens because physical quantities must have real values, and there is a theorem states that Hermitian operators always have real eigenvalues. As a result, it makes sense to use Hermitian operators to represent observables.</p>
+<p>It needs some techniques in functional analysis to provide a complete explanation why Hermitian operators associate with observable. This makes the concept convoluted and unappealing (actually because I don&rsquo;t fully understand it). For simplicity, I would say that this correspondence happens because physical quantities must have real values, and there is a theorem states that Hermitian operators always have real eigenvalues. As a result, it makes sense to use Hermitian operators to represent observables. A quantum postulate summarizes the concepts that</p>
+
+<blockquote>
+<p>All possible results of a measurement of an observable are limited to the set of eigenvalues of that observable.</p>
+</blockquote>
 
 <p>Let $\hat{M}$ be an observable (Hermitian operator), which is defined in the state space of your quantum system, that describes a projective measurement. Since the state space has finite dimensions, it is possible to write $$\hat{M} = \sum_i r_i \hat{P}_{r_i}$$
 , where $\hat{P}_{r_i}$ associated with the eigenvalue $r_i$ of $\hat{M}$ is the projector on the eigenspace of $\hat{M}$ defined by that eigenvalue. (In case you didn&rsquo;t know, eigenspace is the space spanned by all eigenvectors corresponding the same eigenvalue, i.e. the space of all vectors that can be written as linear combinations of those eigenvectors.) The possible outcomes of your measurement are the eigenvalues $r_i$ of observable $\hat{M}$.</p>
@@ -237,9 +243,7 @@ $$|\psi\rangle \leftarrow \frac{\hat{P}_0 |\psi\rangle}{\sqrt{p(0)}} = \frac{\fr
 with $\displaystyle{\left | \frac{1-i}{\sqrt{2}}\right | = 1}$ as expected.</p></li>
 </ul>
 
-<blockquote>
-<p>After going through this wall of text, you probably have enough background knowledge regarding Quantum Information to understand Quantum Algorithms, the next focus of my posts later. If there will be any further post on Quantum Information, it would be at an advanced level and inclined to the Theory of Quantum Mechanics rather than an essence for Quantum Computing.</p>
-</blockquote>
+<p>After going through this wall of text, you probably have enough background knowledge regarding Quantum Information to understand Quantum Algorithms, the next focus of my posts later. If there will be any further post on Quantum Information, it would be at an advanced level and inclined to the Theory of Quantum Mechanics and Quantum Information rather than an essence for Quantum Computing.</p>
     
         </div>
     </section>
@@ -278,15 +282,13 @@ with $\displaystyle{\left | \frac{1-i}{\sqrt{2}}\right | = 1}$ as expected.</p><
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-3/">Quantum Teleportation: The Art of transporting the Unknown (Part 3)</a></li>            
+          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/">Deutsch Algorithm: The first exponential speedup</a></li>            
         
           <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-2/">Quantum Teleportation: The Art of transporting the Unknown (Part 2)</a></li>            
         
-                      
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-1/">Quantum Teleportation: The Art of transporting the Unknown (Part 1)</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/learning-resources/">Learning Resources</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/">A half-alive-half-dead cat and the beginning of Quantum Information</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-3/">Quantum Teleportation: The Art of transporting the Unknown (Part 3)</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -299,8 +301,8 @@ with $\displaystyle{\left | \frac{1-i}{\sqrt{2}}\right | = 1}$ as expected.</p><
       <article class="post-card post"> 
     
     <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-1/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/1.jpg)"></div>
-    </a>    
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)"></div>
+    </a>
     
 
     <div class="post-card-content">
@@ -328,13 +330,15 @@ with $\displaystyle{\left | \frac{1-i}{\sqrt{2}}\right | = 1}$ as expected.</p><
       <article class="post-card post"> 
     
     <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-search-algorithm/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/1.jpg)"></div>
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/2.jpg)"></div>
     </a>    
     
 
     <div class="post-card-content">
       <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/quantum-search-algorithm/">
           <header class="post-card-header">
+              <span class="post-card-tags">
+              #archive  </span>
               
               <h2 class="post-card-title">Quantum Search Algorithm</h2>
           </header>

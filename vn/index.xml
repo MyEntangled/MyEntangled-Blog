@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vn-vn</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 29 Mar 2019 23:59:42 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 23:54:17 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/vn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tài liệu học tập</title>
+      <link>https://myentangled.com/vn/2019/04/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</link>
+      <pubDate>Fri, 26 Apr 2019 23:54:17 +0700</pubDate>
+      
+      <guid>https://myentangled.com/vn/2019/04/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</guid>
+      <description>Không giống như những nhánh đang nổi trội khác của ngành khoa học máy tính như trí tuệ nhân tạo hay học máy, điện toán lượng tử còn khá non trẻ khi so sánh về mức độ phát triển. Hầu hết các ngôn ngữ lập trình hoặc thư viện lượng tử được tạo ra để mọi người học và thí nghiệm những ý tưởng mới thay vì dùng để phát hành bất kì sản phẩm thương mại nào.</description>
+    </item>
     
     <item>
       <title>Vướng víu Lượng tử - một cứ lừa đối với thực tại?</title>

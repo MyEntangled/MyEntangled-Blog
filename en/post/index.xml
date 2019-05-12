@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 26 Apr 2019 23:54:17 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 00:57:50 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deutsch Algorithm: The first exponential speedup</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/</link>
+      <pubDate>Sat, 11 May 2019 00:57:50 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/</guid>
+      <description>I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&amp;rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
+ Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors.</description>
+    </item>
     
     <item>
       <title>Learning Resources</title>
@@ -18,7 +28,7 @@
       <pubDate>Fri, 26 Apr 2019 23:54:17 +0700</pubDate>
       
       <guid>https://myentangled.com/en/2019/04/learning-resources/</guid>
-      <description>Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the development level. Most widely used quantum programming languages and libraries are created for people to learn and experiment with their ideas rather than for publishing any kind of commercial product. Roughly speaking, the field lacks the application side; its focus strongly lies in interpreting quantum theories and&amp;hellip; build some funny stuffs for the sake of learning.</description>
+      <description>Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the development level. Most widely used quantum programming languages and libraries are created for people to learn and experiment with their ideas rather than for publishing any kind of commercial product. Generally speaking, the field has a weak application side; its focus strongly lies in interpreting quantum information theories and&amp;hellip; build some funny stuffs for the sake of learning.</description>
     </item>
     
     <item>
@@ -79,6 +89,15 @@ First, a measurement in general results in probabilistic outcomes. No matter how
     </item>
     
     <item>
+      <title>Quantum Operations: Unitary and Reversible Matrices</title>
+      <link>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</link>
+      <pubDate>Sat, 30 Mar 2019 10:58:21 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</guid>
+      <description>In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion. Since every operation can be implemented as a logic gate in the circuit, all calculations come down to a specific sequence of logic gates.</description>
+    </item>
+    
+    <item>
       <title>Quantum Entanglement to cheat the Reality</title>
       <link>https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/</link>
       <pubDate>Fri, 29 Mar 2019 23:59:42 +0700</pubDate>
@@ -95,15 +114,6 @@ First, a measurement in general results in probabilistic outcomes. No matter how
       <guid>https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/</guid>
       <description>Quantum entanglement is, by definition, a phenomenon that the combined state of a set of qubits cannot be described as a product of the states of each qubit of that set, which also means the entangled state contains hidden information that one cannot reveal through examining separate qubits. In this text, I&amp;rsquo;m going to introduce and discuss several aspects of this spectacular phenomenon.
 Measurement in different bases In previous posts, I&amp;rsquo;ve mentioned that a qubit can be in a superposition of its basis states $\left|0\right\rangle$ and $\left|1\right\rangle$ with corresponding complex amplitudes $a_0$ and $a_1$.</description>
-    </item>
-    
-    <item>
-      <title>Quantum Operations: Unitary and Reversible Matrices</title>
-      <link>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</link>
-      <pubDate>Tue, 26 Mar 2019 10:58:21 +0700</pubDate>
-      
-      <guid>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</guid>
-      <description>In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion. Since every operation can be implemented as a logic gate in the circuit, all calculations come down to a specific sequence of logic gates.</description>
     </item>
     
     <item>
