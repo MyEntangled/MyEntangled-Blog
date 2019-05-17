@@ -3,7 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://myentangled.com/en/2019/05/deutsch-algorithm-the-first-exponential-speedup/</loc>
+    <loc>https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/</loc>
+    <lastmod>2019-05-18T00:53:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-phase-kickback/</loc>
     <lastmod>2019-05-11T00:57:50+07:00</lastmod>
   </url>
   
@@ -28,17 +33,17 @@
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-2/</loc>
+    <loc>https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/</loc>
     <lastmod>2019-04-26T15:26:47+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-3/</loc>
+    <loc>https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/</loc>
     <lastmod>2019-04-26T15:26:47+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/2019/04/quantum-teleportation-the-art-of-transporting-the-unknown-part-1/</loc>
+    <loc>https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/</loc>
     <lastmod>2019-04-26T15:26:46+07:00</lastmod>
   </url>
   
@@ -119,7 +124,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-05-11T00:57:50+07:00</lastmod>
+    <lastmod>2019-05-18T00:53:35+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -166,7 +171,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-05-11T00:57:50+07:00</lastmod>
+    <lastmod>2019-05-18T00:53:35+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
