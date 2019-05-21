@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deutsch Algorithm on </title>
+    <link>https://myentangled.com/en/tags/deutsch-algorithm/</link>
+    <description>Recent content in Deutsch Algorithm on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Sat, 18 May 2019 00:53:35 +0700</lastBuildDate>
+    
+	<atom:link href="https://myentangled.com/en/tags/deutsch-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/</link>
+      <pubDate>Sat, 18 May 2019 00:53:35 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/</guid>
+      <description>Here we&amp;rsquo;re gonna see the most impressive quantum algorithm in terms of query complexity. The algorithm is an generalization of the original Deutsch algorithm we discussed in the last post. But I want to say that this algorithm may not be as extraordinary as you may think of it. It was created to solve a kind of problem that has zero practical meaning for the purpose of demonstrating how strong quantum computing can reach compared to classical computing.</description>
+    </item>
+    
+    <item>
+      <title>Deutsch Algorithm (Part 1): Kicking the phase back</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/</link>
+      <pubDate>Sat, 11 May 2019 00:57:50 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/</guid>
+      <description>I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&amp;rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
+ Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors.</description>
+    </item>
+    
+  </channel>
+</rss>

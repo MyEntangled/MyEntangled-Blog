@@ -5,38 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-    <title>Learning Resources &middot; </title>
+    <title>Quantum Teleportation (Part 1): Preliminaries &middot; </title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
-    <link rel="canonical" href="https://myentangled.com/en/2019/04/learning-resources/" />
+    <link rel="canonical" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/" />
 
-     <meta name="description" content="Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the de" /> 
+     <meta name="description" content="Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&amp;rsquo;s helpful to ge" /> 
 
      
     
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Teleportation/fig1.jpg"/>
     
  
-    <meta name="twitter:title" content="Learning Resources"/>
-    <meta name="twitter:description" content="Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the de"/>
-    <meta name="twitter:url" content="https://myentangled.com/en/2019/04/learning-resources/" />
+    <meta name="twitter:title" content="Quantum Teleportation (Part 1): Preliminaries"/>
+    <meta name="twitter:description" content="Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&amp;rsquo;s helpful to ge"/>
+    <meta name="twitter:url" content="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/" />
     <meta name="twitter:site" content="@"/>
 
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Learning Resources &middot; " />
-    <meta property="og:url" content="https://myentangled.com/en/2019/04/learning-resources/" />
+    <meta property="og:title" content="Quantum Teleportation (Part 1): Preliminaries &middot; " />
+    <meta property="og:url" content="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/" />
     <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the de" />
+    <meta property="og:description" content="Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&amp;rsquo;s helpful to ge" />
 
-    <meta property="article:published_time" content="2019-04-26T23:54:17&#43;07:00" />
-    
+    <meta property="article:published_time" content="2019-04-26T15:26:46&#43;07:00" />
+    <meta property="article:tag" content="Teleportation" />
 
-    <meta property="og:image" content="https://myentangled.com/uploads/cover%20blog.png"/>
+    <meta property="og:image" content="https://myentangled.com/uploads/Teleportation/fig1.jpg"/>
+
 
     <meta name="generator" content="Hugo 0.54.0" />
 
@@ -163,75 +165,57 @@
     <header class="post-full-header">
         <section class="post-full-meta">
             <time class="post-full-meta-date" datetime="2019-04-26">26 April 2019</time>
+                <span class="date-divider">/</span> <a href="/en/tags/teleportation/">#Teleportation</a>&nbsp;
         </section>
-        <h1 class="post-full-title">Learning Resources</h1>
+        <h1 class="post-full-title">Quantum Teleportation (Part 1): Preliminaries</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/4.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
-<p>Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the development level. Most widely used quantum programming languages and libraries are created for people to learn and experiment with their ideas rather than for publishing any kind of commercial product. Generally speaking, the field has a weak application side; its focus strongly lies in interpreting quantum information theories and&hellip; build some funny stuffs for the sake of learning. For that reason, I could say that one haven&rsquo;t really learned quantum computing if he/she didn&rsquo;t get familiar with quantum information theories in the first place. Quantum information- and quantum computing-related books require readers some background knowledge in Linear Algebra (must), Probability and Statistics, Quantum Mechanics, Number Theory, Complex Analysis, and Functional Analysis (optional, depending on the topic) and is usually written in a less-than-friendly manner for beginners. So, in this text, I want to introduce to you all of my favorite materials since I started learning quantum information and quantum computing.</p>
+<blockquote>
+<p>Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&rsquo;s helpful to get familiar with a fundamental constraint to Quantum Computing. In contrast, I&rsquo;ll also introduce you how powerful qubits get in solving problems through a basic protocol: Quantum Teleportation, the &ldquo;Hello, world!&rdquo; of Quantum Programming.</p>
+</blockquote>
 
-<h4 id="take-your-first-step">Take your first step.</h4>
+<h4 id="no-cloning-theorem">No-cloning theorem</h4>
 
-<p>Here&rsquo;s a list of good, I think, reading materials and my comments on them:</p>
+<p>In terms of computer architechture, it&rsquo;s convenient to copy the state of a bit in order to create a new qubit exactly the same. The protocol that seems really simple in the classical scenario is nonetheless proven impossible to perform quantumly. You should understand that while measuring a bit is extremely easy, just $0$ or $1$ with nearly perfect certainty, that process is difficult as mentioned in my previous posts. You can still measure a qubit, but what you really get is just no more than probabilities. They are not even coefficients, what are essential to fully illustrate a qubit state, and just obtained in a statistical manner rather than deterministically. For those reasons, one will never get suffcient information to recreate another version from an arbitrary qubit in general.</p>
 
-<ul>
-<li><p>Lecture note for the course &ldquo;<a href='https://cs.uwaterloo.ca/~watrous/LectureNotes/CPSC519.Winter2006/all.pdf'>Introduction to Quantum Computing</a>&rdquo; by John Watrous: Best of best for beginners, very concise and informative, will definitely help you gain a concrete base. Must read.</p></li>
+<p>You may think that although we cannot recreate the qubit by knowing all of its amplitudes, we can copy its state to another without knowing the state. Unfortunatly, the cloning procedure is also unaccomplishable with the disproof as follows.</p>
 
-<li><p>&lsquo;Quantum Computer Science: An Introduction&rsquo; by David Mermin: Really good, written in computer science-favored style with strong emphasis on formal mathematics, a great preparation for more scientific texts. Highly recommended</p></li>
+<p>Let&rsquo;s formalize the problem. Trong was given a qubit that can be in any state $|\psi\rangle$, and he want to duplicate his qubit&rsquo;s state through a transformation that acts on his qubit and the second qubit initialized in $|0\rangle$. The whole process is displayed in the figure below.</p>
 
-<li><p>&lsquo;Quantum Computing for Computer Science&rsquo; by N. Yanofsky and M. Mannucci: Good but lengthy, uses matrix representation much and has numerous examples with steps listed clearly, certainly suitable for those who are not into math symbols at the onset.</p></li>
+<p><img src="/uploads/Teleportation/circuit_1.png" alt="Example image" /></p>
 
-<li><p>&lsquo;Quantum Computing since Democritus&rsquo; by Scott Aaronson: Interesting but may not suitable for serious learning, wall of text in a narrative tone and a theory focus, very good in referencing. Recommended to read in spare time because it&rsquo;ll give some distintive points of view.</p></li>
+<p>We want a unitary transformation $U$ as a map that $U|\psi\rangle |0\rangle = |\psi\rangle |\psi\rangle$:
+$$(\alpha|0\rangle + \beta|1\rangle) \otimes |0\rangle \overset{U}{\rightarrow} (\alpha|0\rangle + \beta|1\rangle)(\alpha|0\rangle + \beta|1\rangle) \quad \forall \alpha, \beta\in \mathbb{C}$$
+Second qubit replicating the first qubit means $|00\rangle \overset{U}{\rightarrow} |00\rangle$ and $|10\rangle \overset{U}{\rightarrow} |11\rangle$, which leads to the transformation of the LHS
+$$\begin{matrix} \alpha|00\rangle + \beta|10\rangle &amp; \overset{U}{\rightarrow} &amp; \alpha \cdot U|00\rangle + \beta \cdot U|11\rangle \\ &amp; = &amp; \alpha |00\rangle + \beta |11\rangle  \end{matrix}$$
+On the other hand, the expanded RHS is
+$$(\alpha|0\rangle + \beta|1\rangle)(\alpha|0\rangle + \beta|1\rangle) = \alpha^2 |00\rangle + \alpha\beta |01\rangle + \alpha\beta |10\rangle + \beta^2 |11\rangle$$
+So we have a contradiction as $$\alpha |00\rangle + \beta |11\rangle = \alpha^2 |00\rangle + \alpha\beta |01\rangle + \alpha\beta |10\rangle + \beta^2 |11\rangle$$ only when $\alpha = 1$ or $\beta = 1$.</p>
 
-<li><p>&lsquo;An Introduction to Quantum Computing&rsquo; by P. Kaye, R. Laflamme and M. Mosca: Best conclusion and expansion when you finish the basic part (by Grover and Shor algorithms), over-concise and well-written (so not perfect for absolute beginners), extremely theoretical, have a somewhat unique approach to quantum problems that may give you a thorough insight. Highly recommended. (Personal corner: I&rsquo;m very thankful to my bosses and mentors for gifting me this precious book.)</p></li>
-</ul>
+<p>As you can see, it&rsquo;s impossible to clone a qubit state unless the qubit is in the classical state $0$ and $1$. The no-cloning theorem introduces a fundamental barrier to the field as there isn&rsquo;t a universal machine that handles the cloning problem. Imagining that you are free to clone an arbitrary qubit with no idea about its state, i.e. there exists a cloning unitary, you could overcome the post-measurement collapse of a qubit by performing as many experiments as you desire on the clones to figure out the true state of that qubit.</p>
 
-<h4 id="higher-level">Higher level</h4>
+<h4 id="bell-state-circuit">Bell State Circuit</h4>
 
-<ul>
-<li>&lsquo;Quantum Processes, Systems, and Information&rsquo; by B. Schumacher and M. Westmoreland (Quantum Information Theory): Good in overall, detailed but hard to read due to both content and style, a stepping stone for academic papers. Recommended.</li>
-<li>&lsquo;Quantum Walks and Search Algorithms&rsquo; by Renato Portugal (Quantum Walks): Great, well-written and understandable. Highly recommended because quantum walks and search is becoming a branch full of promise. Highly recommended.</li>
-<li>&lsquo;Quantum Walks for Computer Scientist&rsquo; Salvador Venegas-Andraca: Average, informative but really hard-to-read, can serve as a complement to the book right above.</li>
-<li><a href='https://arxiv.org/pdf/1611.09347.pdf'>Quantum Machine Learning</a>: I haven&rsquo;t come to this branch yet so I cannot say anything about this paper although it serves as a widely used reference. One thing I can say is Quantum Machine Learning is the most active branch of quantum computing in the present.</li>
-</ul>
+<p>We have already learned about Bell states through one of my posts on quantum entanglement. There are four Bell states totally, $|\Psi^+\rangle$, $|\Psi^-\rangle$, $|\Phi^+\rangle$, $|\Phi^-\rangle$. The Bell states are essential in several algorithms, one of which is teleportation. So, learning how to construct a Bell state is a necessity before we proceed towards the protocol.</p>
 
-<h4 id="lecture-video">Lecture video</h4>
+<p><img src="/uploads/Teleportation/circuit_2.png" alt="Example image" /></p>
 
-<ul>
-<li>Quantum Mechanics: I found courses offered by MIT OpenCourseWare interesting, challenging but digestable. You can choose a professor whose teaching style you like to follow.</li>
-<li>Berkeley edX course CS191x &ldquo;Quantum Mechanics and Quantum Computation&rdquo; video lecture series by Professor Umesh Vazirani: a great, easy beginning for those who prefer listening to lectures, but not contain enough information for you to completely rely on. Recommended.</li>
-<li><a href='http://pirsa.org/'>Recorded Seminar Archive</a> of Perimeter Institute: An extremely good source for higher learning with tons of videos covering from fundamental to advanced topics.</li>
-</ul>
+<p>Let&rsquo;s get familiar with drawings in quantum circuits. An operator (usually called &lsquo;gate&rsquo; in circuits) is a square that contains a letter standing for the meaning of the gate. Controlled-NOT (CNOT) gate includes a large black dot connected with $\otimes$. The black dot holds for the <em>control qubit</em>, and the $\oplus$ (addition in 2-modulus) is the operator that will act on the <em>target qubit</em> if the control qubit is $|1\rangle$. Following the circuit in the figure, we will be able to create the Bell state $\displaystyle{|\Phi^+\rangle = \frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |11\rangle}$.</p>
 
-<h4 id="other-topics-as-suggestion-for-further-reading-and-searching-for-paper">Other topics (as suggestion for further reading and searching for paper)</h4>
-
-<ul>
-<li>Error correcting</li>
-<li>Computational complexity</li>
-<li>Probabilistic cloning</li>
-<li>Quantum optimization</li>
-<li>Quantum state tomography</li>
-<li>Quantum graph theory</li>
-<li>Quantum simulation</li>
-<li>Topological quantum computing</li>
-<li>&hellip; (too many and too hard)</li>
-</ul>
-
-<h4 id="get-your-hand-dirty">Get your hand dirty</h4>
-
-<p>Don&rsquo;t just merely read the book. Implement what you learned to understand the topic deeper. Some popular programming languages or libraries used in quantum computing are listed here.</p>
-
-<ul>
-<li>Q# by Microsoft: My favorite platform. It has a set of problems and solutions designed for beginners named <a href = "https://github.com/Microsoft/QuantumKatas">Quantum Katas</a>. Complete it and you&rsquo;ll see how your understanding has changed. By the way, it&rsquo;s the language used in the Microsoft Q# Coding Contest organized by CodeforcexMicrosoft (Problems from the contests are a good source for practicing purpose).</li>
-<li>Python, Qiskit by IBM: Really good with an enormous number of libraries and support from the community.</li>
-<li>IBM Q Experience: An interactive, drag-and-drop interface that features quantum circuit. You can run your own quantum algorithms using actual quantum computers built by IBM to see how erroneous so-called state-of-the-art quantum computers are. Just saying, still very recommended.</li>
-</ul>
+<p>First, we have two qubits both initialized in a basis state. $$|\psi\rangle = |00\rangle$$
+Followed from the Hadamard gate acting on the first qubit, the composite state transforms into
+$$\begin{matrix} |\psi\rangle &amp;\leftarrow&amp; \displaystyle{\left(\frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle\right) \otimes |0\rangle} \\
+&amp;=&amp; \displaystyle{\frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |10\rangle} \end{matrix}$$
+The CNOT gate adjusts components of the composite state $|\psi_1\rangle$ where the first qubit state is $|1\rangle$ and keeps the others the same. The performed transformation on the second qubit is a NOT gate (or $X$ gate), which is arithmatically the same as an addition module $2$.
+$$|\psi\rangle \leftarrow \frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |11\rangle$$
+That final state is a Bell state that shows some characteristics helpful in teleportation and other algorithms in general. You should explore by yourself what the eventual results would be if we change the initialized states to $|01\rangle$, $|10\rangle$ and $|11\rangle$ respectively.</p>
     
         </div>
     </section>
@@ -263,6 +247,7 @@
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash;  &mdash;</small>
         
+        <h3 class="read-next-card-header-title"><a href="/en/tags/teleportation/">#Teleportation</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -270,19 +255,20 @@
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/">Quantum Teleportation (Part 2): The Art of transporting the Unknown</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">Quantum Teleportation (Part 3): Implementation</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/">Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">Qubits: The substitution of bits in quantum scenario</a></li>            
         
                       
         
-          <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">Deutsch Algorithm (Part 1): Kicking the phase back</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/">Quantum Teleportation (Part 1): Preliminaries</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
+        <a href="/en/tags/teleportation/">See all related posts →</a>
     </footer>
 </article>
 
@@ -290,24 +276,24 @@
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/2.jpg)"></div>
-    </a>    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)"></div>
+    </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">
           <header class="post-card-header">
               <span class="post-card-tags">
               #project 
-              #Deutsch algorithm  </span>
+              #Teleportation  </span>
               
-              <h2 class="post-card-title">Deutsch Algorithm (Part 1): Kicking the phase back</h2>
+              <h2 class="post-card-title">Quantum Teleportation (Part 3): Implementation</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>I have said something like quantum computing can overpower classical computing several times before. In this series, I&rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
- Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors. ...  </p>
+                <p>Let&rsquo;s implement and verify the teleporation protocol following the procedure we discussed throughout previous parts.
+First we need to create an arbitrary quantum state. Trong has been curious about the combined effect of rotation gates about the x, y, and z axes. So, he decides to apply three distinct rotation gates, each as a rotation of 60 degrees around one coordinate axis acting on a qubit currently in the Hadamard state $|-\rangle$. ...  </p>
               
           </section>
       </a>
@@ -322,20 +308,23 @@
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/6.jpg)"></div>
-    </a>    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Measurement/cover.jpg)"></div>
+    </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">
           <header class="post-card-header">
+              <span class="post-card-tags">
+              #Quantum Mechanics  </span>
               
-              <h2 class="post-card-title">Who am I and what the fish is this blog?</h2>
+              <h2 class="post-card-title">A formal approach to Observables and Measurements</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>About me Hi, my name is Entangled, a cat who adopted a boy named Trong Duong. My servant&hellip; I liken&rsquo;t when he laughed watching videos of other cats showing off their cuteness. He love eating like me&hellip; but just a mediocre, troublemaking cook. He&rsquo;s also a textrovert, a word coined to indicate a person who is apparently energetic in a texting conversation but may dumb as a fish in a face-to-face. ...  </p>
+                <p>Throughout previous posts, I&rsquo;ve delivered a way to understand what is a quantum measurement. That way of understanding is simple and may suit our normal intuition, but measurement is a non-trivial physical process and somewhat counter-intuitive for several reasons.
+First, a measurement in general results in probabilistic outcomes. No matter how careful you prepare for the measurement procedure, it is inherent that possible outcomes of a measure is distributed according to a certain probability distribution determined by the state space of your quantum system. ...  </p>
               
           </section>
       </a>
@@ -359,17 +348,17 @@
     </a>
   </div>
   <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">Learning Resources</div>
+  <div class="floating-header-title">Quantum Teleportation (Part 1): Preliminaries</div>
   <div class="floating-header-share">
     <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Learning%20Resources&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2flearning-resources%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Quantum%20Teleportation%20%28Part%201%29%3a%20Preliminaries&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2fquantum-teleportation-part-1-preliminaries%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2flearning-resources%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2fquantum-teleportation-part-1-preliminaries%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>
