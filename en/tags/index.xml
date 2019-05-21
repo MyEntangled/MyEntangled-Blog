@@ -7,26 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Fri, 12 Apr 2019 00:50:00 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 00:53:35 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Archive</title>
-      <link>https://myentangled.com/en/tags/archive/</link>
-      <pubDate>Fri, 12 Apr 2019 00:50:00 +0700</pubDate>
+      <title>Deutsch Algorithm</title>
+      <link>https://myentangled.com/en/tags/deutsch-algorithm/</link>
+      <pubDate>Sat, 18 May 2019 00:53:35 +0700</pubDate>
       
-      <guid>https://myentangled.com/en/tags/archive/</guid>
+      <guid>https://myentangled.com/en/tags/deutsch-algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Preliminaries</title>
+      <link>https://myentangled.com/en/tags/preliminaries/</link>
+      <pubDate>Sat, 30 Mar 2019 10:58:21 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/tags/preliminaries/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project</title>
       <link>https://myentangled.com/en/tags/project/</link>
-      <pubDate>Sat, 11 May 2019 00:57:50 +0700</pubDate>
+      <pubDate>Sat, 18 May 2019 00:53:35 +0700</pubDate>
       
       <guid>https://myentangled.com/en/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantum Mechanics</title>
+      <link>https://myentangled.com/en/tags/quantum-mechanics/</link>
+      <pubDate>Sat, 20 Apr 2019 11:09:30 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/tags/quantum-mechanics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teleportation</title>
+      <link>https://myentangled.com/en/tags/teleportation/</link>
+      <pubDate>Fri, 26 Apr 2019 15:26:47 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/tags/teleportation/</guid>
       <description></description>
     </item>
     

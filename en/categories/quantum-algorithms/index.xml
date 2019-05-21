@@ -7,17 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate>Sat, 11 May 2019 00:57:50 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 00:53:35 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/categories/quantum-algorithms/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Deutsch Algorithm (Part 1): Phase kickback</title>
-      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-phase-kickback/</link>
+      <title>Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/</link>
+      <pubDate>Sat, 18 May 2019 00:53:35 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/</guid>
+      <description>Here we&amp;rsquo;re gonna see the most impressive quantum algorithm in terms of query complexity. The algorithm is an generalization of the original Deutsch algorithm we discussed in the last post. But I want to say that this algorithm may not be as extraordinary as you may think of it. It was created to solve a kind of problem that has zero practical meaning for the purpose of demonstrating how strong quantum computing can reach compared to classical computing.</description>
+    </item>
+    
+    <item>
+      <title>Deutsch Algorithm (Part 1): Kicking the phase back</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/</link>
       <pubDate>Sat, 11 May 2019 00:57:50 +0700</pubDate>
       
-      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-phase-kickback/</guid>
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/</guid>
       <description>I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&amp;rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
  Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors.</description>
     </item>
@@ -49,15 +58,6 @@ First we need to create an arbitrary quantum state. Trong has been curious about
       <guid>https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/</guid>
       <description>Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&amp;rsquo;s helpful to get familiar with a fundamental constraint to Quantum Computing. In contrast, I&amp;rsquo;ll also introduce you how powerful qubits get in solving problems through a basic protocol: Quantum Teleportation, the &amp;ldquo;Hello, world!&amp;rdquo; of Quantum Programming.
  No-cloning theorem In terms of computer architechture, it&amp;rsquo;s convenient to copy the state of a bit in order to create a new qubit exactly the same.</description>
-    </item>
-    
-    <item>
-      <title>Quantum Search Algorithm</title>
-      <link>https://myentangled.com/en/2019/04/quantum-search-algorithm/</link>
-      <pubDate>Fri, 12 Apr 2019 00:50:00 +0700</pubDate>
-      
-      <guid>https://myentangled.com/en/2019/04/quantum-search-algorithm/</guid>
-      <description>By examining this operator in the instance of $|\Psi\rangle = \frac{1}{2} \left(|00\rangle +|01\rangle+|10\rangle+|11\rangle \right)$, i.e. the equal superposition of two qubits, and a post-phase-flip state $|k\rangle_2 = \left(a_{00}|00\rangle +a_{01}|01\rangle+a_{10}|10\rangle+a_{11}|11\rangle \right)$, we expect to preview the behavior of this so called phase-shift operator. The general form of this transformation is $\displaystyle{(2 |\Psi\rangle \langle\Psi| - I) |k\rangle_n = 2 |\Psi\rangle \langle\Psi||k\rangle_n - |k\rangle_n}$. For a clear writing, the part before the minus sign will be evaluated first.</description>
     </item>
     
   </channel>

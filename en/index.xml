@@ -22,11 +22,11 @@
     </item>
     
     <item>
-      <title>Deutsch Algorithm (Part 1): Phase kickback</title>
-      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-phase-kickback/</link>
+      <title>Deutsch Algorithm (Part 1): Kicking the phase back</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/</link>
       <pubDate>Sat, 11 May 2019 00:57:50 +0700</pubDate>
       
-      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-phase-kickback/</guid>
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/</guid>
       <description>I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&amp;rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
  Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors.</description>
     </item>
@@ -86,15 +86,6 @@ First we need to create an arbitrary quantum state. Trong has been curious about
       <guid>https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/</guid>
       <description>Throughout previous posts, I&amp;rsquo;ve delivered a way to understand what is a quantum measurement. That way of understanding is simple and may suit our normal intuition, but measurement is a non-trivial physical process and somewhat counter-intuitive for several reasons.
 First, a measurement in general results in probabilistic outcomes. No matter how careful you prepare for the measurement procedure, it is inherent that possible outcomes of a measure is distributed according to a certain probability distribution determined by the state space of your quantum system.</description>
-    </item>
-    
-    <item>
-      <title>Quantum Search Algorithm</title>
-      <link>https://myentangled.com/en/2019/04/quantum-search-algorithm/</link>
-      <pubDate>Fri, 12 Apr 2019 00:50:00 +0700</pubDate>
-      
-      <guid>https://myentangled.com/en/2019/04/quantum-search-algorithm/</guid>
-      <description>By examining this operator in the instance of $|\Psi\rangle = \frac{1}{2} \left(|00\rangle +|01\rangle+|10\rangle+|11\rangle \right)$, i.e. the equal superposition of two qubits, and a post-phase-flip state $|k\rangle_2 = \left(a_{00}|00\rangle +a_{01}|01\rangle+a_{10}|10\rangle+a_{11}|11\rangle \right)$, we expect to preview the behavior of this so called phase-shift operator. The general form of this transformation is $\displaystyle{(2 |\Psi\rangle \langle\Psi| - I) |k\rangle_n = 2 |\Psi\rangle \langle\Psi||k\rangle_n - |k\rangle_n}$. For a clear writing, the part before the minus sign will be evaluated first.</description>
     </item>
     
     <item>
