@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Everything is mine</copyright>
+    <copyright>All rights reserved - 2019</copyright>
     <lastBuildDate>Sat, 18 May 2019 00:53:35 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/index.xml" rel="self" type="application/rss+xml" />
@@ -94,7 +94,8 @@ First, a measurement in general results in probabilistic outcomes. No matter how
       <pubDate>Sat, 30 Mar 2019 10:58:21 +0700</pubDate>
       
       <guid>https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/</guid>
-      <description>In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion. Since every operation can be implemented as a logic gate in the circuit, all calculations come down to a specific sequence of logic gates.</description>
+      <description>Source of image: Quantum Computer Explained - Limits of Human Technology  (Kurzgesagt – In a Nutshell) 
+In classical computation, there are four basic operations that act on information bits, namely Identity (no operation), Negation (NOT), Conjunction (AND), and Disjunction (OR). All other operations are secondary and built upon these four operations. That being said, with the primary and secondary operations, one is able to perform any calculation in classical fashion.</description>
     </item>
     
     <item>
@@ -122,8 +123,9 @@ Measurement in different bases In previous posts, I&amp;rsquo;ve mentioned that 
       <pubDate>Fri, 15 Mar 2019 16:39:36 +0700</pubDate>
       
       <guid>https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/</guid>
-      <description>As I&amp;rsquo;ve mentioned in my previous post, qubits doesn&amp;rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&amp;rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field like me.
-Single Qubit Dirac notation $\left | \cdot \right\rangle$ (pronounced as ket) is adopted to indicate qubit states. The state $\left|\psi\right\rangle$ associated with a qubit can be an arbitrary unit vector in the two-dimensional vector space over the complex numbers.</description>
+      <description>Source of image: Quantum Computer Explained - Limits of Human Technology  (Kurzgesagt – In a Nutshell) 
+As I&amp;rsquo;ve mentioned in my previous post, qubits doesn&amp;rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&amp;rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field like me.
+Single Qubit Dirac notation $\left | \cdot \right\rangle$ (pronounced as ket) is adopted to indicate qubit states.</description>
     </item>
     
     <item>
