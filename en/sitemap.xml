@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://myentangled.com/en/2019/05/deutsch-algorithm-part-3-implementation-of-oracle-based-algorithms/</loc>
+    <lastmod>2019-05-22T22:50:19+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/</loc>
     <lastmod>2019-05-18T00:53:35+07:00</lastmod>
   </url>
@@ -13,8 +18,8 @@
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/2019/04/learning-resources/</loc>
-    <lastmod>2019-04-26T23:54:17+07:00</lastmod>
+    <loc>https://myentangled.com/en/2019/05/learning-resources/</loc>
+    <lastmod>2019-05-02T23:54:17+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vn"
@@ -23,7 +28,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://myentangled.com/en/2019/04/learning-resources/"
+                href="https://myentangled.com/en/2019/05/learning-resources/"
                 />
   </url>
   
@@ -119,7 +124,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-05-18T00:53:35+07:00</lastmod>
+    <lastmod>2019-05-22T22:50:19+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -156,7 +161,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-05-18T00:53:35+07:00</lastmod>
+    <lastmod>2019-05-22T22:50:19+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
