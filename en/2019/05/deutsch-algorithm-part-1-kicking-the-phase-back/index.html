@@ -35,7 +35,7 @@
     <meta property="og:description" content="I have said something like quantum computing can overpower classical computing several times before. In this series, I&amp;rsquo;m going to showing you a problem wi" />
 
     <meta property="article:published_time" content="2019-05-11T00:57:50&#43;07:00" />
-    <meta property="article:tag" content="project" /><meta property="article:tag" content="Deutsch algorithm" />
+    <meta property="article:tag" content="Deutsch algorithm" />
 
     <meta property="og:image" content="https://myentangled.com/uploads/Deutsch%20Algorithm/simple-version.png"/>
 
@@ -165,7 +165,7 @@
     <header class="post-full-header">
         <section class="post-full-meta">
             <time class="post-full-meta-date" datetime="2019-05-11">11 May 2019</time>
-                <span class="date-divider">/</span> <a href="/en/tags/project/">#project</a>&nbsp;<a href="/en/tags/deutsch-algorithm/">#Deutsch algorithm</a>&nbsp;
+                <span class="date-divider">/</span> <a href="/en/tags/deutsch-algorithm/">#Deutsch algorithm</a>&nbsp;
         </section>
         <h1 class="post-full-title">Deutsch Algorithm (Part 1): Kicking the phase back</h1>
     </header>
@@ -209,7 +209,7 @@ $$\displaystyle{ U_f: (\alpha|0\rangle + \beta|1\rangle) \left( \frac{|0\oplus f
 <h4 id="deutsch-problem">Deutsch Problem</h4>
 
 <p>Trong&rsquo;s crush has a apparatus that takes a binary input to compute a binary value. Mathematically, it&rsquo;s a black-box function $f: \{0,1\} \rightarrow \{0,1\}$ (which means you can get the value of $f$ with different inputs but have no idea about how $f$ computes inside). </br>
-<strong>Task</strong>: Trong wants to whether $f$ is constant or balanced by making least queries to $f$.</p>
+<strong>Task</strong>: Trong wants to know whether $f$ is constant or balanced by making least queries to $f$.</p>
 
 <p>What is a constant function? Balanced function. A function with binary outputs is constant if it always returns one value regardless of the input. A balanced function is one that outputs $0$ in a half of circumstances and outputs $1$ in the other half. $f: \{0,1\} \rightarrow 0$ and $f: \{0,1\} \rightarrow 1$ are examples of constant functions while $f(x) = \left\{\begin{matrix} 0 \text{, if } x = 0 \\ 1 \text{, if } x = 1 \end{matrix}\right. \text{ }$ and $\text{ }f(x) = \left\{\begin{matrix} 0 \text{, if } x = 1 \\ 1 \text{, if } x = 0 \end{matrix}\right.$ are balanced. Although we have no way to decode a black-box function, it&rsquo;s possible to extract some partial, relational information of the function leveraging quantum information properties. In the Deutsch problem, $f$ is constant if $f(0) \oplus f(1) = 0$ and balanced if $f(0) \oplus f(1) = 0$ that makes the problem equivalent to evaluating $f(0) \oplus f(1)$ with least queries. </br></p>
 
@@ -270,7 +270,7 @@ $$|\psi_3\rangle = (-1)^{f(0)}|1\rangle \left( \frac{|0\rangle - |1\rangle}{\sqr
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash;  &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="/en/tags/project/">#project</a></h3>
+        <h3 class="read-next-card-header-title"><a href="/en/tags/deutsch-algorithm/">#Deutsch algorithm</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -278,20 +278,18 @@ $$|\psi_3\rangle = (-1)^{f(0)}|1\rangle \left( \frac{|0\rangle - |1\rangle}{\sqr
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">Quantum Teleportation (Part 3): Implementation</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/">Quantum Teleportation (Part 1): Preliminaries</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">Quantum Measurement: Not just 0 and 1</a></li>            
-        
-                      
+          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/">Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</a></li>            
         
           <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/">Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/">Quantum Operations: Unitary and Reversible Matrices</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="/en/tags/project/">See all related posts →</a>
+        <a href="/en/tags/deutsch-algorithm/">See all related posts →</a>
     </footer>
 </article>
 
@@ -308,7 +306,6 @@ $$|\psi_3\rangle = (-1)^{f(0)}|1\rangle \left( \frac{|0\rangle - |1\rangle}{\sqr
       <a class="post-card-content-link" href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #project 
               #Deutsch algorithm  </span>
               
               <h2 class="post-card-title">Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</h2>

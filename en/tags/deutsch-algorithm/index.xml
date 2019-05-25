@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Sat, 18 May 2019 00:53:35 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 22:50:19 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/tags/deutsch-algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deutsch Algorithm (Part 3): Implementation of oracle-based algorithms</title>
+      <link>https://myentangled.com/en/2019/05/deutsch-algorithm-part-3-implementation-of-oracle-based-algorithms/</link>
+      <pubDate>Wed, 22 May 2019 22:50:19 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/deutsch-algorithm-part-3-implementation-of-oracle-based-algorithms/</guid>
+      <description>Because the Deutsch algorithm is just a simple instance of the Deutsch-Jozsa algorithm where $n=2$, we&amp;rsquo;ll only discuss how to implement the general one. Let&amp;rsquo;s go.
+Difficulty of reconstructing gates from matrices This is the first time we encounter a so-called black-box function in an algorithm. It&amp;rsquo;s called a black box since we don&amp;rsquo;t how it calculate the output from the input, but we do know the output it returns.</description>
+    </item>
     
     <item>
       <title>Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</title>

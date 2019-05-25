@@ -1,0 +1,11 @@
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\obj\Debug\netcoreapp2.0\Teleportation.csprojAssemblyReference.cache
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\obj\Debug\netcoreapp2.0\Teleportation.csproj.CoreCompileInputs.cache
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\bin\Debug\netcoreapp2.0\Teleportation.deps.json
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\bin\Debug\netcoreapp2.0\Teleportation.runtimeconfig.json
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\bin\Debug\netcoreapp2.0\Teleportation.runtimeconfig.dev.json
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\bin\Debug\netcoreapp2.0\Teleportation.dll
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\bin\Debug\netcoreapp2.0\Teleportation.pdb
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\obj\Debug\netcoreapp2.0\Teleportation.AssemblyInfoInputs.cache
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\obj\Debug\netcoreapp2.0\Teleportation.AssemblyInfo.cs
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\obj\Debug\netcoreapp2.0\Teleportation.dll
+C:\Users\trongduong\Documents\Visual Studio 2017\Projects\Bell\Teleportation\obj\Debug\netcoreapp2.0\Teleportation.pdb
