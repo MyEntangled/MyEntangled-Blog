@@ -167,7 +167,7 @@
         <h1 class="post-full-title">Deutsch Algorithm (Part 3): Implementation of oracle-based algorithms</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/6.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/3.jpg)">
     </figure>
 
     <section class="post-full-content">
@@ -221,10 +221,16 @@ First, I create the entry point for inputing and executing function.
 2
 3
 4
-5</code></pre></div></td><td class="code"><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><code class="language-python" data-lang="python"><span></span> <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">():</span> 
-     <span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">2</span>  <span style="color: #75715e">#Input the number of qubits</span>
-     <span style="color: #f8f8f2">f_map</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span>  <span style="color: #75715e">#Input the mapping function</span>
-     <span style="color: #f8f8f2">Deutsch_Jozsa(n,</span> <span style="color: #f8f8f2">f_map)</span>  <span style="color: #75715e">#All things come in here</span>
+5
+6
+7
+8</code></pre></div></td><td class="code"><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><code class="language-python" data-lang="python"><span></span><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">]</span>  <span style="color: #75715e"># Input the number of qubits</span>
+    <span style="color: #f8f8f2">f_map</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span>
+             <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span>
+             <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]]</span>  <span style="color: #75715e"># Input the mapping functions</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">index,</span> <span style="color: #f8f8f2">value</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(n):</span>
+        <span style="color: #f8f8f2">Deutsch_Jozsa(n[index],</span> <span style="color: #f8f8f2">f_map[index])</span>  <span style="color: #75715e"># Algorithm executed here</span>
  
 </code></pre></div>
 </td></tr></table> </br>
@@ -237,10 +243,10 @@ Next, I define several basic states and operators inside &ldquo;Deutsch-Jozsa&rd
 6
 7</code></pre></div></td><td class="code"><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><code class="language-python" data-lang="python"><span></span><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">Deutsch_Jozsa</span><span style="color: #f8f8f2">(n,</span> <span style="color: #f8f8f2">f_map):</span> 
 	<span style="color: #f8f8f2">num_qubits</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span>  <span style="color: #75715e"># Plus one qubit of the second register, can be called as ancilla qubit</span>
-	<span style="color: #f8f8f2">state_0</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array[[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]]</span>  <span style="color: #75715e"># Standard state |0&gt; as a column vector</span>
-	<span style="color: #f8f8f2">I_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array[[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]]</span>  <span style="color: #75715e"># Identity gate</span>
-	<span style="color: #f8f8f2">X_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array[[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]]</span>  <span style="color: #75715e"># NOT gate</span>
-	<span style="color: #f8f8f2">H_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array[[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]]</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">sqrt(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>  <span style="color: #75715e"># Hadamard gate</span>
+	<span style="color: #f8f8f2">state_0</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]])</span>  <span style="color: #75715e"># Standard state |0&gt; as a column vector</span>
+	<span style="color: #f8f8f2">I_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]])</span>  <span style="color: #75715e"># Identity gate</span>
+	<span style="color: #f8f8f2">X_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]])</span>  <span style="color: #75715e"># NOT gate</span>
+	<span style="color: #f8f8f2">H_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]])</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">sqrt(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>  <span style="color: #75715e"># Hadamard gate</span>
  
 </code></pre></div>
 </td></tr></table> </br>
@@ -292,7 +298,101 @@ I also write a method to calculate tensor products of two or more vectors and ma
 
 <p>Let me elaborate on the above definition. Because of the ancilla qubit, the oracle is a $2^{n+1} \times 2^{n+1}$. We initial it as a zero matrix. Because all quantum states now is in the form of $|x_1x_1\dots x_n y\rangle$, we can get the input string $x_1x_1\dots x_n$ by shifting the state to the right by $1$ place. Next we can obtain $y$ by bitwise ANDing $x_1x_1\dots x_n y$ with $00\dots1$, then XOR $y$ with $f(x_1x_1\dots x_n)$ to get $y \oplus f(\mathbf{x})$. The result is pasted to the ancilla&rsquo;s position by adding it with the input string shifted to the left $1$ place: $x_1x_1\dots x_n 0 + \left(y \oplus f(\mathbf{x})\right) = x_1x_1\dots x_n \left(y \oplus f(\mathbf{x}) \right)$. This is the state $|\mathbf{x}\rangle|y\oplus f(\mathbf{x})\rangle$ we want to create using the oracle. To finish, we assign U[input_state, output_state] = 1 to indicate that the &ldquo;input state&rdquo; is transformed into the &ldquo;output state&rdquo; with absolute certainty. The matrix $U$ is completed by the time we finish repeating the procedure traversing through all quantum states possibly created by $n+1$ qubits.</p>
 
-<p>These definitions are sufficient for us to perform the algorithm</p>
+<p>The final subroutine in our program is used for measuring and displaying result.
+ <table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%"><code class="language-python" data-lang="python"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</code></pre></div></td><td class="code"><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><code class="language-python" data-lang="python"><span></span><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">measure</span><span style="color: #f8f8f2">(n,</span> <span style="color: #f8f8f2">state):</span>
+    <span style="color: #f8f8f2">measurement</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">2</span><span style="color: #f92672">**</span><span style="color: #f8f8f2">n)</span>  <span style="color: #75715e"># Initialize measurement result for n qubits in the first register</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">index,</span> <span style="color: #f8f8f2">value</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(state):</span>
+        <span style="color: #f8f8f2">measurement[index</span> <span style="color: #f92672">&gt;&gt;</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">value</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">value</span>  <span style="color: #75715e">## As the ancilla qubit is discarded, probabilities of the same kind, ie 100 and 101 will be combined</span>
+
+    <span style="color: #75715e"># Last step: Determine the type of function f</span>
+    <span style="color: #75715e"># f is constant if the probability of measuring |0&gt; is positive</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(abs(measurement[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">])</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">1e-10</span><span style="color: #f8f8f2">):</span> 
+        <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The function is constant.&quot;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The function is balanced.&quot;</span><span style="color: #f8f8f2">)</span>
+ 
+</code></pre></div>
+</td></tr></table> </br></p>
+
+<p>The definitions listed above are sufficient for us to perform the algorithm. You may need to see the circuit for the algorithm before getting your hand in. Please note that there are some trivial differences between the states on the circuit and in the implementation code.
+<img src="/uploads/Deutsch Algorithm/DJ circuit.png" alt="Example image" />
+ <table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%"><code class="language-python" data-lang="python"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</code></pre></div></td><td class="code"><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><code class="language-python" data-lang="python"><span></span><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">Deutsch_Jozsa</span><span style="color: #f8f8f2">(n,</span> <span style="color: #f8f8f2">f_map):</span>
+    <span style="color: #f8f8f2">num_qubits</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span>  <span style="color: #75715e"># Plus one qubit and the second register, can be called as ancilla qubit</span>
+    <span style="color: #f8f8f2">state_0</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]])</span>  <span style="color: #75715e"># Standard state |0&gt; as a column vector</span>
+    <span style="color: #f8f8f2">I_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]])</span>  <span style="color: #75715e"># Identity gate</span>
+    <span style="color: #f8f8f2">X_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]])</span>  <span style="color: #75715e"># NOT gate</span>
+    <span style="color: #f8f8f2">H_gate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">array([[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">],</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]])</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">sqrt(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>  <span style="color: #75715e"># Hadamard gate</span>
+    
+    <span style="color: #f8f8f2">ancilla</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">dot(X_gate,</span> <span style="color: #f8f8f2">state_0)</span>  <span style="color: #75715e"># Create state |1&gt; assigned to the ancilla</span>
+    
+    <span style="color: #75715e"># Create the a Hadamard transformation for all qubits and the state |ψ_0&gt; </span>
+    <span style="color: #f8f8f2">listStates</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+    <span style="color: #f8f8f2">listGates_H</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(n):</span>
+        <span style="color: #f8f8f2">listStates</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(state_0)</span>
+        <span style="color: #f8f8f2">listGates_H</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(H_gate)</span>
+    <span style="color: #f8f8f2">listStates</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(ancilla)</span>
+    <span style="color: #f8f8f2">listGates_H</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(H_gate)</span>
+    <span style="color: #f8f8f2">psi_0</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">getTensor(listStates)</span>
+    <span style="color: #f8f8f2">composite_H</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">getTensor(listGates_H)</span>
+    
+    <span style="color: #75715e"># |ψ_1&gt; is the dot product of the Hadamard transformation and |ψ_0&gt;  </span>
+    <span style="color: #f8f8f2">psi_1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">dot(composite_H,</span> <span style="color: #f8f8f2">psi_0)</span>
+    
+    <span style="color: #75715e"># Apply the oracle to |ψ_1&gt;</span>
+    <span style="color: #f8f8f2">psi_2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">dot(U(n,</span> <span style="color: #f8f8f2">f_map),</span> <span style="color: #f8f8f2">psi_1)</span>
+    
+    <span style="color: #75715e"># H on all again</span>
+    <span style="color: #f8f8f2">psi_3</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">dot(composite_H,</span> <span style="color: #f8f8f2">psi_2)</span>
+    
+    <span style="color: #f8f8f2">measure(n,</span> <span style="color: #f8f8f2">psi_3)</span>
+ 
+</code></pre></div>
+</td></tr></table> </br></p>
+
+<p><p> It&rsquo;s all done. Now let&rsquo;s check if everything is okay. </p>
+<img src="/uploads/Deutsch Algorithm/result_1.png" alt="Example image" /></p>
     
         </div>
     </section>
@@ -331,13 +431,13 @@ I also write a method to calculate tensor products of two or more vectors and ma
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/">Quantum Teleportation (Part 2): The Art of transporting the Unknown</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">Qubits: The substitution of bits in quantum scenario</a></li>            
-        
           <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
         
           <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">Quantum Teleportation (Part 3): Implementation</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/">Quantum Teleportation (Part 2): The Art of transporting the Unknown</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/">Quantum Operations: Unitary and Reversible Matrices</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
