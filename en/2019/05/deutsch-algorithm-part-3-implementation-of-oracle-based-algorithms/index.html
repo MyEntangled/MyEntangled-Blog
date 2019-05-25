@@ -167,7 +167,7 @@
         <h1 class="post-full-title">Deutsch Algorithm (Part 3): Implementation of oracle-based algorithms</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/3.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/defimg/5.jpg)">
     </figure>
 
     <section class="post-full-content">
@@ -194,18 +194,6 @@ $$\frac{1}{2}
 \end{bmatrix},$$
 we can input it into <a href="https://algassert.com/quirk#circuit=%7B%22cols%22%3A%5B%5B%22QFT3%22%5D%2C%5B%22inputA3%22%2C1%2C1%2C%22%2B%3DA3%22%5D%2C%5B%22~39sb%22%5D%2C%5B%5D%2C%5B%5D%2C%5B%22X%22%2C%22%E2%80%A2%22%5D%2C%5B1%2C%22H%22%2C%22H%22%5D%2C%5B%22X%22%2C%22Z%22%2C%22%E2%80%A2%22%5D%2C%5B%22inputA3%22%2C1%2C1%2C%22-%3DA3%22%5D%2C%5B%22QFT%E2%80%A03%22%5D%5D%2C%22gates%22%3A%5B%7B%22id%22%3A%22~39sb%22%2C%22matrix%22%3A%22%7B%7B%C2%BD%2C0%2C%C2%BD%2C0%2C0%2C%C2%BD%2C0%2C-%C2%BD%7D%2C%7B0%2C%C2%BD%2C0%2C%C2%BD%2C%C2%BD%2C0%2C-%C2%BD%2C0%7D%2C%7B0%2C%C2%BD%2C0%2C-%C2%BD%2C%C2%BD%2C0%2C%C2%BD%2C0%7D%2C%7B%C2%BD%2C0%2C-%C2%BD%2C0%2C0%2C%C2%BD%2C0%2C%C2%BD%7D%2C%7B%C2%BD%2C0%2C%C2%BD%2C0%2C0%2C-%C2%BD%2C0%2C%C2%BD%7D%2C%7B0%2C%C2%BD%2C0%2C%C2%BD%2C-%C2%BD%2C0%2C%C2%BD%2C0%7D%2C%7B0%2C%C2%BD%2C0%2C-%C2%BD%2C-%C2%BD%2C0%2C-%C2%BD%2C0%7D%2C%7B%C2%BD%2C0%2C-%C2%BD%2C0%2C0%2C-%C2%BD%2C0%2C-%C2%BD%7D%7D%22%7D%5D%7D">Quirk</a>, diagonalizing the matrix by adding some operations, then simplying them while hoping that the matrix of our interest isn&rsquo;t created by any complex operations; &ldquo;complex&rdquo; means that it don&rsquo;t contain rotation gates with odd angle parameters or any other kind of complicated transformations. In this case, we by luck retain the circuit for the mentioned matrix as follows
 <img src="/uploads/Deutsch Algorithm/mini_circuit.png" alt="Example image" /></p>
-
-<p>Recall that
-$$U_f: |\mathbf{x}\rangle |y\rangle \mapsto |\mathbf{x}\rangle |y \oplus f(\mathbf{x})\rangle$$
-1. If $f(\mathbf{x}) = 0, \forall \mathbf{x} \in \{0,1\}^n$, the oracle is $U_f: |\mathbf{x}\rangle |y\rangle \mapsto |\mathbf{x}\rangle |y\rangle$. In other words, we don&rsquo;t need to do anything. </br>
-2. If $f(\mathbf{x}) = 1, \forall \mathbf{x} \in \{0,1\}^n$, the oracle is $U_f: |\mathbf{x}\rangle |y\rangle \mapsto |\mathbf{x}\rangle |y \oplus 1\rangle$. So, in this case, we just apply an $X$ gate to the second register. </br>
-3. (Monster&rsquo;s here) If $f$ is balanced, it can be any one of $\binom{2^{n-1}}{2^n}$ functions that divides its domain evenly. (The factor of $2$, which are the number of value each half can take, is not taken into the calculation above.)</p>
-
-<h4 id="oracle-for-balanced-function">Oracle for balanced function</h4>
-
-<p>Although there are many $f$, I&rsquo;ll propose a function whose implementation works with least hard-coded parts: </br>
-1. Randomly choose a binary string $a \text{ }| \text{ length}(a)=n$ from the equal distribution $[1,2^n]$. </br>
-2. Across the length of the string, for any bit $a_i = 1$, apply a $CNOT$ gate to the pair $(x_i,y)$, which means the qubit $x_i$ controls a controlled $NOT$ gate acting on the second register $y$.</p>
 
 <h4 id="deutsch-jozsa-oracle">Deutsch-Jozsa oracle</h4>
 
@@ -392,7 +380,8 @@ I also write a method to calculate tensor products of two or more vectors and ma
 </td></tr></table> </br></p>
 
 <p><p> It&rsquo;s all done. Now let&rsquo;s check if everything is okay. </p>
-<img src="/uploads/Deutsch Algorithm/result_1.png" alt="Example image" /></p>
+<img src="/uploads/Deutsch Algorithm/result_1.png" alt="Example image" />
+It works as expected. You can continue to experiment other functions $f$ on yourself. The source code is archived in my <p>Check <a href="https://github.com/MyEntangled/MyBlog/blob/master/Quantum%20Programming%20Projects/Deutsch-Jozsa%20algorithm.ipynb">GitHub</a> directory.</p>
     
         </div>
     </section>
@@ -431,11 +420,13 @@ I also write a method to calculate tensor products of two or more vectors and ma
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
-        
           <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">Quantum Teleportation (Part 3): Implementation</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/">Quantum Teleportation (Part 2): The Art of transporting the Unknown</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/">A half-alive-half-dead cat and the beginning of Quantum Information</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
+        
+                      
         
           <li><a href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/">Quantum Operations: Unitary and Reversible Matrices</a></li>            
         </ul>
