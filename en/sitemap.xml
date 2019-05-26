@@ -138,22 +138,6 @@
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vn"
-                href="https://myentangled.com/vn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://myentangled.com/en/"
-                />
-  </url>
-  
-  <url>
     <loc>https://myentangled.com/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -188,6 +172,22 @@
     <loc>https://myentangled.com/en/tags/deutsch-algorithm/</loc>
     <lastmod>2019-05-22T22:50:19+07:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/en/</loc>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/"
+                />
   </url>
   
   <url>

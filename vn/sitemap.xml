@@ -93,22 +93,6 @@
   </url>
   
   <url>
-    <loc>https://myentangled.com/vn/</loc>
-    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://myentangled.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vn"
-                href="https://myentangled.com/vn/"
-                />
-  </url>
-  
-  <url>
     <loc>https://myentangled.com/vn/categories/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -136,6 +120,22 @@
                 rel="alternate"
                 hreflang="vn"
                 href="https://myentangled.com/vn/tags/deep-learning/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/vn/</loc>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/"
                 />
   </url>
   
