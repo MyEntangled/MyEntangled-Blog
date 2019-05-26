@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Wed, 22 May 2019 22:50:19 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 14:12:08 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[TUYỂN SINH] PiMA 2019 - The Mathematics of Deep Learning</title>
+      <link>https://myentangled.com/en/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/</link>
+      <pubDate>Sun, 26 May 2019 14:12:08 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/</guid>
+      <description>Nối tiếp ba mùa trại 2016, 2017 và 2018 đầy thành công, PiMA chính thức quay trở lại với chủ đề “The Mathematics of Deep Learning”.
+I. Đôi nét về PiMA Chúng mình là ai? Projects in Mathematics and Applications (PiMA) là một dự án phi lợi nhuận được thành lập năm 2016 bởi một nhóm sinh viên có niềm đam mê với Toán ứng dụng từ các trường đại học ở nhiều nơi trên thế giới.</description>
+    </item>
     
     <item>
       <title>Deutsch Algorithm (Part 3): Implementation of oracle-based algorithms</title>
@@ -42,11 +52,11 @@ Difficulty of reconstructing gates from matrices This is the first time we encou
     </item>
     
     <item>
-      <title>Learning Resources</title>
-      <link>https://myentangled.com/en/2019/05/learning-resources/</link>
+      <title>Study Resources</title>
+      <link>https://myentangled.com/en/2019/05/study-resources/</link>
       <pubDate>Thu, 02 May 2019 23:54:17 +0700</pubDate>
       
-      <guid>https://myentangled.com/en/2019/05/learning-resources/</guid>
+      <guid>https://myentangled.com/en/2019/05/study-resources/</guid>
       <description>Unlike several rising branches of computer science such as artificial intellgence and machine learning, quantum computing is still young when it comes to the development level. Most widely used quantum programming languages and libraries are created for people to learn and experiment with their ideas rather than for publishing any kind of commercial product. Generally speaking, the field has a weak application side; its focus strongly lies in interpreting quantum information theories and&amp;hellip; build some funny stuffs for the sake of learning.</description>
     </item>
     
@@ -56,7 +66,8 @@ Difficulty of reconstructing gates from matrices This is the first time we encou
       <pubDate>Fri, 26 Apr 2019 22:27:24 +0700</pubDate>
       
       <guid>https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/</guid>
-      <description>About me Hi, my name is Entangled, a cat who adopted a boy named Trong Duong. My servant&amp;hellip; I liken&amp;rsquo;t when he laughed watching videos of other cats showing off their cuteness. He love eating like me&amp;hellip; but just a mediocre, troublemaking cook. He&amp;rsquo;s also a textrovert, a word coined to indicate a person who is apparently energetic in a texting conversation but may dumb as a fish in a face-to-face.</description>
+      <description>About me Hi, my name is Entangled, a cat who adopted a boy named Trong, my hooman slave&amp;hellip; I liken&amp;rsquo;t when he laughed watching videos of other cats showing off their cuteness. He&amp;rsquo;s textroverted that is apparently energetic in a texting conversation but may dumb as a fish in a face-to-face. Just send him cat footages to get him engaged.
+Okay, here&amp;rsquo;s the truth. He&amp;rsquo;s a coming student at KAIST (Korean Advanced Institute of Science and Technology) and inclined to major in Physics plus Computer Science.</description>
     </item>
     
     <item>

@@ -7,17 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vn-vn</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Fri, 26 Apr 2019 23:54:17 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 14:12:08 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/vn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Tài liệu học tập</title>
-      <link>https://myentangled.com/vn/2019/04/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</link>
-      <pubDate>Fri, 26 Apr 2019 23:54:17 +0700</pubDate>
+      <title>[TUYỂN SINH] PiMA 2019 - The Mathematics of Deep Learning</title>
+      <link>https://myentangled.com/vn/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/</link>
+      <pubDate>Sun, 26 May 2019 14:12:08 +0700</pubDate>
       
-      <guid>https://myentangled.com/vn/2019/04/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</guid>
+      <guid>https://myentangled.com/vn/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/</guid>
+      <description>Nối tiếp ba mùa trại 2016, 2017 và 2018 đầy thành công, PiMA chính thức quay trở lại với chủ đề “The Mathematics of Deep Learning”.
+I. Đôi nét về PiMA Chúng mình là ai? Projects in Mathematics and Applications (PiMA) là một dự án phi lợi nhuận được thành lập năm 2016 bởi một nhóm sinh viên có niềm đam mê với Toán ứng dụng từ các trường đại học ở nhiều nơi trên thế giới.</description>
+    </item>
+    
+    <item>
+      <title>Tài liệu học tập</title>
+      <link>https://myentangled.com/vn/2019/05/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</link>
+      <pubDate>Thu, 02 May 2019 23:54:17 +0700</pubDate>
+      
+      <guid>https://myentangled.com/vn/2019/05/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</guid>
       <description>Không giống như những nhánh đang nổi trội khác của ngành khoa học máy tính như trí tuệ nhân tạo hay học máy, điện toán lượng tử còn khá non trẻ khi so sánh về mức độ phát triển. Hầu hết các ngôn ngữ lập trình hoặc thư viện lượng tử được tạo ra để mọi người học và thí nghiệm những ý tưởng mới thay vì dùng để phát hành bất kì sản phẩm thương mại nào.</description>
     </item>
     
@@ -40,22 +50,22 @@
     </item>
     
     <item>
-      <title>Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử</title>
-      <link>https://myentangled.com/vn/2019/03/introduction-to-quantum-computing/</link>
-      <pubDate>Tue, 12 Mar 2019 19:47:20 +0700</pubDate>
+      <title>Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử</title>
+      <link>https://myentangled.com/vn/2019/03/qubit-s%E1%BB%B1-thay-th%E1%BA%BF-cho-bit-t%E1%BB%AB-g%C3%B3c-nh%C3%ACn-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/</link>
+      <pubDate>Fri, 15 Mar 2019 16:39:36 +0700</pubDate>
       
-      <guid>https://myentangled.com/vn/2019/03/introduction-to-quantum-computing/</guid>
-      <description>Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều năm trước, tôi cũng bị ấn tượng bởi những tuyên ngôn này được lặp đi lặp lại trong những bài báo khoa học đại chúng. Nhưng liệu rằng khẳng định trên đúng đến đâu? Trước khi đi đến một kết luận cuối cùng, hãy cùng tôi điểm qua một vài cột mốc trong tiến trình lịch sử của ngành khoa học này.</description>
+      <guid>https://myentangled.com/vn/2019/03/qubit-s%E1%BB%B1-thay-th%E1%BA%BF-cho-bit-t%E1%BB%AB-g%C3%B3c-nh%C3%ACn-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/</guid>
+      <description>Như mình đã nhắc đến trong bài đăng trước, qubit (Bit Lượng tử) không bị giới hạn giá trị bởi duy nhất $0$ và $1$. Trong bài viết này, mình sẽ nói về những kiến thức nền cần thiết cho những ai mới bắt đầu tìm hiểu như mình.
+As I&amp;rsquo;ve mentioned in my previous post, qubits doesn&amp;rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&amp;rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field.</description>
     </item>
     
     <item>
-      <title>Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử</title>
-      <link>https://myentangled.com/vn/2019/03/fundamentals-of-qubits/</link>
+      <title>Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử</title>
+      <link>https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/</link>
       <pubDate>Tue, 12 Mar 2019 19:47:20 +0700</pubDate>
       
-      <guid>https://myentangled.com/vn/2019/03/fundamentals-of-qubits/</guid>
-      <description>Như mình đã nhắc đến trong bài đăng trước, qubit (Bit Lượng tử) không bị giới hạn giá trị bởi duy nhất $0$ và $1$. Trong bài viết này, mình sẽ nói về những kiến thức nền cần thiết cho những ai mới bắt đầu tìm hiểu như mình.
-As I&amp;rsquo;ve mentioned in my previous post, qubits doesn&amp;rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&amp;rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field.</description>
+      <guid>https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/</guid>
+      <description>Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều năm trước, tôi cũng bị ấn tượng bởi những tuyên ngôn này được lặp đi lặp lại trong những bài báo khoa học đại chúng. Nhưng liệu rằng khẳng định trên đúng đến đâu? Trước khi đi đến một kết luận cuối cùng, hãy cùng tôi điểm qua một vài cột mốc trong tiến trình lịch sử của ngành khoa học này.</description>
     </item>
     
   </channel>

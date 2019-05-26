@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vn-vn" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <title>Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử &middot; </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
+    <link rel="canonical" href="https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/" />
+
+     <meta name="description" content="Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều" /> 
+
+     
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Introduction%20to%20Quantum%20Computing/Post1_Schrodinger%27s%20cat.jpg"/>
+    
+ 
+    <meta name="twitter:title" content="Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử"/>
+    <meta name="twitter:description" content="Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều"/>
+    <meta name="twitter:url" content="https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/" />
+    <meta name="twitter:site" content="@"/>
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử &middot; " />
+    <meta property="og:url" content="https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/" />
+    <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều" />
+
+    <meta property="article:published_time" content="2019-03-12T19:47:20&#43;07:00" />
+    <meta property="article:tag" content="Preliminaries" />
+
+    <meta property="og:image" content="https://myentangled.com/uploads/Introduction%20to%20Quantum%20Computing/Post1_Schrodinger%27s%20cat.jpg"/>
+
+
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://myentangled.com/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
+
+     
+
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script> 
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto" rel="stylesheet" type='text/css'>
+
+    <style>
+    p{
+    font-family: 'Arial', sans-serif;
+    }
+    body {
+    }
+    code {}
+    }
+    </style>
+
+</head>
+
+
+<body class="post-template">
+  <div class="site-wrapper"> 
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">
+
+        <ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="/vn/">Trang chủ</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/categories/quantum-information/">Thông tin Lượng tử</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/categories/quantum-algorithms/">Thuật toán lượng tử</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/tags/project/">Dự án</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Về tớ</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/vn/2019/04/study-resources/">Học liệu</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/en/">English</a>
+            </li>
+        
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
+
+                    
+
+                    <a class="social-link" href="https://github.com/myentangled" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+                    
+
+                    
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    
+      <article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="2019-03-12">12 March 2019</time>
+                <span class="date-divider">/</span> <a href="/vn/tags/preliminaries/">#Preliminaries</a>&nbsp;
+        </section>
+        <h1 class="post-full-title">Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử</h1>
+    </header>
+    
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Introduction%20to%20Quantum%20Computing/Post1_Schrodinger%27s%20cat.jpg)">
+    </figure>
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        <p>Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều năm trước, tôi cũng bị ấn tượng bởi những tuyên ngôn này được lặp đi lặp lại trong những bài báo khoa học đại chúng. Nhưng liệu rằng khẳng định trên đúng đến đâu? Trước khi đi đến một kết luận cuối cùng, hãy cùng tôi điểm qua một vài cột mốc trong tiến trình lịch sử của ngành khoa học này.</p>
+
+<p>Khoảng thời gian từ thập niên 1900 đến thập niên 1930 là thời kỳ hoàng kim của ngành cơ học lượng tử với rất nhiều phát hiện bước ngoặt đã xác lập một nền tảng lý thuyết vững chắc cho ngành thông tin lượng tử. Một số nhà khoa học bấy giờ tin rằng những đặc tính kỳ lạ của hạt hạ nguyên tử có thể bổ trợ đắc lực cho lĩnh vực điện toán.</p>
+
+<p>Dù đã có những bước đi đầu tiên từ trước thập niên 60 nhưng không thật sự có một bước tiến đáng kể nào cho đến những năm 1980. Nhà vật lý học Richard Feynman giới thiệu một mô hình giúp máy tính lượng tử mô phỏng tiến trình của các hệ lượng tử vào năm 1981. Xuyên suốt 10 năm tiếp theo, các thuật toán được giới thiệu đã chứng minh rằng máy tính lượng tử thực sự vượt trội hơn máy tính cổ điển, thậm chí thuật toán của Deutch và Josza còn đạt tốc độ vượt trội theo cấp số mũ. Đáng chú ý nhất là các thuật toán của Grover và Shor. Trong khi Grover khởi xướng một thuật toán tìm kiếm dựa vào lượng tử với độ phức tạp giảm còn căn bậc hai so với trước đây thì thuật toán phân tích số nguyên tố của Shor đánh dấu một bước ngoặt khi giảm độ phức tạp thời gian từ cấp số mũ xuống đa thức đối với một bài toán mang ý nghĩa thực tiễn. Lĩnh vực điện toán lượng tử chính thức chuyển mình từ đây.</p>
+
+<p>Tới nay chúng ta đã có một số thuật toán lượng tử vượt trội hơn những thuật toán cổ điển tương ứng. Tuy nhiên ta hiện chưa thể tận dụng khả năng tính toán mạnh mẽ của máy tính lượng tử vì quá trình phát triển phần cứng không theo kịp. Đúng rằng điện toán lượng tử vẫn là một lĩnh vực mới đầy tiềm năng, song trong 10 năm tới thật khó để trông chờ một chiếc máy tính lượng tử đủ tốt để thay thế những cổ máy cổ điển. Đó là nhận định của bản thân tôi cũng như nhiều tên tuổi khác cho câu hỏi đặt ra ở đầu bài.</p>
+
+<p>Quay trở về gốc rễ thì điều gì đã làm cho điện toán lượng tử mạnh hơn điện toán cổ điển. Bạn chắc đã biết rằng mỗi bit mang một giá trị nhị phân là 0 hoặc 1 tương ứng với mức logic thấp hoặc cao. Như vậy, để có khả năng biểu điễn mọi số nhị phân có độ dài $n$, ta cần tới $2^n$ bit. Cấp số mũ này là một gánh nặng đáng kể cho hệ thống.</p>
+
+<p>Ở mặt khác, một qubit là đơn vị lượng tử tương đồng với bit có thể lưu trữ cùng lúc tín hiệu 0 hoặc 1 hoặc cả hai giá trị này. Điều này có nghĩa là ta chỉ cần $n$ qubit để mang cùng lượng thông tin mà $2^n$ có thể mang. Tuy nhiên, nếu ta tiến hành đo đạc giá trị của một qubit, ta chỉ có thể nhận được 0 hoặc 1, mỗi giá trị tương ứng với một xác suất được định trước bởi chính qubit đó. Ngay tại thời điểm thực hiện phép đo, qubit suy sụp và lập tức biến đổi thành giá trị vừa thu được, tức là qubit sẽ không còn bất cứ khác biệt nào so với bit cổ điển sau một lần đo.</p>
+
+<p>Một minh họa nổi tiếng cho khái niệm này là thí nghiệm Con Mèo của Schrödinger: Một con mèo đặt bên trong một chiếc hộp đóng kín cùng với một bộ đếm Geiger, một bình chứa chất độc và một mẩu vật liệu phóng xạ. Vật liệu này yếu đến nỗi nó chỉ có thể phóng ra nhiều nhất một tia phóng xạ trong một giờ với xác suất 50%. Nếu bộ đếm Geiger nhận biết được sự phóng xạ, nó sẽ phá hủy bình thủy tinh, giải phóng chất độc và giết chết con mèo ngay tức khắc.</p>
+
+<p>Sau một giờ đồng hồ, bạn tự hỏi rằng con mèo còn sống hay đã chết nhưng không ai biết được cho tới khi bạn mở chiếc hộp. Trước khi mở nắp, con mèo đang trong trạng thái 50-50. Khi bạn mở ra và nhìn vào bên trong, còn mèo chỉ có thể còn sống hoặc đã chết.</p>
+
+<figure>
+    <img src="/uploads/Post1_Schrodinger%27s%20cat.jpg"
+         alt="Vẽ bởi ADA và Neagoe, phát hành lần đầu trên tạp chí Omagiu"/> <figcaption>
+            <p>Vẽ bởi ADA và Neagoe, phát hành lần đầu trên tạp chí Omagiu</p>
+        </figcaption>
+</figure>
+
+
+<p>Trong thí nghiệm này, trạng thái 50-50 của con mèo trước khi mở hộp gọi là <em>sự chồng chập</em> và nó hoàn toàn tương đồng với trạng thái của qubit nhắc đến ban nãy. Hành động mở hộp đã cập nhật trạng thái của con mèo thành một trong hai trạng thái tiền định cũng giống như thao tác đo giá trị một qubit. Một điểm khác biệt giữa qubit và thí nghiệm Schrödinger là qubit không nhất thiết phải ở trạng thái 50-50. Nó có thể là 70-30, 40-60 v.v. Đặc biệt giá trị của một qubit sau phép đo sẽ trở thành 100-0 hoặc 0-100 (xác xuất của giá trị trở thành 0 hoặc 1), tương tự trạng thái một bit cổ điển.</p>
+
+<p>Nói tóm lại qubit sở hữu khả năng chồng chập trạng thái làm nó có thể lưu trữ một lượng thông tin lớn. Điều đáng tiếc là chúng ta không bao giờ biết được hoàn toàn lượng thông tin mà mỗi qubit chứa. &ldquo;Phá hủy&rdquo; một qubit chỉ giúp thu được một phần nhỏ dữ liệu ban đầu của nó. Có thể nói rằng trạng thái chồng chập của qubit là tiền đề đầu tiên và quan trọng nhất làm nên điện toán lượng tử, nhưng còn cả một chặng đường dài để ta có thể điều khiển tính chất lượng tử này một cách phù hợp và chính xác.</p>
+    
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="https://myentangled.com/uploads/profile.jpg" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="/vn/">Entangled Cat</a></h4>
+                <p>I work hard so that my cats can live a better live</p>
+        </section>
+      </section>
+    </footer>
+</article>
+    
+    
+    
+
+  </div>
+</main>
+
+
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">      
+      
+<article class="read-next-card" 
+            style="background-image: url(https://myentangled.com/uploads/cover%20blog.png);" >
+    <header class="read-next-card-header">
+        <small class="read-next-card-header-sitetitle">&mdash;  &mdash;</small>
+        
+        <h3 class="read-next-card-header-title"><a href="/vn/tags/preliminaries/">#Preliminaries</a></h3>
+    </header>
+    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+    </div>
+
+    <div class="read-next-card-content">
+      
+        <ul>
+                      
+        
+          <li><a href="https://myentangled.com/vn/2019/03/%C4%91o-l%C6%B0%E1%BB%9Dng-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD-kh%C3%B4ng-ch%E1%BB%89-l%C3%A0-0-v%C3%A0-1/">Đo lường Lượng tử: Không chỉ là 0 và 1</a></li>            
+        
+          <li><a href="https://myentangled.com/vn/2019/03/v%C6%B0%E1%BB%9Bng-v%C3%ADu-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD-m%E1%BB%99t-c%E1%BB%A9-l%E1%BB%ABa-%C4%91%E1%BB%91i-v%E1%BB%9Bi-th%E1%BB%B1c-t%E1%BA%A1i/">Vướng víu Lượng tử - một cứ lừa đối với thực tại?</a></li>            
+        
+          <li><a href="https://myentangled.com/vn/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/">[TUYỂN SINH] PiMA 2019 - The Mathematics of Deep Learning</a></li>            
+        
+          <li><a href="https://myentangled.com/vn/2019/03/qubit-s%E1%BB%B1-thay-th%E1%BA%BF-cho-bit-t%E1%BB%AB-g%C3%B3c-nh%C3%ACn-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/">Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử</a></li>            
+        </ul>
+    </div>
+    <footer class="read-next-card-footer">
+      
+        <a href="/vn/tags/preliminaries/">See all related posts →</a>
+    </footer>
+</article>
+
+
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/vn/2019/03/qubit-s%E1%BB%B1-thay-th%E1%BA%BF-cho-bit-t%E1%BB%AB-g%C3%B3c-nh%C3%ACn-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Fundamentals%20of%20Qubits/HelplessHighlevelEelelephant-size_restricted.gif)"></div>
+    </a>
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/vn/2019/03/qubit-s%E1%BB%B1-thay-th%E1%BA%BF-cho-bit-t%E1%BB%AB-g%C3%B3c-nh%C3%ACn-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #Preliminaries  </span>
+              
+              <h2 class="post-card-title">Qubit: Sự thay thế cho Bit từ góc nhìn lượng tử</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>Như mình đã nhắc đến trong bài đăng trước, qubit (Bit Lượng tử) không bị giới hạn giá trị bởi duy nhất $0$ và $1$. Trong bài viết này, mình sẽ nói về những kiến thức nền cần thiết cho những ai mới bắt đầu tìm hiểu như mình.
+As I&rsquo;ve mentioned in my previous post, qubits doesn&rsquo;t suffer from the limitation of only being $0$ or $1$. Within this article, I&rsquo;m going to talk about some background knowledge essential for ones who have just stepped into the field. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile.jpg" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+      
+      
+    </div>
+  </div>
+</aside>
+
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="https://myentangled.com/">
+      
+      <span></span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử</div>
+  <div class="floating-header-share">
+    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+    </div>
+    
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Chuy%e1%bb%87n%20con%20m%c3%a8o%20n%e1%bb%ada%20s%e1%bb%91ng%20n%e1%bb%ada%20ch%e1%ba%bft%20v%c3%a0%20kh%e1%bb%9fi%20nguy%c3%aan%20c%e1%bb%a7a%20Th%c3%b4ng%20tin%20L%c6%b0%e1%bb%a3ng%20t%e1%bb%ad&amp;url=https%3a%2f%2fmyentangled.com%2fvn%2f2019%2f03%2fchuy%25E1%25BB%2587n-con-m%25C3%25A8o-n%25E1%25BB%25ADa-s%25E1%25BB%2591ng-n%25E1%25BB%25ADa-ch%25E1%25BA%25BFt-v%25C3%25A0-kh%25E1%25BB%259Fi-nguy%25C3%25AAn-c%25E1%25BB%25A7a-th%25C3%25B4ng-tin-l%25C6%25B0%25E1%25BB%25A3ng-t%25E1%25BB%25AD%2f"
+          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+      </a>
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fvn%2f2019%2f03%2fchuy%25E1%25BB%2587n-con-m%25C3%25A8o-n%25E1%25BB%25ADa-s%25E1%25BB%2591ng-n%25E1%25BB%25ADa-ch%25E1%25BA%25BFt-v%25C3%25A0-kh%25E1%25BB%259Fi-nguy%25C3%25AAn-c%25E1%25BB%25A7a-th%25C3%25B4ng-tin-l%25C6%25B0%25E1%25BB%25A3ng-t%25E1%25BB%25AD%2f"
+          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+      </a>
+  </div>
+
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="/"></a>  <br>
+      
+    </section>
+    <nav class="site-footer-nav">
+        <a href="/">Latest Posts</a>
+        <a href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener">Facebook</a>
+        
+        <a href="https://github.com/myentangled" target="_blank" rel="noopener">Github</a>
+        
+        
+    </nav>  
+  </div>
+
+</footer>
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://myentangled.com/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+  <!-- Google Analytics -->
+  <script>
+    var _gaq=[['_setAccount','google-site-verification=qA4s0-D9Q9IQAlFEUrJNkGs1JXtbFcRna2k2ZR1ErEA'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+
+    <script>
+
+
+
+
+
+$(document).ready(function () {
+    
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+</body></html>

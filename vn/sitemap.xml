@@ -3,17 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://myentangled.com/vn/2019/04/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</loc>
-    <lastmod>2019-04-26T23:54:17+07:00</lastmod>
+    <loc>https://myentangled.com/vn/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/</loc>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://myentangled.com/en/2019/05/learning-resources/"
+                href="https://myentangled.com/en/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vn"
-                href="https://myentangled.com/vn/2019/04/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/"
+                href="https://myentangled.com/vn/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/vn/2019/05/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/</loc>
+    <lastmod>2019-05-02T23:54:17+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/2019/05/study-resources/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/2019/05/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/"
                 />
   </url>
   
@@ -48,7 +63,22 @@
   </url>
   
   <url>
-    <loc>https://myentangled.com/vn/2019/03/introduction-to-quantum-computing/</loc>
+    <loc>https://myentangled.com/vn/2019/03/qubit-s%E1%BB%B1-thay-th%E1%BA%BF-cho-bit-t%E1%BB%AB-g%C3%B3c-nh%C3%ACn-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/</loc>
+    <lastmod>2019-03-15T16:39:36+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/2019/03/qubit-s%E1%BB%B1-thay-th%E1%BA%BF-cho-bit-t%E1%BB%AB-g%C3%B3c-nh%C3%ACn-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/</loc>
     <lastmod>2019-03-12T19:47:20+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -58,28 +88,13 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="vn"
-                href="https://myentangled.com/vn/2019/03/introduction-to-quantum-computing/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://myentangled.com/vn/2019/03/fundamentals-of-qubits/</loc>
-    <lastmod>2019-03-12T19:47:20+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vn"
-                href="https://myentangled.com/vn/2019/03/fundamentals-of-qubits/"
+                href="https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/"
                 />
   </url>
   
   <url>
     <loc>https://myentangled.com/vn/</loc>
-    <lastmod>2019-04-26T23:54:17+07:00</lastmod>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -91,12 +106,6 @@
                 hreflang="vn"
                 href="https://myentangled.com/vn/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://myentangled.com/vn/tags/archive/</loc>
-    <lastmod>2019-03-29T23:59:42+07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -115,8 +124,40 @@
   </url>
   
   <url>
+    <loc>https://myentangled.com/vn/tags/deep-learning/</loc>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/tags/deep-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/tags/deep-learning/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/vn/tags/pima-2019/</loc>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/tags/pima-2019/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/tags/pima-2019/"
+                />
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/vn/post/</loc>
-    <lastmod>2019-04-26T23:54:17+07:00</lastmod>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -127,6 +168,22 @@
                 rel="alternate"
                 hreflang="vn"
                 href="https://myentangled.com/vn/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/vn/tags/preliminaries/</loc>
+    <lastmod>2019-03-29T23:59:42+07:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/tags/preliminaries/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/tags/preliminaries/"
                 />
   </url>
   
@@ -153,8 +210,24 @@
   </url>
   
   <url>
+    <loc>https://myentangled.com/vn/categories/quantum-information/</loc>
+    <lastmod>2019-03-26T10:58:21+07:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://myentangled.com/en/categories/quantum-information/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vn"
+                href="https://myentangled.com/vn/categories/quantum-information/"
+                />
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/vn/tags/</loc>
-    <lastmod>2019-03-29T23:59:42+07:00</lastmod>
+    <lastmod>2019-05-26T14:12:08+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

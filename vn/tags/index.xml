@@ -7,17 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vn-vn</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Fri, 29 Mar 2019 23:59:42 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 14:12:08 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/vn/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Archive</title>
-      <link>https://myentangled.com/vn/tags/archive/</link>
+      <title>Deep Learning</title>
+      <link>https://myentangled.com/vn/tags/deep-learning/</link>
+      <pubDate>Sun, 26 May 2019 14:12:08 +0700</pubDate>
+      
+      <guid>https://myentangled.com/vn/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pima 2019</title>
+      <link>https://myentangled.com/vn/tags/pima-2019/</link>
+      <pubDate>Sun, 26 May 2019 14:12:08 +0700</pubDate>
+      
+      <guid>https://myentangled.com/vn/tags/pima-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Preliminaries</title>
+      <link>https://myentangled.com/vn/tags/preliminaries/</link>
       <pubDate>Fri, 29 Mar 2019 23:59:42 +0700</pubDate>
       
-      <guid>https://myentangled.com/vn/tags/archive/</guid>
+      <guid>https://myentangled.com/vn/tags/preliminaries/</guid>
       <description></description>
     </item>
     
