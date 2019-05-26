@@ -200,9 +200,9 @@ we can input it into <a href="https://algassert.com/quirk#circuit=%7B%22cols%22%
 
 <h4 id="deutsch-jozsa-oracle">Deutsch-Jozsa oracle</h4>
 
-<p>In this problem, I&rsquo;ll prefer using Python &amp; Qiskit over Microsoft Q# because I want to illustrate a coding approach that differs from my previous implementation-centered posts.</p>
+<p>As I want to implement and verify the Deutsch-Jozsa algorithm for various functions $f$, it&rsquo;s not effective to construct gate-based oracles with each function reverse engineered. Now I want to illustrate a coding approach, more exploratory, that differs from my previous codes. I&rsquo;ll use Python instead of Microsoft Q# to perform it.</p>
 
-<p>I&rsquo;ll allow users to input their own function $f$ as long as it&rsquo;s either constant or balanced. The function maps each integer value from $0$ to $2^n$ to a binary value. For example, a function $f = [0,0,1,1]$ maps $00$ to $0$, $01$ to $0$, $10$ to $1$, and $11$ to $1$. This specific function is apparently balanced because the number of $0$ is equal the number of $1$. However, we&rsquo;ll pretend not to know this and perform Deutsch-Jozsa algorithm to determine its constant-balanced property.</p>
+<p>Users are now allowed to input their own function $f$ as long as it&rsquo;s either constant or balanced. The function maps each integer value from $0$ to $2^n$ to a binary value. For example, a function $f = [0,0,1,1]$ maps $00$ to $0$, $01$ to $0$, $10$ to $1$, and $11$ to $1$. This specific function is apparently balanced because the number of $0$ is equal the number of $1$. However, we&rsquo;ll pretend not to know this and perform Deutsch-Jozsa algorithm to determine its constant-balanced property.</p>
 
 <h4 id="manual-coding">Manual coding</h4>
 
@@ -287,7 +287,7 @@ I also write a method to calculate tensor products of two or more vectors and ma
 </code></pre></div>
 </td></tr></table></p>
 
-<p> Let me elaborate on the above definition. Because of the ancilla qubit, the oracle is a $2^{n+1} \times 2^{n+1}$. We initial it as a zero matrix. Because all quantum states now is in the form of $|x\_1x\_1\dots x\_n y\rangle$, we can get the input string $x\_1x\_1\dots x\_n$ by shifting the state to the right by $1$ place. Next we can obtain $y$ by bitwise ANDing $x\_1x\_1\dots x\_n y$ with $00\dots1$, then XOR $y$ with $f(x\_1x\_1\dots x\_n)$ to get $y \oplus f(\mathbf{x})$. The result is pasted to the ancilla's position by adding it with the input string shifted to the left $1$ place: $x\_1x\_1\dots x\_n 0 + \left(y \oplus f(\mathbf{x})\right) = x\_1x\_1\dots x\_n \left(y \oplus f(\mathbf{x}) \right)$. This is the state $|\mathbf{x}\rangle|y\oplus f(\mathbf{x})\rangle$ we want to create using the oracle. To finish, we assign U[input\_state, output\_state] = 1 to indicate that the "input state" is transformed into the "output state" with absolute certainty. The matrix $U$ is completed by the time we finish repeating the procedure traversing through all quantum states possibly created by $n+1$ qubits. </p>
+<p>Let me elaborate on the above definition. Because of the ancilla qubit, the oracle is a $2^{n+1} \times 2^{n+1}$. We initial it as a zero matrix. Because all quantum states now is in the form of $|x_1x_1\dots x_n y\rangle$, we can get the input string $x_1x_1\dots x_n$ by shifting the state to the right by $1$ place. Next we can obtain $y$ by bitwise ANDing $x_1x_1\dots x_n y$ with $00\dots1$, then XOR $y$ with $f(x_1x_1\dots x_n)$ to get $y \oplus f(\mathbf{x})$. The result is pasted to the ancilla&rsquo;s position by adding it with the input string shifted to the left $1$ place: $x_1x_1\dots x_n 0 + \left(y \oplus f(\mathbf{x})\right) = x_1x_1\dots x_n \left(y \oplus f(\mathbf{x}) \right)$. This is the state $|\mathbf{x}\rangle|y\oplus f(\mathbf{x})\rangle$ we want to create using the oracle. To finish, we assign U[input_state, output_state] = 1 to indicate that the &ldquo;input state&rdquo; is transformed into the &ldquo;output state&rdquo; with absolute certainty. The matrix $U$ is completed by the time we finish repeating the procedure traversing through all quantum states possibly created by $n+1$ qubits.</p>
 
 <p>The final subroutine in our program is used for measuring and displaying result.
  <table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%"><code class="language-python" data-lang="python"> 1
@@ -425,13 +425,13 @@ I also write a method to calculate tensor products of two or more vectors and ma
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">Qubits: The substitution of bits in quantum scenario</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/">Quantum Operations: Unitary and Reversible Matrices</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/">Quantum Teleportation (Part 2): The Art of transporting the Unknown</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">Quantum Entanglement to cheat the Reality</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/">A half-alive-half-dead cat and the beginning of Quantum Information</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/">Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/">Quantum Teleportation (Part 1): Preliminaries</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
