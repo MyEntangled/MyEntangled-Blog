@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Sun, 26 May 2019 14:12:08 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 18:10:50 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bernstein Vazirani Algorithm</title>
+      <link>https://myentangled.com/en/tags/bernstein-vazirani-algorithm/</link>
+      <pubDate>Wed, 29 May 2019 18:10:50 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/tags/bernstein-vazirani-algorithm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Deep Learning</title>
@@ -24,7 +33,7 @@
     <item>
       <title>Deutsch Algorithm</title>
       <link>https://myentangled.com/en/tags/deutsch-algorithm/</link>
-      <pubDate>Wed, 22 May 2019 22:50:19 +0700</pubDate>
+      <pubDate>Wed, 29 May 2019 18:10:50 +0700</pubDate>
       
       <guid>https://myentangled.com/en/tags/deutsch-algorithm/</guid>
       <description></description>
@@ -51,7 +60,7 @@
     <item>
       <title>Project</title>
       <link>https://myentangled.com/en/tags/project/</link>
-      <pubDate>Wed, 22 May 2019 22:50:19 +0700</pubDate>
+      <pubDate>Wed, 29 May 2019 18:10:50 +0700</pubDate>
       
       <guid>https://myentangled.com/en/tags/project/</guid>
       <description></description>

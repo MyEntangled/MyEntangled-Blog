@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bernstein Vazirani Algorithm on My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</title>
+    <link>https://myentangled.com/en/tags/bernstein-vazirani-algorithm/</link>
+    <description>Recent content in Bernstein Vazirani Algorithm on My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2019</copyright>
+    <lastBuildDate>Wed, 29 May 2019 18:10:50 +0700</lastBuildDate>
+    
+	<atom:link href="https://myentangled.com/en/tags/bernstein-vazirani-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bernstein-Vazirani algorithm: A derivation of the Deutsch-Jozsa algorithm</title>
+      <link>https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-a-derivation-of-the-deutsch-jozsa-algorithm/</link>
+      <pubDate>Wed, 29 May 2019 18:10:50 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-a-derivation-of-the-deutsch-jozsa-algorithm/</guid>
+      <description>Here we stop by Berstein-Vazirani problem that inherents the structure of its predecessor, Deutsch-Jozsa problem, before we can get started with problems and solutions of practical meaning later. Because this problem is similar to the one stated in the last series, we&amp;rsquo;ll get straight to it.
+Berstein-Vazirani problem The access for a black-box function $f: \{0,1\}^n \mapsto \{0,1\}$. It&amp;rsquo;s guaranteed that $f(\mathbf{x}) = \mathbf{s}\cdot\mathbf{x}$ (mod $2$) for some secret string $\mathbf{s} \in \{0,1\}^n$.</description>
+    </item>
+    
+  </channel>
+</rss>

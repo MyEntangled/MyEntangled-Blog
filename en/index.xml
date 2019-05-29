@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Sun, 26 May 2019 14:12:08 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 18:10:50 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bernstein-Vazirani algorithm: A derivation of the Deutsch-Jozsa algorithm</title>
+      <link>https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-a-derivation-of-the-deutsch-jozsa-algorithm/</link>
+      <pubDate>Wed, 29 May 2019 18:10:50 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-a-derivation-of-the-deutsch-jozsa-algorithm/</guid>
+      <description>Here we stop by Berstein-Vazirani problem that inherents the structure of its predecessor, Deutsch-Jozsa problem, before we can get started with problems and solutions of practical meaning later. Because this problem is similar to the one stated in the last series, we&amp;rsquo;ll get straight to it.
+Berstein-Vazirani problem The access for a black-box function $f: \{0,1\}^n \mapsto \{0,1\}$. It&amp;rsquo;s guaranteed that $f(\mathbf{x}) = \mathbf{s}\cdot\mathbf{x}$ (mod $2$) for some secret string $\mathbf{s} \in \{0,1\}^n$.</description>
+    </item>
     
     <item>
       <title>[TUYỂN SINH] PiMA 2019 - The Mathematics of Deep Learning</title>
