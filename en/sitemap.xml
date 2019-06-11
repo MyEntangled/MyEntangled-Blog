@@ -3,7 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-a-derivation-of-the-deutsch-jozsa-algorithm/</loc>
+    <loc>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-real%C3%ADtic-quantum-computer/</loc>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-part-1-a-derivation-of-the-deutsch-jozsa-algorithm/</loc>
     <lastmod>2019-05-29T18:10:50+07:00</lastmod>
   </url>
   
@@ -144,7 +149,7 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/bernstein-vazirani-algorithm/</loc>
-    <lastmod>2019-05-29T18:10:50+07:00</lastmod>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -181,13 +186,13 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/deutsch-algorithm/</loc>
-    <lastmod>2019-05-29T18:10:50+07:00</lastmod>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-05-29T18:10:50+07:00</lastmod>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -219,7 +224,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-05-29T18:10:50+07:00</lastmod>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -251,7 +256,7 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/project/</loc>
-    <lastmod>2019-05-29T18:10:50+07:00</lastmod>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -267,7 +272,7 @@
   
   <url>
     <loc>https://myentangled.com/en/categories/quantum-algorithms/</loc>
-    <lastmod>2019-05-29T18:10:50+07:00</lastmod>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -295,7 +300,7 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/</loc>
-    <lastmod>2019-05-29T18:10:50+07:00</lastmod>
+    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
