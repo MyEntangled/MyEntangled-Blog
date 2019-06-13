@@ -201,9 +201,9 @@ $$\begin{matrix} f(x) = 0 : &amp; \displaystyle{\frac{|0\oplus f(x)\rangle - |1\
 f(x) = 1 : &amp; \displaystyle{\frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}}} &amp; = &amp; \displaystyle{-\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)}\end{matrix}$$</p>
 
 <p>In these two possibilities, the posterior target states only differ by a global factor of $-1$, which depends on the value of $f(x)$. In that way, we can generalize the transformation into:
-$$\displaystyle{ U_f: |x\rangle \left( \frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}} \right) \mapsto (-1)^{f(x)} |x\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}$$
+$$\displaystyle{ U_f: |x\rangle \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) \mapsto |x\rangle \left( \frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}} \right) = (-1)^{f(x)} |x\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}$$
 <p> In most of the cases, the control qubit will be in a superposition of $|0\rangle$ and $|1\rangle$: </p>
-$$\displaystyle{ U_f: (\alpha|0\rangle + \beta|1\rangle) \left( \frac{|0\oplus f(x)\rangle - |1\oplus f(x)\rangle}{\sqrt{2}} \right) \mapsto \left( (-1)^{f(0)} \alpha|0\rangle + (-1)^{f(1)} \beta|1\rangle  \right) \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}$$</p>
+$$\displaystyle{ U_f: (\alpha|0\rangle + \beta|1\rangle) \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) \mapsto \left( (-1)^{f(0)} \alpha|0\rangle + (-1)^{f(1)} \beta|1\rangle  \right) \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}$$</p>
 
 <p>This phase kick-back technique is definitely useful for solving some quantum problems, especially the next one.</p>
 
@@ -279,13 +279,13 @@ $$|\psi_3\rangle = (-1)^{f(0)}|1\rangle \left( \frac{|0\rangle - |1\rangle}{\sqr
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">Quantum Measurement: Not just 0 and 1</a></li>            
+          <li><a href="https://myentangled.com/en/2019/05/study-resources/">Study Resources</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">Quantum Teleportation (Part 3): Implementation</a></li>            
         
           <li><a href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">Qubits: The substitution of bits in quantum scenario</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/05/study-resources/">Study Resources</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/">Quantum Operations: Unitary and Reversible Matrices</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
