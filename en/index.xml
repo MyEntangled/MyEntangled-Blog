@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realític quantum computer</title>
-      <link>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-real%C3%ADtic-quantum-computer/</link>
+      <title>Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</title>
+      <link>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/</link>
       <pubDate>Fri, 07 Jun 2019 15:30:16 +0700</pubDate>
       
-      <guid>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-real%C3%ADtic-quantum-computer/</guid>
+      <guid>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/</guid>
       <description>In the last part of the previous series, Deutsch algorithm, I introduced a manual way to construct the oracle. That oracle must be built from matrix because the oracle function is undeterminate except for the outcome. In Bernsterin-Vazirani problem, the function is, on the other hand, clearly stated: $f(\mathbf{x}) = \mathbf{s}\cdot\mathbf{x}$. So, it&amp;rsquo;s unnecessary to repeat the previous procedure; instead, we&amp;rsquo;ll build the oracle without using matrices by understanding what the function really do.</description>
     </item>
     
