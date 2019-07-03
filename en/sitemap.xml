@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/</loc>
+    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://myentangled.com/en/2019/06/randomized-benchmarking-part-1-on-the-components-of-fault-tolerant-computers/</loc>
+    <lastmod>2019-06-26T15:37:55+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/</loc>
     <lastmod>2019-06-07T15:30:16+07:00</lastmod>
   </url>
@@ -192,7 +202,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
+    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -224,7 +234,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-06-07T15:30:16+07:00</lastmod>
+    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
