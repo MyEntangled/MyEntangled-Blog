@@ -23,15 +23,6 @@ Review Given a state $$|\psi\rangle = \sum_i \alpha_i |\varphi_i \rangle,$$ it&a
     </item>
     
     <item>
-      <title>Randomized Benchmarking (Part 1): On the components of fault-tolerant computers</title>
-      <link>https://myentangled.com/en/2019/06/randomized-benchmarking-part-1-on-the-components-of-fault-tolerant-computers/</link>
-      <pubDate>Wed, 26 Jun 2019 15:37:55 +0700</pubDate>
-      
-      <guid>https://myentangled.com/en/2019/06/randomized-benchmarking-part-1-on-the-components-of-fault-tolerant-computers/</guid>
-      <description>In the article of Bernsterin-Vazirani implementation, I&amp;rsquo;ve addressed one of the most crucial challenges of quantum computing. The field is yet to flourish because quantum gates aren&amp;rsquo;t constructed good enough. One major difference of quantum gates versus classical gates is that quantum gates have to be reversible, which means we can retrieve a prior state of a qubit without loss of information. Scientists are now on their way to establish a proper scheme for building decent quantum gates.</description>
-    </item>
-    
-    <item>
       <title>Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</title>
       <link>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/</link>
       <pubDate>Fri, 07 Jun 2019 15:30:16 +0700</pubDate>
