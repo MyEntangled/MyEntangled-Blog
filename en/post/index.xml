@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Mon, 01 Jul 2019 23:45:19 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jul 2019 16:39:35 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Error rate vs Fidelity (Part 1): Unveil the mathematics behind quantum error rate</title>
+      <link>https://myentangled.com/en/2019/07/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</link>
+      <pubDate>Tue, 02 Jul 2019 16:39:35 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/07/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</guid>
+      <description>In the article of Bernsterin-Vazirani implementation, I&amp;rsquo;ve addressed one of the most crucial challenges of quantum computing. The field is yet to flourish because quantum gates aren&amp;rsquo;t constructed to be good enough. One major difference of quantum gates versus classical counterparts is that quantum gates have to be reversible, which means we can retrieve a prior state of a qubit without loss of information. Scientists are now on their way to establish a proper scheme for building decent quantum gates.</description>
+    </item>
     
     <item>
       <title>Mixed States and General Quantum Operations: A simple view on the framework of Quantum Mechanics</title>
@@ -20,15 +29,6 @@
       <guid>https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/</guid>
       <description>In this text I&amp;rsquo;ll do some review on the definition of quantum state and quantum measurement, which was introduced here, and reasonably expand the notions into the most general instances of quantum bits.
 Review Given a state $$|\psi\rangle = \sum_i \alpha_i |\varphi_i \rangle,$$ it&amp;rsquo;s possible to perform a Von Neumann measurement on the state&amp;rsquo;s space $\mathscr{H}$ with respect to the orthonormal basis $B = \{|\varphi_i \rangle\}$. The output would be a label $i$ with corresponding probability $|\alpha_i|^2$ and the system left in state $|\varphi_i\rangle$.</description>
-    </item>
-    
-    <item>
-      <title>Error rate vs Fidelity (Part 1): Unveil the mathematics behind quantum error rate</title>
-      <link>https://myentangled.com/en/2019/06/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</link>
-      <pubDate>Wed, 26 Jun 2019 15:37:55 +0700</pubDate>
-      
-      <guid>https://myentangled.com/en/2019/06/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</guid>
-      <description>In the article of Bernsterin-Vazirani implementation, I&amp;rsquo;ve addressed one of the most crucial challenges of quantum computing. The field is yet to flourish because quantum gates aren&amp;rsquo;t constructed to be good enough. One major difference of quantum gates versus classical counterparts is that quantum gates have to be reversible, which means we can retrieve a prior state of a qubit without loss of information. Scientists are now on their way to establish a proper scheme for building decent quantum gates.</description>
     </item>
     
     <item>

@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/</loc>
-    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
+    <loc>https://myentangled.com/en/2019/07/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</loc>
+    <lastmod>2019-07-02T16:39:35+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/2019/06/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</loc>
-    <lastmod>2019-06-26T15:37:55+07:00</lastmod>
+    <loc>https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/</loc>
+    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
   </url>
   
   <url>
@@ -196,7 +196,7 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/density-operator/</loc>
-    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
+    <lastmod>2019-07-02T16:39:35+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -208,13 +208,13 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/errpr-rate/</loc>
-    <lastmod>2019-06-26T15:37:55+07:00</lastmod>
+    <lastmod>2019-07-02T16:39:35+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://myentangled.com/en/tags/literature/</loc>
-    <lastmod>2019-06-26T15:37:55+07:00</lastmod>
+    <lastmod>2019-07-02T16:39:35+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -226,7 +226,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
+    <lastmod>2019-07-02T16:39:35+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -258,7 +258,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
+    <lastmod>2019-07-02T16:39:35+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -312,7 +312,7 @@
   
   <url>
     <loc>https://myentangled.com/en/categories/quantum-information/</loc>
-    <lastmod>2019-07-01T23:45:19+07:00</lastmod>
+    <lastmod>2019-07-02T16:39:35+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
