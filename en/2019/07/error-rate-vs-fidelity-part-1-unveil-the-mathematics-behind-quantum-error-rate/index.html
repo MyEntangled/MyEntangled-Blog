@@ -217,8 +217,8 @@ $$\Delta \left(\mathfrak{G}_{a}(\rho),\mathfrak{G}_{i}(\rho) \right)$$.
 It&rsquo;s necessary to maximize $\Delta (\mathfrak{G}_{a}(\rho),\mathfrak{G}_{i})(\rho)$ over all possible inputs $\rho$ to find out the error rate of the realistic channel with respect to the ideal channel. In short, the desired calculation is
 $$\underset{\rho}{\text{max }}\Delta \left(\mathfrak{G}_{a}(\rho),\mathfrak{G}_{i}(\rho) \right)$$
 However the established formula becomes invalid because the error rate of $\mathfrak{G}_{a} \otimes \mathbb{I}$ ($\mathbb{I}$ is an identity matrix corresponding to the space of ancillary qubits $\mathscr{H&rsquo;}$) differs from the error rate of $\mathfrak{G}_{a}$ in general. This is where <em>diamond norm</em> comes to correct the previous maximization by expanding it to the spaces of both input and ancillary qubits.
-$$\|\mathfrak{A}\|_{\diamond} := \underset{\mathscr{H&rsquo;}}{\text{sup}} \underset{\rho \in \text{ dens. op.}(\mathscr{H&rsquo;} \otimes \mathscr{H})}{\text{sup}} \left \| \mathfrak{A} \otimes \mathbb{1} (\rho) \right\|_{\text{Tr}},$$
-where $\mathfrak{A}$ is an arbitrary superoperator over $\mathscr{H}$, and the set of density operators over the joint space $\mathbb{H} \otimes \mathbb{H&rsquo;}$. This gives us convenience to define to define the gate error rate $\eta$ via diamond norm as
+$$\|\mathfrak{A}\|_{\diamond} := \underset{\mathscr{H&rsquo;}}{\text{sup}} \underset{\rho \in \text{ dens. op.}(\mathscr{H} \otimes \mathscr{H&rsquo;})}{\text{sup}} \left \| \mathfrak{A} \otimes \mathbb{1} (\rho) \right\|_{\text{Tr}},$$
+where $\mathfrak{A}$ is an arbitrary superoperator over $\mathscr{H}$, and the set of density operators over the joint space $\mathscr{H} \otimes \mathscr{H&rsquo;}$. This gives us convenience to define to define the gate error rate $\eta$ via diamond norm as
 $$\eta = \Delta_{\diamond} \left(\mathfrak{G}_{a},\mathfrak{G}_{i} \right) := \frac{1}{2} \|\mathfrak{G}_{a} - \mathfrak{G}_{i}\|_{\diamond}$$</p>
 
 <p>The other side of this series, fidelity, will be discussed in the next part along with the dichotomy between gate error rate and gate fidelity.</p>
@@ -261,15 +261,13 @@ $$\eta = \Delta_{\diamond} \left(\mathfrak{G}_{a},\mathfrak{G}_{i} \right) := \f
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/">Quantum Teleportation (Part 1): Preliminaries</a></li>            
         
           <li><a href="https://myentangled.com/en/2019/03/quantum-operations-unitary-and-reversible-matrices/">Quantum Operations: Unitary and Reversible Matrices</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/">Mixed States and General Quantum Operations: A simple view on the framework of Quantum Mechanics</a></li>            
+          <li><a href="https://myentangled.com/en/2019/05/study-resources/">Study Resources</a></li>            
         
-                      
-        
-          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
+          <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
