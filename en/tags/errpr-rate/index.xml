@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Errpr Rate on My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</title>
+    <link>https://myentangled.com/en/tags/errpr-rate/</link>
+    <description>Recent content in Errpr Rate on My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2019</copyright>
+    <lastBuildDate>Wed, 26 Jun 2019 15:37:55 +0700</lastBuildDate>
+    
+	<atom:link href="https://myentangled.com/en/tags/errpr-rate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Error rate vs Fidelity (Part 1): Unveil the mathematics behind quantum error rate</title>
+      <link>https://myentangled.com/en/2019/06/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</link>
+      <pubDate>Wed, 26 Jun 2019 15:37:55 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/06/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/</guid>
+      <description>In the article of Bernsterin-Vazirani implementation, I&amp;rsquo;ve addressed one of the most crucial challenges of quantum computing. The field is yet to flourish because quantum gates aren&amp;rsquo;t constructed to be good enough. One major difference of quantum gates versus classical counterparts is that quantum gates have to be reversible, which means we can retrieve a prior state of a qubit without loss of information. Scientists are now on their way to establish a proper scheme for building decent quantum gates.</description>
+    </item>
+    
+  </channel>
+</rss>

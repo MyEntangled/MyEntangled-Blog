@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mixed States on My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</title>
+    <link>https://myentangled.com/en/tags/mixed-states/</link>
+    <description>Recent content in Mixed States on My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2019</copyright>
+    <lastBuildDate>Mon, 01 Jul 2019 23:45:19 +0700</lastBuildDate>
+    
+	<atom:link href="https://myentangled.com/en/tags/mixed-states/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mixed States and General Quantum Operations: A simple view on the framework of Quantum Mechanics</title>
+      <link>https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/</link>
+      <pubDate>Mon, 01 Jul 2019 23:45:19 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/</guid>
+      <description>In this text I&amp;rsquo;ll do some review on the definition of quantum state and quantum measurement, which was introduced here, and reasonably expand the notions into the most general instances of quantum bits.
+Review Given a state $$|\psi\rangle = \sum_i \alpha_i |\varphi_i \rangle,$$ it&amp;rsquo;s possible to perform a Von Neumann measurement on the state&amp;rsquo;s space $\mathscr{H}$ with respect to the orthonormal basis $B = \{|\varphi_i \rangle\}$. The output would be a label $i$ with corresponding probability $|\alpha_i|^2$ and the system left in state $|\varphi_i\rangle$.</description>
+    </item>
+    
+  </channel>
+</rss>

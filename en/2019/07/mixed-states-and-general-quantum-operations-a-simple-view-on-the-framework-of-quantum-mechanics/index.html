@@ -35,7 +35,7 @@
     <meta property="og:description" content="In this text I&amp;rsquo;ll do some review on the definition of quantum state and quantum measurement, which was introduced here, and reasonably expand the notions " />
 
     <meta property="article:published_time" content="2019-07-01T23:45:19&#43;07:00" />
-    
+    <meta property="article:tag" content="Mixed States" /><meta property="article:tag" content="Density Operator" />
 
     <meta property="og:image" content="https://myentangled.com/uploads/Mixed%20State/cover.png"/>
 
@@ -166,6 +166,7 @@
     <header class="post-full-header">
         <section class="post-full-meta">
             <time class="post-full-meta-date" datetime="2019-07-01">1 July 2019</time>
+                <span class="date-divider">/</span> <a href="/en/tags/mixed-states/">#Mixed States</a>&nbsp;<a href="/en/tags/density-operator/">#Density Operator</a>&nbsp;
         </section>
         <h1 class="post-full-title">Mixed States and General Quantum Operations: A simple view on the framework of Quantum Mechanics</h1>
     </header>
@@ -177,7 +178,7 @@
         <div class="kg-card-markdown">
         
 
-<p>In this text I&rsquo;ll do some review on the definition of quantum state and quantum measurement, which was introduced here, and reasonably expand the notions into the most general instances of quantum bits.</p>
+<p>In this text I&rsquo;ll do some review on the definition of quantum state and quantum measurement, which was introduced <a href='/en/2019/04/a-formal-approach-to-observables-and-measurements/'>here</a>, and reasonably expand the notions into the most general instances of quantum bits.</p>
 
 <h4 id="review">Review</h4>
 
@@ -209,7 +210,7 @@ Y &amp; HS^{\dagger} \end{matrix}$$
 You could verify that the measurement of $X$ observable is a complete Pauli measurement with respect to the basis $\{ |+\rangle,|-\rangle \}$</p>
 
 <p>The formalism of observable engenders a convenient way to evaluate the expected value of $m_i$, which relates to physical quantities relevant to our system. In an instance when our system is in state $|\psi\rangle$, this expectation value can be represented as
-$$E(m_i) = Tr(M|\psi\rangle\langle \psi|)$$</p>
+$$E(m_i) = \text{Tr}(M|\psi\rangle\langle \psi|)$$</p>
 
 <h4 id="mixed-state-and-density-matrix">Mixed State and Density Matrix</h4>
 
@@ -231,7 +232,7 @@ If a mixed state can be written in the form above, it&rsquo;s <em>separable</em>
 
 <p>So, how about an operator that is measurement operator? For a pure state $|\psi\rangle = \sum_i a_i|\varphi_i\rangle$ where $a_i = \langle \varphi_i| |\psi\rangle = \langle \varphi_i|\psi\rangle$,
 $$|a_i|^2 = a_i^*a_i = \langle \psi |\varphi_i \rangle \langle \varphi_i | \psi\rangle$$
-This equation holds for measurements of density matrix. Considering a measurement of any arbitrary density matrix $\rho = |\psi\rangle \langle \psi|$ in an basis of interest, the probability of the measurement giving a suitable result $\phi$ is given by
+This equation holds for measurements of density matrix. Considering a measurement of any arbitrary density matrix $\rho = |\psi\rangle \langle \psi|$ in a basis of interest, the probability of the measurement giving a suitable result $\phi$ is given by
 $$\langle \phi |\psi\rangle \langle \psi| \phi \rangle = \langle \phi |\rho| \phi \rangle$$
 The probability is a real number that can be called as the only element and the trace of a $1\times 1$ matrix. This allows us to rewrite the probability as
 $$\langle \phi |\psi\rangle \langle \psi| \phi \rangle  = \text{Tr}(\langle \phi |\psi\rangle \langle \psi| \phi \rangle ) = \text{Tr}(|\phi\rangle\langle \phi| |\psi\rangle\langle \psi|)$$
@@ -277,6 +278,7 @@ The last two equations regarding applying operators and measuring showcase that 
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash;  &mdash;</small>
         
+        <h3 class="read-next-card-header-title"><a href="/en/tags/mixed-states/">#Mixed States</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -286,17 +288,16 @@ The last two equations regarding applying operators and measuring showcase that 
         <ul>
           <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/">Quantum Teleportation (Part 2): The Art of transporting the Unknown</a></li>            
         
-                      
+          <li><a href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">A formal approach to Observables and Measurements</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-part-1-a-derivation-of-the-deutsch-jozsa-algorithm/">Bernstein-Vazirani algorithm (Part 1): A derivation of the Deutsch-Jozsa algorithm</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/a-half-alive-half-dead-cat-and-the-beginning-of-quantum-information/">A half-alive-half-dead cat and the beginning of Quantum Information</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/03/qubits-the-substitution-of-bits-in-quantum-scenario/">Qubits: The substitution of bits in quantum scenario</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/">Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/quantum-measurement-not-just-0-and-1/">Quantum Measurement: Not just 0 and 1</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
+        <a href="/en/tags/mixed-states/">See all related posts →</a>
     </footer>
 </article>
 
@@ -305,24 +306,24 @@ The last two equations regarding applying operators and measuring showcase that 
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Bernstein-Vazirani%20Algorithm/cover.png)"></div>
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/06/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Error%20rate%20vs%20Fidelity/cover.png)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/06/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #project 
-              #Bernstein-Vazirani algorithm 
-              #Deutsch algorithm  </span>
+              #Literature 
+              #Errpr rate 
+              #Density Operator  </span>
               
-              <h2 class="post-card-title">Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</h2>
+              <h2 class="post-card-title">Error rate vs Fidelity (Part 1): Unveil the mathematics behind quantum error rate</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>In the last part of the previous series, Deutsch algorithm, I introduced a manual way to construct the oracle. That oracle must be built from matrix because the oracle function is undeterminate except for the outcome. In Bernsterin-Vazirani problem, the function is, on the other hand, clearly stated: $f(\mathbf{x}) = \mathbf{s}\cdot\mathbf{x}$. So, it&rsquo;s unnecessary to repeat the previous procedure; instead, we&rsquo;ll build the oracle without using matrices by understanding what the function really do. ...  </p>
+                <p>In the article of Bernsterin-Vazirani implementation, I&rsquo;ve addressed one of the most crucial challenges of quantum computing. The field is yet to flourish because quantum gates aren&rsquo;t constructed to be good enough. One major difference of quantum gates versus classical counterparts is that quantum gates have to be reversible, which means we can retrieve a prior state of a qubit without loss of information. Scientists are now on their way to establish a proper scheme for building decent quantum gates. ...  </p>
               
           </section>
       </a>
