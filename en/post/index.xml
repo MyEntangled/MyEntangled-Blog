@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Tue, 02 Jul 2019 16:39:35 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jul 2019 23:49:31 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Work and thought about a summer camp for kids from the view of a speaker</title>
+      <link>https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/</link>
+      <pubDate>Sat, 27 Jul 2019 23:49:31 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/</guid>
+      <description>I just have had a trip to Hanoi during two middle weeks of this July. A main purpose that drove me to travel to the same place the second time this year was to give a speech at a summer camp for middle students organized by CKP or Creative Kids Project. I delivered a technology-central workshop, through which I hope to ignite my students&amp;rsquo; curiosty towards technology and programming particularly.</description>
+    </item>
     
     <item>
       <title>Error rate vs Fidelity (Part 1): Unveil the mathematics behind quantum error rate</title>
