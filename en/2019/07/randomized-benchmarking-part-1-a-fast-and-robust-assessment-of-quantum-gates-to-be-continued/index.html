@@ -5,39 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-    <title>Bernstein-Vazirani algorithm (Part 1): A derivation of the Deutsch-Jozsa algorithm &middot; My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</title>
+    <title>Randomized Benchmarking (Part 1): A fast and robust assessment of quantum gates (To be continued) &middot; My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
-    <link rel="canonical" href="https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-part-1-a-derivation-of-the-deutsch-jozsa-algorithm/" />
+    <link rel="canonical" href="https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-and-robust-assessment-of-quantum-gates-to-be-continued/" />
 
-     <meta name="description" content="Here we stop by Berstein-Vazirani problem that inherents the structure of its predecessor, Deutsch-Jozsa problem, before we can get started with problems and so" /> 
+     <meta name="description" content="As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of " /> 
 
      
     
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="https://myentangled.com/uploads/Bernstein-Vazirani%20Algorithm/cat%20cover.jpg"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Randomized%20Benchmarking/Timeline.jpg"/>
     
  
-    <meta name="twitter:title" content="Bernstein-Vazirani algorithm (Part 1): A derivation of the Deutsch-Jozsa algorithm"/>
-    <meta name="twitter:description" content="Here we stop by Berstein-Vazirani problem that inherents the structure of its predecessor, Deutsch-Jozsa problem, before we can get started with problems and so"/>
-    <meta name="twitter:url" content="https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-part-1-a-derivation-of-the-deutsch-jozsa-algorithm/" />
+    <meta name="twitter:title" content="Randomized Benchmarking (Part 1): A fast and robust assessment of quantum gates (To be continued)"/>
+    <meta name="twitter:description" content="As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of "/>
+    <meta name="twitter:url" content="https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-and-robust-assessment-of-quantum-gates-to-be-continued/" />
     <meta name="twitter:site" content="@"/>
 
     <meta property="og:site_name" content="My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing" />
-    <meta property="og:title" content="Bernstein-Vazirani algorithm (Part 1): A derivation of the Deutsch-Jozsa algorithm &middot; " />
-    <meta property="og:url" content="https://myentangled.com/en/2019/05/bernstein-vazirani-algorithm-part-1-a-derivation-of-the-deutsch-jozsa-algorithm/" />
+    <meta property="og:title" content="Randomized Benchmarking (Part 1): A fast and robust assessment of quantum gates (To be continued) &middot; " />
+    <meta property="og:url" content="https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-and-robust-assessment-of-quantum-gates-to-be-continued/" />
     <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Here we stop by Berstein-Vazirani problem that inherents the structure of its predecessor, Deutsch-Jozsa problem, before we can get started with problems and so" />
+    <meta property="og:description" content="As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of " />
 
-    <meta property="article:published_time" content="2019-05-29T18:10:50&#43;07:00" />
-    <meta property="article:tag" content="Bernstein-Vazirani algorithm" /><meta property="article:tag" content="Deutsch algorithm" />
+    <meta property="article:published_time" content="2019-07-28T22:50:45&#43;07:00" />
+    
 
-    <meta property="og:image" content="https://myentangled.com/uploads/Bernstein-Vazirani%20Algorithm/cat%20cover.jpg"/>
+    <meta property="og:image" content="https://myentangled.com/uploads/Randomized%20Benchmarking/Timeline.jpg"/>
 
 
     <meta name="generator" content="Hugo 0.54.0" />
@@ -169,54 +169,29 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2019-05-29">29 May 2019</time>
-                <span class="date-divider">/</span> <a href="/en/tags/bernstein-vazirani-algorithm/">#Bernstein-Vazirani algorithm</a>&nbsp;<a href="/en/tags/deutsch-algorithm/">#Deutsch algorithm</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2019-07-28">28 July 2019</time>
         </section>
-        <h1 class="post-full-title">Bernstein-Vazirani algorithm (Part 1): A derivation of the Deutsch-Jozsa algorithm</h1>
+        <h1 class="post-full-title">Randomized Benchmarking (Part 1): A fast and robust assessment of quantum gates (To be continued)</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Bernstein-Vazirani%20Algorithm/cat%20cover.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Randomized%20Benchmarking/Timeline.jpg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
-<p>Here we stop by Berstein-Vazirani problem that inherents the structure of its predecessor, Deutsch-Jozsa problem, before we can get started with problems and solutions of practical meaning later. Because this problem is similar to the one stated in the <a href="/en/tags/deutsch-algorithm/">last series</a>, we&rsquo;ll get straight to it.</p>
+<p>As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of quantum computing, quantum supremacy. Two pivotal constraints to the realization of any useful quantum processor are decoherence and the high error rate of quantum operations. It&rsquo;s been suggested that the probability of error per unitary gate should be less than $10^{-2}$ (better $10^{-4}$) for outcomes to be reliable. In the scope of this text, we&rsquo;ll examine one prevalent technique that help assess the error rate, therefore quality, of quantum gates. It&rsquo;s called Randomized Benchmarking.</p>
 
-<h4 id="berstein-vazirani-problem">Berstein-Vazirani problem</h4>
+<h2 id="standard-randomized-benchmarking">Standard Randomized Benchmarking</h2>
 
-<p>The access for a black-box function $f: \{0,1\}^n \mapsto \{0,1\}$. It&rsquo;s guaranteed that $f(\mathbf{x}) = \mathbf{s}\cdot\mathbf{x}$ (mod $2$) for some secret string $\mathbf{s} \in \{0,1\}^n$. </br>
-<strong>Quest</strong>: Find $\mathbf{s}$.</p>
+<p>Randomized Benchmarking (RB) is the process of applying random gate sequences of varying lengths to an initial state, $|0\rangle$ normally. Gates of each sequence must sum to Indentity, which means the chosen gates collectively reserve the input state, theoretically.</p>
 
-<h4 id="classical-approach">Classical approach</h4>
-
-<p>You can get every bit of $\mathbf{x}$ one-by-one by querying $f$ with binary strings that only have one $1$, each in a different position. For example, if $\mathbf{s} = s_1s_2&hellip;s_n$,
-$$f(10&hellip;0) = s_1 \\ f(01&hellip;0) = s_2 \\ \vdots \\ f(00&hellip;1) = s_n$$
-Queries each provides one bit of information about $\mathbf{s}$, so we need to make $n$ queries in order to retrieve $\mathbf{s}$. No classical algorithm can do anything better than this. But Bernstein, Vazirani et al. proposed a <a href = 'https://epubs.siam.org/doi/abs/10.1137/S0097539796300933'>quantum algorithm</a>, later named after them, when trying to find out a class of problems that can only be solved efficiently in the quantum world. Their original idea was revised several times and proved that $\mathbf{s}$ can be determined within one query to the oracle function $f$.</p>
-
-<h4 id="quantum-approach">Quantum approach</h4>
-
-<p>In general, the solution to this problem is pretty much the same as that the solution to the Deutsch-Jozsa problem. The only two differences emerge in constructing the oracle (only during implementation) and analyzing the measurement result. The circuit for the solution is therefore unchanged.</p>
-
-<p><img src="/uploads/Bernstein-Vazirani Algorithm/BV circuit.png" alt="Example image" />
-$$|\psi_0\rangle = |0\rangle^{\otimes n} \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)$$
-$$|\psi_1\rangle = \frac{1}{\sqrt{2^n}}\sum_{\mathbf{x} \in \{0,1\}^n} |\mathbf{x}\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)$$
-$$\begin{matrix} |\psi_2\rangle &amp; = &amp; \displaystyle{\frac{1}{\sqrt{2^n}} \sum_{\mathbf{x} \in \{0,1\}^n} (-1)^{f(\mathbf{x})} |\mathbf{x}\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)} \\
-&amp; = &amp; \displaystyle{\frac{1}{\sqrt{2^n}} \sum_{\mathbf{x} \in \{0,1\}^n} (-1)^{\mathbf{s}\cdot\mathbf{x}} |\mathbf{x}\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right)}\end{matrix}$$</p>
-
-<p>In the last series, we saw that the compound Hadamard transform acting on the first register can be expressed as $H^{\otimes n} |\mathbf{x}\rangle = \frac{1}{\sqrt{2^n}} \sum_{\mathbf{z} \in \{0,1\}^n} (-1)^{\mathbf{x} \cdot \mathbf{z}} |\mathbf{z}\rangle$. Combine this expression with the last one we get</p>
-
-<p>$$|\psi_3\rangle = \frac{1}{\sqrt{2^n}} \sum_{\mathbf{z} \in \{0,1\}^n} (-1)^{\mathbf{s}\cdot\mathbf{x} \oplus \mathbf{x}\cdot\mathbf{z}} |\mathbf{z}\rangle \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) $$</p>
-
-<p>Now let&rsquo;s take a closer look at the coefficient of the first register. The amplitude, neglecting the global factor, is
-$$\begin{matrix} &amp; \displaystyle{\sum_{\mathbf{z} \in \{0,1\}^n} (-1)^{\mathbf{s}\cdot\mathbf{x} \oplus \mathbf{x}\cdot\mathbf{z}}} \\
-= &amp; \displaystyle{\sum_{\mathbf{z} \in \{0,1\}^n} (-1)^{(\mathbf{s}\oplus\mathbf{z})\cdot \mathbf{x}}} \\
-= &amp; \displaystyle{\prod_{i=1}^n \sum_{z_i \in \{0,1\}} (-1)^{(s_i \oplus z_i)\cdot x_i}} \end{matrix}$$
-At least one term of the product vanishes, thus the product becomes $0$, unless every bit $s_i$ of $\mathbf{s}$ is equal to the corresponding bit $z_i$ of $\mathbf{z}$, i.e. $\mathbf{s} = \mathbf{z}$. So, by measuring the state $|\mathbf{z}\rangle$, we actually obtain $\mathbf{s}$.</p>
-
-<p>Looking back the whole process, we can reduce all transformations across the circuit to
-$\mathbf{H}^{\otimes (n+1)}\mathbf{U}_f\mathbf{H}^{\otimes(n+1)} |0\rangle^{\otimes n} |1\rangle = |\mathbf{s}\rangle |1\rangle$. We&rsquo;re going to implement this algorithm in the next part. Two ways of constructing the oracle will be discussed.</p>
+<p>The <strong>fidelity</strong> of the final measurements is obtained for each sequence length. Fidelity measures the similarity/closeness of two quantum states $\rho = |\psi_{\rho}\rangle \langle \psi_{\rho} |$ and $\sigma = |\psi_{\sigma}\rangle \langle \psi_{\sigma} |$ via the overlap of them $F(\rho,\sigma) = F(\sigma,\rho) = |\langle\psi_{\rho}|\psi_{\sigma}\rangle|^2$.
+<p>1. For each sequence length, we compare the realistic outcome with the theoretically expected one. The fidelity of them is calculated following the formula above. If the experiment is conducted multiple times for a certain sequence length, we can just average the fidelities to get the representative.</br>
+2. $1 - \text{Average fidelities}$ for different sequence lengths suggest a function that decreases as the length increases (check out the figure below). </br>
+3. Average error per gate can be calculated from some parameters of the function.</p>
+<img src="/uploads/Randomized Benchmarking/function curve.png" alt="Example image" /></p>
     
         </div>
     </section>
@@ -248,7 +223,6 @@ $\mathbf{H}^{\otimes (n+1)}\mathbf{U}_f\mathbf{H}^{\otimes(n+1)} |0\rangle^{\oti
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash;  &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="/en/tags/bernstein-vazirani-algorithm/">#Bernstein-Vazirani algorithm</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -256,18 +230,17 @@ $\mathbf{H}^{\otimes (n+1)}\mathbf{U}_f\mathbf{H}^{\otimes(n+1)} |0\rangle^{\oti
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-2-the-art-of-transporting-the-unknown/">Quantum Teleportation (Part 2): The Art of transporting the Unknown</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/05/study-resources/">Study Resources</a></li>            
-        
-          <li><a href="https://myentangled.com/en/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/">[TUYỂN SINH] PiMA 2019 - The Mathematics of Deep Learning</a></li>            
+          <li><a href="https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/">Work and thought about a summer camp for kids from the view of a speaker</a></li>            
         
           <li><a href="https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/">Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/07/mixed-states-and-general-quantum-operations-a-simple-view-on-the-framework-of-quantum-mechanics/">Mixed States and General Quantum Operations: A simple view on the framework of Quantum Mechanics</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/">Quantum Teleportation (Part 1): Preliminaries</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="/en/tags/bernstein-vazirani-algorithm/">See all related posts →</a>
     </footer>
 </article>
 
@@ -275,24 +248,25 @@ $\mathbf{H}^{\otimes (n+1)}\mathbf{U}_f\mathbf{H}^{\otimes(n+1)} |0\rangle^{\oti
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Bernstein-Vazirani%20Algorithm/cover.png)"></div>
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/07/myentangled-index-my-suggested-order-of-reading/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/index/cover2.png)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/07/myentangled-index-my-suggested-order-of-reading/">
           <header class="post-card-header">
-              <span class="post-card-tags">
-              #project 
-              #Bernstein-Vazirani algorithm 
-              #Deutsch algorithm  </span>
               
-              <h2 class="post-card-title">Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</h2>
+              <h2 class="post-card-title">MyEntangled index: my suggested order of reading</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>In the last part of the previous series, Deutsch algorithm, I introduced a manual way to construct the oracle. That oracle must be built from matrix because the oracle function is undeterminate except for the outcome. In Bernsterin-Vazirani problem, the function is, on the other hand, clearly stated: $f(\mathbf{x}) = \mathbf{s}\cdot\mathbf{x}$. So, it&rsquo;s unnecessary to repeat the previous procedure; instead, we&rsquo;ll build the oracle without using matrices by understanding what the function really do. ...  </p>
+                <p>TABLE OF CONTENT
+I. About me
+II. Study resources: What you should read, watch, and explore at the entrance of quantum computing
+III. Stories: My sharing about other events, and some anecdotes and thoughts about what I see, feel and experience in my current walk of life.
+IV. Quantum things  0. A no-science introduction to Quantum Information
+Introduction to quantum information theory  1.1. Fundamentals of Qubits  1.2 Quantum Measurement  1. ...  </p>
               
           </section>
       </a>
@@ -307,24 +281,20 @@ $\mathbf{H}^{\otimes (n+1)}\mathbf{U}_f\mathbf{H}^{\otimes(n+1)} |0\rangle^{\oti
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/pima%20admissions/cover.jpg)"></div>
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/CKP%20Camp/cover.png)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/05/tuy%E1%BB%83n-sinh-pima-2019-the-mathematics-of-deep-learning/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/">
           <header class="post-card-header">
-              <span class="post-card-tags">
-              #PiMA 2019 
-              #Deep Learning  </span>
               
-              <h2 class="post-card-title">[TUYỂN SINH] PiMA 2019 - The Mathematics of Deep Learning</h2>
+              <h2 class="post-card-title">Work and thought about a summer camp for kids from the view of a speaker</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>Nối tiếp ba mùa trại 2016, 2017 và 2018 đầy thành công, PiMA chính thức quay trở lại với chủ đề “The Mathematics of Deep Learning”.
-I. Đôi nét về PiMA Chúng mình là ai? Projects in Mathematics and Applications (PiMA) là một dự án phi lợi nhuận được thành lập năm 2016 bởi một nhóm sinh viên có niềm đam mê với Toán ứng dụng từ các trường đại học ở nhiều nơi trên thế giới. ...  </p>
+                <p>I just have had a trip to Hanoi during two middle weeks of this July. A main purpose that drove me to travel to the same place the second time this year was to give a speech at a summer camp for middle students organized by CKP or Creative Kids Project. I delivered a technology-central workshop, through which I hope to ignite my students&rsquo; curiosty towards technology and programming particularly. ...  </p>
               
           </section>
       </a>
@@ -348,17 +318,17 @@ I. Đôi nét về PiMA Chúng mình là ai? Projects in Mathematics and Applica
     </a>
   </div>
   <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">Bernstein-Vazirani algorithm (Part 1): A derivation of the Deutsch-Jozsa algorithm</div>
+  <div class="floating-header-title">Randomized Benchmarking (Part 1): A fast and robust assessment of quantum gates (To be continued)</div>
   <div class="floating-header-share">
     <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Bernstein-Vazirani%20algorithm%20%28Part%201%29%3a%20A%20derivation%20of%20the%20Deutsch-Jozsa%20algorithm&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f05%2fbernstein-vazirani-algorithm-part-1-a-derivation-of-the-deutsch-jozsa-algorithm%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Randomized%20Benchmarking%20%28Part%201%29%3a%20A%20fast%20and%20robust%20assessment%20of%20quantum%20gates%20%28To%20be%20continued%29&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f07%2frandomized-benchmarking-part-1-a-fast-and-robust-assessment-of-quantum-gates-to-be-continued%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f05%2fbernstein-vazirani-algorithm-part-1-a-derivation-of-the-deutsch-jozsa-algorithm%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f07%2frandomized-benchmarking-part-1-a-fast-and-robust-assessment-of-quantum-gates-to-be-continued%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>
