@@ -5,39 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-    <title>Quantum Teleportation (Part 1): Preliminaries &middot; My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</title>
+    <title>Randomized Benchmarking (Part 1): A fast, robust, and scalable assessment of quantum gates (To be continued) &middot; My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing</title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="https://myentangled.com/favicon.ico" />
-    <link rel="canonical" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/" />
+    <link rel="canonical" href="https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-quantum-gates-to-be-continued/" />
 
-     <meta name="description" content="Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&amp;rsquo;s helpful to ge" /> 
+     <meta name="description" content="As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of " /> 
 
      
     
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="https://myentangled.com/uploads/Teleportation/fig1.jpg"/>
+    <meta name="twitter:image" content="https://myentangled.com/uploads/Randomized%20Benchmarking/Timeline.jpg"/>
     
  
-    <meta name="twitter:title" content="Quantum Teleportation (Part 1): Preliminaries"/>
-    <meta name="twitter:description" content="Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&amp;rsquo;s helpful to ge"/>
-    <meta name="twitter:url" content="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/" />
+    <meta name="twitter:title" content="Randomized Benchmarking (Part 1): A fast, robust, and scalable assessment of quantum gates (To be continued)"/>
+    <meta name="twitter:description" content="As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of "/>
+    <meta name="twitter:url" content="https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-quantum-gates-to-be-continued/" />
     <meta name="twitter:site" content="@"/>
 
     <meta property="og:site_name" content="My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing" />
-    <meta property="og:title" content="Quantum Teleportation (Part 1): Preliminaries &middot; " />
-    <meta property="og:url" content="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/" />
+    <meta property="og:title" content="Randomized Benchmarking (Part 1): A fast, robust, and scalable assessment of quantum gates (To be continued) &middot; " />
+    <meta property="og:url" content="https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-quantum-gates-to-be-continued/" />
     <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&amp;rsquo;s helpful to ge" />
+    <meta property="og:description" content="As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of " />
 
-    <meta property="article:published_time" content="2019-04-26T15:26:46&#43;07:00" />
-    <meta property="article:tag" content="Teleportation" />
+    <meta property="article:published_time" content="2019-07-28T22:50:45&#43;07:00" />
+    
 
-    <meta property="og:image" content="https://myentangled.com/uploads/Teleportation/fig1.jpg"/>
+    <meta property="og:image" content="https://myentangled.com/uploads/Randomized%20Benchmarking/Timeline.jpg"/>
 
 
     <meta name="generator" content="Hugo 0.54.0" />
@@ -169,58 +169,59 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2019-04-26">26 April 2019</time>
-                <span class="date-divider">/</span> <a href="/en/tags/teleportation/">#Teleportation</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2019-07-28">28 July 2019</time>
         </section>
-        <h1 class="post-full-title">Quantum Teleportation (Part 1): Preliminaries</h1>
+        <h1 class="post-full-title">Randomized Benchmarking (Part 1): A fast, robust, and scalable assessment of quantum gates (To be continued)</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://myentangled.com/uploads/Randomized%20Benchmarking/Timeline.jpg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
+<p>As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of quantum computing, quantum supremacy. Two pivotal constraints to the realization of any useful quantum processor are decoherence and the high error rate of quantum operators, or quantum gates experimentally. It&rsquo;s been suggested that the probability of error per unitary gate should be less than $10^{-2}$ (better $10^{-4}$) for the outcome to be reliable. In the scope of this text, we&rsquo;ll examine one prevalent technique that helps assess the error rate, therefore quality, of quantum gates. It&rsquo;s called Randomized Benchmarking.</p>
+
+<h2 id="randomized-benchmarking">Randomized Benchmarking</h2>
+
+<p>Randomized Benchmarking (RB) is the process of applying random gate sequences of varying lengths to an initial state, $|0\rangle$ normally. Gates of each sequence must sum to Indentity, which means the chosen gates collectively reserve the input state, theoretically.</p>
+
+<p>The <strong>fidelity</strong> of the final measurements is obtained for each sequence length. Fidelity measures the similarity/closeness of two quantum states $\rho = |\psi_{\rho}\rangle \langle \psi_{\rho} |$ and $\sigma = |\psi_{\sigma}\rangle \langle \psi_{\sigma} |$ via the overlap of them $F(\rho,\sigma) = F(\sigma,\rho) = |\langle\psi_{\rho}|\psi_{\sigma}\rangle|^2$.
+<p>1. For each sequence length, we compare the realistic outcome with the theoretically expected one. The fidelity of them is calculated following the formula above. If the experiment is conducted multiple times for a certain sequence length, we can just average the fidelities to get the representative.</br>
+2. $1 - \text{Average fidelities}$ for different sequence lengths suggest a function that decreases as the length increases (check out the figure below). </br>
+3. Average error per gate can be calculated from some parameters of the function.</p>
+<img src="/uploads/Randomized Benchmarking/function curve.png" alt="Example image" /></p>
+
+<h2 id="figure-of-merit">Figure of merit</h2>
+
+<p>Putting the procedure for implementing RB aside, we start with theoretically essential quantities in the protocol. RB was created to measure how good realistic quantum operators are in a noisy environment. The ideal transformation is denoted as $\mathcal{U}: \mathcal{U}(\rho) = U\rho U^{\dagger}$ for any unitary $U$ and density matrix $\rho$.</p>
+
+<p>The presence of noise in the system can be characterized as a noise operation $\mathcal{E}$, where $\mathcal{E}$ is a completely positive, trace-preserving (CTPT) map. Note that $\mathcal{E}$ may depend on the implementation of unitary $\mathcal{U}$. However, we are going to consider $\mathcal{E}$ to be the same, or gate-independent, for all $\mathcal{U}$ for the sake of simplicity. So, it&rsquo;s convenient that we can be always to represent the practically-performed operation $\mathcal{\tilde{U}} = \mathcal{E} \circ \mathcal{U}$ where $\circ$ denotes composition (i.e. apply $\mathcal{E}$ then apply $\mathcal{U}$). The <strong>average (gate) fidelity</strong> is the measure of the quality of the practical implementation $\mathcal{\tilde{U}}$ compared to its ideal counterpart $\mathcal{U}$:
+$$F_{avg}(\mathcal{U},\mathcal{\tilde{U}}):= \int \text{Tr}(\mathcal{U} (|\psi\rangle \langle \psi|)   \mathcal{\tilde{U}} (\psi\rangle \langle \psi|)) d\psi,$$
+where $d\psi$ is the uniform Haar measurement over pure quantum states. Doing some math with the integrand we get $\text{Tr}(\mathcal{U} (|\psi\rangle \langle \psi|)   \mathcal{\tilde{U}} (|\psi\rangle \langle \psi|))$ $= \text{Tr}(U|\psi\rangle \langle \psi| U^{\dagger} UE|\psi\rangle \langle \psi| E^{\dagger}U^{\dagger})$ $= \text{Tr}(E|\psi\rangle \langle \psi|E^{\dagger}|\psi\rangle \langle \psi|)$ because of the communicativeness of trace and $UU^{\dagger} = I$. This explicitly explains
+$$F_{avg}(\mathcal{U},\mathcal{\tilde{U}}) = F_{avg}(\mathcal{E},\mathcal{I}),$$
+where $\mathcal{I}$ is the identity operation. The <strong>average infidelity</strong> $r$ is defined simply as
+$$r(\mathcal{E}) := 1 - F_{avg}(\mathcal{E},\mathcal{I})$$
+Next we define a new quantity, $f(\mathcal{E})$ as the &ldquo;depolarizing parameter&rdquo; corresponding to the quantum channel $\mathcal{E}$. RB can be used to estimate this quantity.
+$$f(\mathcal{E}) := \frac{dF_{avg}(\mathcal{E},\mathcal{I})-1}{d-1},$$
+where d is the dimension of the state space, $d = \text{dim}(\mathscr{H})$, normally $2^n$, where n is the number of qubits in the system.</p>
+
+<h2 id="use-of-clifford-gates">Use of Clifford Gates</h2>
+
+<p>We&rsquo;re gonna perform RB to assess the elements taken from the Clifford group. It&rsquo;s a group of unitary gates constructed by all possible combinations of generating operators: $\mathbf{CNOT}, \mathbf{H}, \mathbf{S}$ ($\pi/4$ phase gate). Some of Clifford gates are {$\mathbf{X},\mathbf{Y},\mathbf{Z},\mathbf{H},\mathbf{S},\mathbf{S^{\dagger}},\mathbf{CX},\mathbf{CZ},\mathbf{SWAP}$}. Theoretically, these gates assure that the final measurement yields a deterministic outcome in the absence of error. But there are many more gates that also satisfy such a condition. So, why Clifford group?</p>
+
+<p>There are several compelling reasons supporting the use of Clifford operators over arbitrary unitaries in the implementation of RB: </br>
+• The Clifford group is finite in number of elements, so it&rsquo;s easy to calibrate them for small qubit number $n$. Moreover, each Clifford gate can be constructed using a finite number of generating gates that can be calibrated. Unitary gates, in general, don&rsquo;t have such a set of generating gates and therefore cannot be constructed with a set of gates under proper calibration. </br>
+• It&rsquo;s practice that the Clifford gates are the basis of many quantum error-correction protocols. Quantifying their gate fidelity is essential in determining the possible error correction scheme for a given architecture. </br>
+• At the end of the gate sequence may require inverting an enormous product of preceeding gates. For arbitrary unitaries, the inversion algorithm&rsquo;s complexity scales exponentially with $n$, which is impossible with our classical computing technology even for not-really-large $n$. On the other hand, the inversion algorithm for Clifford operators only require time of order $O(n^3)$, so tractable even for very large $n$. </br>
+• In contrast to the infinite number of possible unitary sequences of fixed length, the number of possible Clifford sequences of fixed length is finite. It conveniently replaces all integrals over unitaries with sums over Clifford operators. It also allows the analysis of the degree to which the sum of a small number of sequence fidelities approximates the sum over all sequence fidelities (in comparison to analyzing the convergence of a finite sum of sequences to the integral over all unitary sequences)</p>
+
 <blockquote>
-<p>Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&rsquo;s helpful to get familiar with a fundamental constraint to Quantum Computing. In contrast, I&rsquo;ll also introduce you how powerful qubits get in solving problems through a basic protocol: Quantum Teleportation, the &ldquo;Hello, world!&rdquo; of Quantum Programming.</p>
+<blockquote>
+<p>The next parts are about constructing the protocol and deriving some necessary equations in the model.</p>
 </blockquote>
-
-<h4 id="no-cloning-theorem">No-cloning theorem</h4>
-
-<p>In terms of computer architechture, it&rsquo;s convenient to copy the state of a bit in order to create a new qubit exactly the same. The protocol that seems really simple in the classical scenario is nonetheless proven impossible to perform quantumly. You should understand that while measuring a bit is extremely easy, just $0$ or $1$ with nearly perfect certainty, that process is difficult as mentioned in my previous posts. You can still measure a qubit, but what you really get is just no more than probabilities. They are not even coefficients, what are essential to fully illustrate a qubit state, and just obtained in a statistical manner rather than deterministically. For those reasons, one will never get suffcient information to recreate another version from an arbitrary qubit in general.</p>
-
-<p>You may think that although we cannot recreate the qubit by knowing all of its amplitudes, we can copy its state to another without knowing the state. Unfortunatly, the cloning procedure is also unaccomplishable with the disproof as follows.</p>
-
-<p>Let&rsquo;s formalize the problem. Trong was given a qubit that can be in any state $|\psi\rangle$, and he want to duplicate his qubit&rsquo;s state through a transformation that acts on his qubit and the second qubit initialized in $|0\rangle$. The whole process is displayed in the figure below.</p>
-
-<p><img src="/uploads/Teleportation/circuit_1.png" alt="Example image" /></p>
-
-<p>We want a unitary transformation $U$ as a map that $U|\psi\rangle |0\rangle = |\psi\rangle |\psi\rangle$:
-$$(\alpha|0\rangle + \beta|1\rangle) \otimes |0\rangle \overset{U}{\rightarrow} (\alpha|0\rangle + \beta|1\rangle)(\alpha|0\rangle + \beta|1\rangle) \quad \forall \alpha, \beta\in \mathbb{C}$$
-Second qubit replicating the first qubit means $|00\rangle \overset{U}{\rightarrow} |00\rangle$ and $|10\rangle \overset{U}{\rightarrow} |11\rangle$, which leads to the transformation of the LHS
-$$\begin{matrix} \alpha|00\rangle + \beta|10\rangle &amp; \overset{U}{\rightarrow} &amp; \alpha \cdot U|00\rangle + \beta \cdot U|11\rangle \\ &amp; = &amp; \alpha |00\rangle + \beta |11\rangle  \end{matrix}$$
-On the other hand, the expanded RHS is
-$$(\alpha|0\rangle + \beta|1\rangle)(\alpha|0\rangle + \beta|1\rangle) = \alpha^2 |00\rangle + \alpha\beta |01\rangle + \alpha\beta |10\rangle + \beta^2 |11\rangle$$
-So we have a contradiction as $$\alpha |00\rangle + \beta |11\rangle = \alpha^2 |00\rangle + \alpha\beta |01\rangle + \alpha\beta |10\rangle + \beta^2 |11\rangle$$ only when $\alpha = 1$ or $\beta = 1$.</p>
-
-<p>As you can see, it&rsquo;s impossible to clone a qubit state unless the qubit is in the classical state $0$ and $1$. The no-cloning theorem introduces a fundamental barrier to the field as there isn&rsquo;t a universal machine that handles the cloning problem. Imagining that you are free to clone an arbitrary qubit with no idea about its state, i.e. there exists a cloning unitary, you could overcome the post-measurement collapse of a qubit by performing as many experiments as you desire on the clones to figure out the true state of that qubit.</p>
-
-<h4 id="bell-state-circuit">Bell State Circuit</h4>
-
-<p>We have already learned about Bell states through one of my posts on quantum entanglement. There are four Bell states totally, $|\Psi^+\rangle$, $|\Psi^-\rangle$, $|\Phi^+\rangle$, $|\Phi^-\rangle$. The Bell states are essential in several algorithms, one of which is teleportation. So, learning how to construct a Bell state is a necessity before we proceed towards the protocol.</p>
-
-<p><img src="/uploads/Teleportation/circuit_2.png" alt="Example image" /></p>
-
-<p>Let&rsquo;s get familiar with drawings in quantum circuits. An operator (usually called &lsquo;gate&rsquo; in circuits) is a square that contains a letter standing for the meaning of the gate. Controlled-NOT (CNOT) gate includes a large black dot connected with $\otimes$. The black dot holds for the <em>control qubit</em>, and the $\oplus$ (addition in 2-modulus) is the operator that will act on the <em>target qubit</em> if the control qubit is $|1\rangle$. Following the circuit in the figure, we will be able to create the Bell state $\displaystyle{|\Phi^+\rangle = \frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |11\rangle}$.</p>
-
-<p>First, we have two qubits both initialized in a basis state. $$|\psi\rangle = |00\rangle$$
-Followed from the Hadamard gate acting on the first qubit, the composite state transforms into
-$$\begin{matrix} |\psi\rangle &amp;\leftarrow&amp; \displaystyle{\left(\frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle\right) \otimes |0\rangle} \\
-&amp;=&amp; \displaystyle{\frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |10\rangle} \end{matrix}$$
-The CNOT gate adjusts components of the composite state $|\psi_1\rangle$ where the first qubit state is $|1\rangle$ and keeps the others the same. The performed transformation on the second qubit is a NOT gate (or $X$ gate), which is arithmatically the same as an addition module $2$.
-$$|\psi\rangle \leftarrow \frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |11\rangle$$
-That final state is a Bell state that shows some characteristics helpful in teleportation and other algorithms in general. You should explore by yourself what the eventual results would be if we change the initialized states to $|01\rangle$, $|10\rangle$ and $|11\rangle$ respectively.</p>
+</blockquote>
     
         </div>
     </section>
@@ -252,7 +253,6 @@ That final state is a Bell state that shows some characteristics helpful in tele
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash;  &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="/en/tags/teleportation/">#Teleportation</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -260,18 +260,19 @@ That final state is a Bell state that shows some characteristics helpful in tele
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">Deutsch Algorithm (Part 1): Kicking the phase back</a></li>            
+          <li><a href="https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/">Work and thought about a summer camp for kids from the view of a speaker</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/who-am-i-and-what-the-fish-is-this-blog/">Who am I and what the fish is this blog?</a></li>            
+                      
         
           <li><a href="https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/">Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</a></li>            
         
-          <li><a href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">Quantum Teleportation (Part 3): Implementation</a></li>            
+          <li><a href="https://myentangled.com/en/2019/03/quantum-entanglement-to-cheat-the-reality/">Quantum Entanglement to cheat the Reality</a></li>            
+        
+          <li><a href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-2-deutsch-jozsa-problem-the-first-exponential-speedup/">Deutsch Algorithm (Part 2): Deutsch-Jozsa problem - The first exponential speedup</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="/en/tags/teleportation/">See all related posts →</a>
     </footer>
 </article>
 
@@ -279,24 +280,25 @@ That final state is a Bell state that shows some characteristics helpful in tele
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)"></div>
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/07/myentangled-index-my-suggested-order-of-reading/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/index/cover2.png)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/07/myentangled-index-my-suggested-order-of-reading/">
           <header class="post-card-header">
-              <span class="post-card-tags">
-              #project 
-              #Teleportation  </span>
               
-              <h2 class="post-card-title">Quantum Teleportation (Part 3): Implementation</h2>
+              <h2 class="post-card-title">MyEntangled index: my suggested order of reading</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>Let&rsquo;s implement and verify the teleporation protocol following the procedure we discussed throughout previous parts.
-First we need to create an arbitrary quantum state. Trong has been curious about the combined effect of rotation gates about the x, y, and z axes. So, he decides to apply three distinct rotation gates, each as a rotation of 60 degrees around one coordinate axis acting on a qubit currently in the Hadamard state $|-\rangle$. ...  </p>
+                <p>TABLE OF CONTENT
+I. About me
+II. Study resources: What you should read, watch, and explore at the entrance of quantum computing
+III. Stories: My sharing about other events, and some anecdotes and thoughts about what I see, feel and experience in my current walk of life.
+IV. Quantum things  0. A no-science introduction to Quantum Information
+Introduction to quantum information theory  1.1. Fundamentals of Qubits  1.2 Quantum Measurement  1. ...  </p>
               
           </section>
       </a>
@@ -311,23 +313,20 @@ First we need to create an arbitrary quantum state. Trong has been curious about
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Measurement/cover.jpg)"></div>
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/CKP%20Camp/cover.png)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/a-formal-approach-to-observables-and-measurements/">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/07/work-and-thought-about-a-summer-camp-for-kids-from-the-view-of-a-speaker/">
           <header class="post-card-header">
-              <span class="post-card-tags">
-              #Quantum Mechanics  </span>
               
-              <h2 class="post-card-title">A formal approach to Observables and Measurements</h2>
+              <h2 class="post-card-title">Work and thought about a summer camp for kids from the view of a speaker</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>Throughout previous posts, I&rsquo;ve delivered a way to understand what is a quantum measurement. That way of understanding is simple and may suit our normal intuition, but measurement is a non-trivial physical process and somewhat counter-intuitive for several reasons.
-First, a measurement in general results in probabilistic outcomes. No matter how careful you prepare for the measurement procedure, it is inherent that possible outcomes of a measure is distributed according to a certain probability distribution determined by the state space of your quantum system. ...  </p>
+                <p>I just have had a trip to Hanoi during two middle weeks of this July. A main purpose that drove me to travel to the same place the second time this year was to give a speech at a summer camp for middle students organized by CKP or Creative Kids Project. I delivered a technology-central workshop, through which I hope to ignite my students&rsquo; curiosty towards technology and programming particularly. ...  </p>
               
           </section>
       </a>
@@ -351,17 +350,17 @@ First, a measurement in general results in probabilistic outcomes. No matter how
     </a>
   </div>
   <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">Quantum Teleportation (Part 1): Preliminaries</div>
+  <div class="floating-header-title">Randomized Benchmarking (Part 1): A fast, robust, and scalable assessment of quantum gates (To be continued)</div>
   <div class="floating-header-share">
     <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Quantum%20Teleportation%20%28Part%201%29%3a%20Preliminaries&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2fquantum-teleportation-part-1-preliminaries%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Randomized%20Benchmarking%20%28Part%201%29%3a%20A%20fast%2c%20robust%2c%20and%20scalable%20assessment%20of%20quantum%20gates%20%28To%20be%20continued%29&amp;url=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f07%2frandomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-quantum-gates-to-be-continued%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f04%2fquantum-teleportation-part-1-preliminaries%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmyentangled.com%2fen%2f2019%2f07%2frandomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-quantum-gates-to-be-continued%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>
