@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://myentangled.com/en/2019/08/randomized-benchmarking-part-2-protocols-for-standard-and-interleaved-versions.-experiments-with-a-realistic-quantum-device./</loc>
+    <lastmod>2019-08-19T22:52:02+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/en/2019/07/myentangled-index-my-suggested-order-of-reading/</loc>
     <lastmod>2019-07-29T00:00:00+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-quantum-gates/</loc>
+    <loc>https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-clifford-gates/</loc>
     <lastmod>2019-07-28T22:50:45+07:00</lastmod>
   </url>
   
@@ -241,7 +246,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-07-29T00:00:00+07:00</lastmod>
+    <lastmod>2019-08-19T22:52:02+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -273,7 +278,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-07-29T00:00:00+07:00</lastmod>
+    <lastmod>2019-08-19T22:52:02+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -305,7 +310,7 @@
   
   <url>
     <loc>https://myentangled.com/en/tags/project/</loc>
-    <lastmod>2019-07-28T22:50:45+07:00</lastmod>
+    <lastmod>2019-08-19T22:52:02+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -321,13 +326,13 @@
   
   <url>
     <loc>https://myentangled.com/en/categories/quantum-algorithms/</loc>
-    <lastmod>2019-07-28T22:50:45+07:00</lastmod>
+    <lastmod>2019-08-19T22:52:02+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://myentangled.com/en/categories/quantum-information/</loc>
-    <lastmod>2019-07-28T22:50:45+07:00</lastmod>
+    <lastmod>2019-08-19T22:52:02+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
