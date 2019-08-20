@@ -27,11 +27,11 @@ Introduction to quantum information theory  1.1. Fundamentals of Qubits  1.2 Qua
     </item>
     
     <item>
-      <title>Randomized Benchmarking (Part 2): Protocols for standard and interleaved versions. Experiments with a realistic quantum device.</title>
-      <link>https://myentangled.com/en/2019/08/randomized-benchmarking-part-2-protocols-for-standard-and-interleaved-versions.-experiments-with-a-realistic-quantum-device./</link>
+      <title>Randomized Benchmarking (Part 2): Protocols for standard and interleaved versions &#43; Experiment with a realistic quantum device</title>
+      <link>https://myentangled.com/en/2019/08/randomized-benchmarking-part-2-protocols-for-standard-and-interleaved-versions-experiment-with-a-realistic-quantum-device/</link>
       <pubDate>Mon, 19 Aug 2019 22:52:02 +0700</pubDate>
       
-      <guid>https://myentangled.com/en/2019/08/randomized-benchmarking-part-2-protocols-for-standard-and-interleaved-versions.-experiments-with-a-realistic-quantum-device./</guid>
+      <guid>https://myentangled.com/en/2019/08/randomized-benchmarking-part-2-protocols-for-standard-and-interleaved-versions-experiment-with-a-realistic-quantum-device/</guid>
       <description>Knowing the underpinnings of randomized benchmarking addressed in the last part, we first begin with the standard protocol. Standard RB is used to assess the error rate over gates of Clifford group with an assumption that these gates have the same error rate. After that, another improvement of the technique will be introduced, namely Interleaved Randomized Benchmarking. The upgraded version was proposed not to investigate the Clifford group as a whole, but restricted to one single kind of Clifford gate of our choice.</description>
     </item>
     
