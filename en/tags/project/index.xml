@@ -22,15 +22,6 @@
     </item>
     
     <item>
-      <title>Randomized Benchmarking (Part 1): A fast, robust, and scalable assessment of Clifford gates</title>
-      <link>https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-clifford-gates/</link>
-      <pubDate>Sun, 28 Jul 2019 22:50:45 +0700</pubDate>
-      
-      <guid>https://myentangled.com/en/2019/07/randomized-benchmarking-part-1-a-fast-robust-and-scalable-assessment-of-clifford-gates/</guid>
-      <description>As you can see in the cover figure, quantum computing is just at the onset of its journey. There are tons of work to do before we can move to the next stage of quantum computing, quantum supremacy. Two pivotal constraints to the realization of any useful quantum processor are decoherence and the high error rate of quantum operators, or quantum gates experimentally. It&amp;rsquo;s been suggested that the probability of error per unitary gate should be less than $10^{-2}$ (better $10^{-4}$) for the outcome to be reliable.</description>
-    </item>
-    
-    <item>
       <title>Bernstein-Vazirani algorithm (Part 2): How to run your algorithms on a realistic quantum computer</title>
       <link>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/</link>
       <pubDate>Fri, 07 Jun 2019 15:30:16 +0700</pubDate>
