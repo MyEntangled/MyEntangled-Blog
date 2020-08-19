@@ -23,12 +23,12 @@
     <meta name="twitter:title" content="404 Page not found"/>
     <meta name="twitter:description" content="A space for sharing introductory knowledge about Quantum Information and Quantum Computing"/>
     <meta name="twitter:url" content="https://myentangled.com/" />
-    <meta name="twitter:site" content="@"/>
+    <meta name="twitter:site" content="@TrongDu81761446"/>
 
     <meta property="og:site_name" content="My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing" />
     <meta property="og:title" content="404 Page not found &middot; " />
     <meta property="og:url" content="" />
-    <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
+    
 
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A space for sharing introductory knowledge about Quantum Information and Quantum Computing" />
@@ -47,11 +47,21 @@
 
     
     <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
+  jax: ["input/MathML","output/HTML-CSS"],
+  extensions: ["mml2jax.js","MathMenu.js", "MathZoom.js"],
+  "HTML-CSS": {
+    imageFont: null,
+    linebreaks: { automatic: true }
+  },
+  MathMenu: {
+    showLocale: false,
+    showRenderer: false
+  },    
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$']],
+    displayMath: [['$$','$$'],['\\[','\\]']],
     processEscapes: true,
     processEnvironments: true,
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
@@ -59,6 +69,7 @@
          extensions: ["AMSmath.js", "AMSsymbols.js"] }
   }
   });
+
   MathJax.Hub.Queue(function() {
     
     
@@ -81,10 +92,9 @@
 
     <style>
     p{
-    font-family: 'Arial', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
-    body {
-    }
+    body {}
     code {}
     }
     </style>
@@ -126,6 +136,68 @@
 
 <article class="post-card post"> 
     
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Deutsch%20Algorithm/simple-version.png)"></div>
+    </a>
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #Deutsch algorithm  </span>
+              
+              <h2 class="post-card-title">Deutsch Algorithm (Part 1): Kicking the phase back</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>I have said something like quantum computing can overpower classical computing several times before. In this series, I&rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
+ Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile.jpg" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+ 
+
+<article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)"></div>
+    </a>
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-1-preliminaries/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #Teleportation  </span>
+              
+              <h2 class="post-card-title">Quantum Teleportation (Part 1): Preliminaries</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>Here we start exploring a core of Quantum Computing: Quantum Algorithms. Before we dive into the dark and deep pool of such algorithms, it&rsquo;s helpful to get familiar with a fundamental constraint to Quantum Computing. In contrast, I&rsquo;ll also introduce you how powerful qubits get in solving problems through a basic protocol: Quantum Teleportation, the &ldquo;Hello, world!&rdquo; of Quantum Programming.
+ No-cloning theorem In terms of computer architechture, it&rsquo;s convenient to copy the state of a bit in order to create a new qubit exactly the same. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://myentangled.com/uploads/profile.jpg" alt="Author" />
+          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
+      </footer>
+    </div>
+</article>
+ 
+
+<article class="post-card post"> 
+    
     <a class="post-card-image-link" href="https://myentangled.com/en/2019/04/quantum-teleportation-part-3-implementation/">
       <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Teleportation/fig1.jpg)"></div>
     </a>
@@ -154,69 +226,6 @@ First we need to create an arbitrary quantum state. Trong has been curious about
       </footer>
     </div>
 </article>
- 
-
-<article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/07/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Error%20rate%20vs%20Fidelity/cover.jpg)"></div>
-    </a>
-    
-
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/07/error-rate-vs-fidelity-part-1-unveil-the-mathematics-behind-quantum-error-rate/">
-          <header class="post-card-header">
-              <span class="post-card-tags">
-              #Literature 
-              #Error rate 
-              #Density Operator  </span>
-              
-              <h2 class="post-card-title">Error rate vs Fidelity (Part 1): Unveil the mathematics behind quantum error rate</h2>
-          </header>
-          <section class="post-card-excerpt">
-              
-                <p>In the article of Bernsterin-Vazirani implementation, I&rsquo;ve addressed one of the most crucial challenges of quantum computing. The field is yet to flourish because quantum gates aren&rsquo;t constructed to be good enough. One major difference of quantum gates versus classical counterparts is that quantum gates have to be reversible, which means we&rsquo;re able to retrieve a prior state of a qubit without loss of information. Scientists are now on their way to establish a proper scheme for building decent quantum gates. ...  </p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="https://myentangled.com/uploads/profile.jpg" alt="Author" />
-          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
-      </footer>
-    </div>
-</article>
- 
-
-<article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Deutsch%20Algorithm/simple-version.png)"></div>
-    </a>
-    
-
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/en/2019/05/deutsch-algorithm-part-1-kicking-the-phase-back/">
-          <header class="post-card-header">
-              <span class="post-card-tags">
-              #Deutsch algorithm  </span>
-              
-              <h2 class="post-card-title">Deutsch Algorithm (Part 1): Kicking the phase back</h2>
-          </header>
-          <section class="post-card-excerpt">
-              
-                <p>I have said something like quantum computing can overpower classical computing several times before. In this series, I&rsquo;m going to showing you a problem with a quantum algorithm that is exponentially faster in terms of complexity than any classical solution. In this text, we&rsquo;re going to explore an essential technique and apply it to solve the simplest version of Deutsch problem.
- Phase kick-back One concept you may encouter numerous times in a Linear Algebra class is eigenvalues and eigenvectors. ...  </p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="https://myentangled.com/uploads/profile.jpg" alt="Author" />
-          <span class="post-card-author"><a href="/">Entangled Cat</a></span>
-      </footer>
-    </div>
-</article>
 
 
     </div>
@@ -232,10 +241,10 @@ First we need to create an arbitrary quantum state. Trong has been curious about
     </section>
     <nav class="site-footer-nav">
         <a href="/">Latest Posts</a>
-        <a href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener">Facebook</a>
         
+        <a href="https://twitter.com/TrongDu81761446" target="_blank" rel="noopener">Twitter</a>
         <a href="https://github.com/myentangled" target="_blank" rel="noopener">Github</a>
-        
+        <a href="https://www.linkedin.com/in/trong-duong-0a75b6171" target="_blank" rel="noopener">LinkedIn</a>
         
     </nav>  
   </div>

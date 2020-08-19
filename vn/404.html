@@ -23,12 +23,12 @@
     <meta name="twitter:title" content="404 Page not found"/>
     <meta name="twitter:description" content="A space for sharing introductory knowledge about Quantum Information and Quantum Computing"/>
     <meta name="twitter:url" content="https://myentangled.com/" />
-    <meta name="twitter:site" content="@"/>
+    <meta name="twitter:site" content="@TrongDu81761446"/>
 
     <meta property="og:site_name" content="My Entangled: Blogging on Quantum Information, Quantum Algorithms and Quantum Computing" />
     <meta property="og:title" content="404 Page not found &middot; " />
     <meta property="og:url" content="" />
-    <meta property="article:publisher" content="https://www.facebook.com/duong.dinh.trong99" />
+    
 
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A space for sharing introductory knowledge about Quantum Information and Quantum Computing" />
@@ -47,11 +47,21 @@
 
     
     <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
+  jax: ["input/MathML","output/HTML-CSS"],
+  extensions: ["mml2jax.js","MathMenu.js", "MathZoom.js"],
+  "HTML-CSS": {
+    imageFont: null,
+    linebreaks: { automatic: true }
+  },
+  MathMenu: {
+    showLocale: false,
+    showRenderer: false
+  },    
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$']],
+    displayMath: [['$$','$$'],['\\[','\\]']],
     processEscapes: true,
     processEnvironments: true,
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
@@ -59,6 +69,7 @@
          extensions: ["AMSmath.js", "AMSsymbols.js"] }
   }
   });
+
   MathJax.Hub.Queue(function() {
     
     
@@ -81,10 +92,9 @@
 
     <style>
     p{
-    font-family: 'Arial', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
-    body {
-    }
+    body {}
     code {}
     }
     </style>
@@ -126,22 +136,22 @@
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/vn/2019/03/%C4%91o-l%C6%B0%E1%BB%9Dng-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD-kh%C3%B4ng-ch%E1%BB%89-l%C3%A0-0-v%C3%A0-1/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Quantum%20Measurement/Fig1.png)"></div>
+    <a class="post-card-image-link" href="https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/Introduction%20to%20Quantum%20Computing/Post1_Schrodinger%27s%20cat.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/vn/2019/03/%C4%91o-l%C6%B0%E1%BB%9Dng-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD-kh%C3%B4ng-ch%E1%BB%89-l%C3%A0-0-v%C3%A0-1/">
+      <a class="post-card-content-link" href="https://myentangled.com/vn/2019/03/chuy%E1%BB%87n-con-m%C3%A8o-n%E1%BB%ADa-s%E1%BB%91ng-n%E1%BB%ADa-ch%E1%BA%BFt-v%C3%A0-kh%E1%BB%9Fi-nguy%C3%AAn-c%E1%BB%A7a-th%C3%B4ng-tin-l%C6%B0%E1%BB%A3ng-t%E1%BB%AD/">
           <header class="post-card-header">
               <span class="post-card-tags">
               #Preliminaries  </span>
               
-              <h2 class="post-card-title">Đo lường Lượng tử: Không chỉ là 0 và 1</h2>
+              <h2 class="post-card-title">Chuyện con mèo nửa sống nửa chết và khởi nguyên của Thông tin Lượng tử</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>Vướng víu lượng tử theo định nghĩa là một hiện tượng trong đó trạng thái hợp của một tập hợp các qubit không thể được mô tả bằng tích trạng thái của mỗi qubit thuộc tập hợp đó, cũng có nghĩa rằng trạng thái vướng víu chứa đựng thông tin ẩn không thể phát hiện được bằng cách đánh giá từng qubit riêng lẻ. Trong bài viết này tớ sẽ giới thiệu và bàn luận một số khía cạnh của hiện tượng đặc biệt này. ...  </p>
+                <p>Có thể bạn đã từng nghe qua khái niệm thông tin lượng tử, một lĩnh vực hứa hẹn khả năng cách mạng hóa tương lai của máy vi tính? Khi tôi còn học phổ thông nhiều năm trước, tôi cũng bị ấn tượng bởi những tuyên ngôn này được lặp đi lặp lại trong những bài báo khoa học đại chúng. Nhưng liệu rằng khẳng định trên đúng đến đâu? Trước khi đi đến một kết luận cuối cùng, hãy cùng tôi điểm qua một vài cột mốc trong tiến trình lịch sử của ngành khoa học này. ...  </p>
               
           </section>
       </a>
@@ -156,20 +166,20 @@
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://myentangled.com/vn/2019/05/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/">
-      <div class="post-card-image" style="background-image: url(https://myentangled.com/uploads/resources/cover.png)"></div>
-    </a>
+    <a class="post-card-image-link" href="https://myentangled.com/vn/post/">
+      <div class="post-card-image" style="background-image: url(https://myentangled.com/defimg/3.jpg)"></div>
+    </a>    
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://myentangled.com/vn/2019/05/t%C3%A0i-li%E1%BB%87u-h%E1%BB%8Dc-t%E1%BA%ADp/">
+      <a class="post-card-content-link" href="https://myentangled.com/vn/post/">
           <header class="post-card-header">
               
-              <h2 class="post-card-title">Tài liệu học tập</h2>
+              <h2 class="post-card-title">Posts</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>Không giống như những nhánh đang nổi trội khác của ngành khoa học máy tính như trí tuệ nhân tạo hay học máy, điện toán lượng tử còn khá non trẻ khi so sánh về mức độ phát triển. Hầu hết các ngôn ngữ lập trình hoặc thư viện lượng tử được tạo ra để mọi người học và thí nghiệm những ý tưởng mới thay vì dùng để phát hành bất kì sản phẩm thương mại nào. ...  </p>
+                <p> </p>
               
           </section>
       </a>
@@ -226,10 +236,10 @@
     </section>
     <nav class="site-footer-nav">
         <a href="/">Latest Posts</a>
-        <a href="https://www.facebook.com/duong.dinh.trong99" target="_blank" rel="noopener">Facebook</a>
         
+        <a href="https://twitter.com/TrongDu81761446" target="_blank" rel="noopener">Twitter</a>
         <a href="https://github.com/myentangled" target="_blank" rel="noopener">Github</a>
-        
+        <a href="https://www.linkedin.com/in/trong-duong-0a75b6171" target="_blank" rel="noopener">LinkedIn</a>
         
     </nav>  
   </div>
