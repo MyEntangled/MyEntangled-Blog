@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2020</copyright>
-    <lastBuildDate>Wed, 21 Aug 2019 00:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 17:23:02 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Shor&#39;s algorithm (Part 1): Quantum Fourier Transform</title>
+      <link>https://myentangled.com/en/2020/07/shors-algorithm-part-1-quantum-fourier-transform/</link>
+      <pubDate>Fri, 24 Jul 2020 17:23:02 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2020/07/shors-algorithm-part-1-quantum-fourier-transform/</guid>
+      <description>Introduction In this NISQ (Noisy Intermediate Scale Quantum) era, scientists hold much expectation for three applications of Quantum Computing: Quantum Fourier Transform-based algorithms, Grover-search-based algorithms, and simulations of quantum phenomena (as in Quantum Chemistry). In this series, we want to discuss Shor&amp;rsquo;s algorithm, the most prominent instance of the first type. Shor&amp;rsquo;s original work attracted huge attention since it showed a strong evidence that 2048-bit RSA, a widely used cryptographic protocol in the Internet communication, can be broken (Technology is switching to post-quantum cryptography though).</description>
+    </item>
     
     <item>
       <title>MyEntangled index: my suggested order of reading</title>

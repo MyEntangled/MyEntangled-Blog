@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://myentangled.com/en/2020/07/shors-algorithm-part-1-quantum-fourier-transform/</loc>
+    <lastmod>2020-07-24T17:23:02+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/en/2019/08/myentangled-index-my-suggested-order-of-reading/</loc>
     <lastmod>2019-08-21T00:00:00+07:00</lastmod>
   </url>
@@ -246,7 +251,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2019-08-21T00:00:00+07:00</lastmod>
+    <lastmod>2020-07-24T17:23:02+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -278,7 +283,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2019-08-21T00:00:00+07:00</lastmod>
+    <lastmod>2020-07-24T17:23:02+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
