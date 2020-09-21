@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2020</copyright>
-    <lastBuildDate>Fri, 24 Jul 2020 17:23:02 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0700</lastBuildDate>
     
 	<atom:link href="https://myentangled.com/en/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MyEntangled Contents</title>
+      <link>https://myentangled.com/en/2020/08/myentangled-contents/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0700</pubDate>
+      
+      <guid>https://myentangled.com/en/2020/08/myentangled-contents/</guid>
+      <description>TABLE OF CONTENT
+I. About me
+II. Study resources: What you should read, watch, and explore at the entrance of quantum computing
+III. Stories: My sharing about other events, and some anecdotes and thoughts about what I see, feel and experience in my current walk of life.
+IV. Quantum things  0. A no-science introduction to Quantum Information
+Introduction to quantum information theory  1.1. Fundamentals of Qubits  1.2 Quantum Measurement  1.</description>
+    </item>
     
     <item>
       <title>Shor&#39;s algorithm (Part 1): Quantum Fourier Transform</title>
@@ -19,20 +33,6 @@
       
       <guid>https://myentangled.com/en/2020/07/shors-algorithm-part-1-quantum-fourier-transform/</guid>
       <description>Introduction In this NISQ (Noisy Intermediate Scale Quantum) era, scientists hold much expectation for three applications of Quantum Computing: Quantum Fourier Transform-based algorithms, Grover-search-based algorithms, and simulations of quantum phenomena (as in Quantum Chemistry). In this series, we want to discuss Shor&amp;rsquo;s algorithm, the most prominent instance of the first type. Shor&amp;rsquo;s original work attracted huge attention since it showed a strong evidence that 2048-bit RSA, a widely used cryptographic protocol in the Internet communication, can be broken (Technology is switching to post-quantum cryptography though).</description>
-    </item>
-    
-    <item>
-      <title>MyEntangled index: my suggested order of reading</title>
-      <link>https://myentangled.com/en/2019/08/myentangled-index-my-suggested-order-of-reading/</link>
-      <pubDate>Wed, 21 Aug 2019 00:00:00 +0700</pubDate>
-      
-      <guid>https://myentangled.com/en/2019/08/myentangled-index-my-suggested-order-of-reading/</guid>
-      <description>TABLE OF CONTENT
-I. About me
-II. Study resources: What you should read, watch, and explore at the entrance of quantum computing
-III. Stories: My sharing about other events, and some anecdotes and thoughts about what I see, feel and experience in my current walk of life.
-IV. Quantum things  0. A no-science introduction to Quantum Information
-Introduction to quantum information theory  1.1. Fundamentals of Qubits  1.2 Quantum Measurement  1.</description>
     </item>
     
     <item>
@@ -87,7 +87,7 @@ Review Given a state $$|\psi\rangle = \sum_i \alpha_i |\varphi_i \rangle,$$ it&a
       <pubDate>Fri, 07 Jun 2019 15:30:16 +0700</pubDate>
       
       <guid>https://myentangled.com/en/2019/06/bernstein-vazirani-algorithm-part-2-how-to-run-your-algorithms-on-a-realistic-quantum-computer/</guid>
-      <description>In the last part of the previous series, Deutsch algorithm, I introduced a manual way to construct the oracle. That oracle must be built from matrix because the oracle function is undeterminate except for the outcome. In Bernsterin-Vazirani problem, the function is, on the other hand, clearly stated: $f(\mathbf{x}) = \mathbf{s}\cdot\mathbf{x}$. So, it&amp;rsquo;s unnecessary to repeat the previous procedure; instead, we&amp;rsquo;ll build the oracle without using matrices by understanding what the function really do.</description>
+      <description></description>
     </item>
     
     <item>
