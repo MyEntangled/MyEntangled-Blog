@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://myentangled.com/en/2020/11/quantum-states-may-represent-the-physical-reality/</loc>
+    <lastmod>2020-11-29T16:08:58+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://myentangled.com/en/2020/08/myentangled-contents/</loc>
     <lastmod>2020-08-21T00:00:00+07:00</lastmod>
   </url>
@@ -251,7 +256,7 @@
   
   <url>
     <loc>https://myentangled.com/en/</loc>
-    <lastmod>2020-08-21T00:00:00+07:00</lastmod>
+    <lastmod>2020-11-29T16:08:58+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -283,7 +288,7 @@
   
   <url>
     <loc>https://myentangled.com/en/post/</loc>
-    <lastmod>2020-08-21T00:00:00+07:00</lastmod>
+    <lastmod>2020-11-29T16:08:58+07:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
